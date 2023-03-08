@@ -1,2 +1,0 @@
-# trivialers.github.io
-gameee
