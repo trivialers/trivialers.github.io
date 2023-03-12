@@ -1,9 +1,8 @@
 <html>
     <head>
         <script>
-            var d = document.getElementById("cerchio")
-            var p= d.getBoundingClientRect(); //not working
-            console.log(p.rect.left.toFixed());
+            var d = document.getElementById("Ellipse");
+            //var p = d.getBBox(); not working same as getboundingclientrect Cannot read properties of null?
         </script>
         <style>
             div{
@@ -14,7 +13,7 @@
     </head>
     <body>
         <div>
-            <svg width="2296" height="2296" viewBox="0 0 2296 2296" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg id="m" width="2296" height="2296" viewBox="0 0 2296 2296" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink">
                 <g id="trivial">
                     <g id="cerchio">
                         <g id="grandi" clip-path="url(#clip0_0_1)">
