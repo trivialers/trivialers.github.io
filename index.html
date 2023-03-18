@@ -9,11 +9,31 @@
                 justify-content: center;
             }
             #pedina{
-                position: absolute;
-                top: 3;
-                left: 4;
+				position: absolute;
+				top: 200px;
+				left: 200px;
             }
         </style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<script>
+			function posizione (id){
+				console.log(id);
+				let pedina = document.getElementById("pedina");
+				let indirizzo = document.getElementById(id);
+				let posizione = indirizzo.getBoundingClientRect();
+				pedina.style.top = posizione.top + "px";
+				pedina.style.left = posizione.left + "px";
+			}
+			
+			$(document).ready(function() {
+				$("#Segment_6").click(function(){
+					posizione("Segment_6");
+					alert("sss")
+				});
+			});
+			
+
+        </script>
     </head>
     <body>
         <div id="map">
@@ -21,10 +41,10 @@
                 <g id="trivial">
                     <g id="cerchio">
                         <g id="grandi" clip-path="url(#clip0_0_1)">
-                            <g id="Segment 2">
+                            <g id="Segment_2">
                                 <path id="Ellipse" d="M1889.24 1462.78L2064.6 1535.93C2032.54 1611.71 1991.2 1683.21 1941.54 1748.81L1790.63 1633.36C1830.36 1580.76 1863.48 1523.46 1889.24 1462.78Z" fill="#E8DCB8" stroke="#4BA2F2" stroke-width="10"></path>
                             </g>
-                            <g id="Segment 6">
+                            <g id="Segment_6">
                                 <path id="Ellipse_2" d="M1246.33 1947.24L1270.66 2135.68C1189.01 2145.8 1106.42 2145.76 1024.78 2135.55L1049.3 1947.13C1114.73 1955.24 1180.9 1955.27 1246.33 1947.24Z" fill="#E8DCB8" stroke="#EF7733" stroke-width="10"></path>
                             </g>
                             <g id="Segment 10">
@@ -167,7 +187,7 @@
                     </g>
                     <path id="esagono" fill-rule="evenodd" clip-rule="evenodd" d="M1352.5 1149.54L1250 1327.07H1045L942.5 1149.54L1045 972L1250 972L1352.5 1149.54Z" fill="#27678D"></path>
                     <path id="esagono (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M1352.5 1149.54L1250 1327.07H1045L942.5 1149.54L1045 972H1250L1352.5 1149.54ZM1340.95 1149.54L1244.23 1317.07H1050.77L954.047 1149.54L1050.77 982H1244.23L1340.95 1149.54Z" fill="#DFA207" fill-opacity="0.91"></path>
-                    <path id="pedina" fill="url(#pattern0)" d="M959 978H1337.67V1433.5H959V978Z"></path>
+                    <path id="centro" fill="url(#pattern0)" d="M959 978H1337.67V1433.5H959V978Z"></path>
                     <g id="braccio">
                         <g id="Group 1_2">
                             <g id="1">
@@ -268,19 +288,5 @@
                 </g>
             </svg>
         </div>
-        <script>
-            let d = document.getElementById("Rectangle 4_3");
-            let p = d.getBoundingClientRect();
-            console.log(p);
-            const path = document.getElementsByTagName("g");
-
-            const pathpress = e => {
-                console.log(e.target.id); 
-            }
-
-            for (let g of path) {
-                g.addEventListener("click", pathpress);
-}
-        </script>
     </body>
 </html>
