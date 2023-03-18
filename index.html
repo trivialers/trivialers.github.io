@@ -10,19 +10,32 @@
             }
             #pedina{
 				position: absolute;
-				top: 200px;
-				left: 200px;
+				visibility: hidden;
             }
         </style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 		<script>
+			let larghezza = 0;
+			let altezza = 0;
+			
+			function lunghezza_larghezza (){
+				let pedina = document.getElementById("pedina");
+				let posizione = pedina.getBoundingClientRect();
+				larghezza = posizione.right - posizione.left;
+				altezza = posizione.bottom - posizione.top ;
+				console.log(larghezza + " " + altezza);
+				pedina.style.visibility = "visible";
+
+			}
+			
 			function posizione (id){
 				console.log(id);
+				lunghezza_larghezza();
 				let pedina = document.getElementById("pedina");
 				let indirizzo = document.getElementById(id);
 				let posizione = indirizzo.getBoundingClientRect();
-				pedina.style.top = (posizione.top+(posizione.bottom - posizione.top)/4) + "px";
-				pedina.style.left = (posizione.left+(posizione.right - posizione.left)/4) + "px";
+				pedina.style.top = ( posizione.top - ( altezza / 2 ) ) + ( (  posizione.bottom - posizione.top ) / 2 ) + "px";
+				pedina.style.left = ( posizione.left - ( larghezza / 2 ) ) + ( ( posizione.right - posizione.left ) / 2 ) + "px";
 			}
 			
 			$(document).ready(function() {
@@ -169,6 +182,101 @@
 				});
 				$("#Ellipse_42").click(function(){
 					posizione("Ellipse_42");
+				});
+				$("#esagono").click(function(){
+					posizione("esagono");
+				});
+				$("#centro").click(function(){
+					posizione("centro");
+				});
+				$("#Rectangle_1_1").click(function(){
+					posizione("Rectangle_1_1");
+				});
+				$("#Rectangle_2_1").click(function(){
+					posizione("Rectangle_2_1");
+				});
+				$("#Rectangle_3_1").click(function(){
+					posizione("Rectangle_3_1");
+				});
+				$("#Rectangle_4_1").click(function(){
+					posizione("Rectangle_4_1");
+				});
+				$("#Rectangle_5_1").click(function(){
+					posizione("Rectangle_5_1");
+				});
+				$("#Rectangle_1_2").click(function(){
+					posizione("Rectangle_1_2");
+				});
+				$("#Rectangle_2_2").click(function(){
+					posizione("Rectangle_2_2");
+				});
+				$("#Rectangle_3_2").click(function(){
+					posizione("Rectangle_3_2");
+				});
+				$("#Rectangle_4_2").click(function(){
+					posizione("Rectangle_4_2");
+				});
+				$("#Rectangle_5_2").click(function(){
+					posizione("Rectangle_5_2");
+				});
+				$("#Rectangle_1_3").click(function(){
+					posizione("Rectangle_1_3");
+				});
+				$("#Rectangle_2_3").click(function(){
+					posizione("Rectangle_2_3");
+				});
+				$("#Rectangle_3_3").click(function(){
+					posizione("Rectangle_3_3");
+				});
+				$("#Rectangle_4_3").click(function(){
+					posizione("Rectangle_4_3");
+				});
+				$("#Rectangle_5_3").click(function(){
+					posizione("Rectangle_5_3");
+				});
+				$("#Rectangle_1_4").click(function(){
+					posizione("Rectangle_1_4");
+				});
+				$("#Rectangle_2_4").click(function(){
+					posizione("Rectangle_2_4");
+				});
+				$("#Rectangle_3_4").click(function(){
+					posizione("Rectangle_3_4");
+				});
+				$("#Rectangle_4_4").click(function(){
+					posizione("Rectangle_4_4");
+				});
+				$("#Rectangle_5_4").click(function(){
+					posizione("Rectangle_5_4");
+				});
+				$("#Rectangle_1_5").click(function(){
+					posizione("Rectangle_1_5");
+				});
+				$("#Rectangle_2_5").click(function(){
+					posizione("Rectangle_2_5");
+				});
+				$("#Rectangle_3_5").click(function(){
+					posizione("Rectangle_3_5");
+				});
+				$("#Rectangle_4_5").click(function(){
+					posizione("Rectangle_4_5");
+				});
+				$("#Rectangle_5_5").click(function(){
+					posizione("Rectangle_5_5");
+				});$("#Rectangle_1_6").click(function(){
+					posizione("Rectangle_1_6");
+				});
+				$("#Rectangle_2_6").click(function(){
+					posizione("Rectangle_2_6");
+				});
+				$("#Rectangle_3_6").click(function(){
+					posizione("Rectangle_3_6");
+				});
+				$("#Rectangle_4_6").click(function(){
+					posizione("Rectangle_4_6");
+				});
+				$("#Rectangle_5_6").click(function(){
+					posizione("Rectangle_5_6");
 				});
 			});
 			
@@ -330,74 +438,59 @@
                     <g id="braccio">
                         <g id="Group 1_2">
                             <g id="1">
-                                <path id="Rectangle 1_1" d="M1045 1330H1250V1449.2H1045V1330Z" fill="#4BA2F2"></path>
-                                <path id="Rectangle 2_1" d="M1045 1452.2H1250V1571.4H1045V1452.2Z" fill="#EFD02D"></path>
-                                <path id="Rectangle 3_1" d="M1045 1574.4H1250V1693.6H1045V1574.4Z" fill="#F93CAD"></path>
-                                <path id="Rectangle 4_1" d="M1045 1696.6H1250V1815.8H1045V1696.6Z" fill="#BC4BF2"></path>
-                                <path id="Rectangle 5_1" d="M1045 1818.8H1250V1938H1045V1818.8Z" fill="#53D060"></path>
+                                <path id="Rectangle_1_1" d="M1045 1330H1250V1449.2H1045V1330Z" fill="#4BA2F2"></path>
+                                <path id="Rectangle_2_1" d="M1045 1452.2H1250V1571.4H1045V1452.2Z" fill="#EFD02D"></path>
+                                <path id="Rectangle_3_1" d="M1045 1574.4H1250V1693.6H1045V1574.4Z" fill="#F93CAD"></path>
+                                <path id="Rectangle_4_1" d="M1045 1696.6H1250V1815.8H1045V1696.6Z" fill="#BC4BF2"></path>
+                                <path id="Rectangle_5_1" d="M1045 1818.8H1250V1938H1045V1818.8Z" fill="#53D060"></path>
                             </g>
                             <g id="4">
-                                <path id="Rectangle 1_2" d="M1045 361H1250V480.2H1045V361Z" fill="#EF7733"></path>
-                                <path id="Rectangle 2_2" d="M1045 483.2H1250V602.4H1045V483.2Z" fill="#EFD02D"></path>
-                                <path id="Rectangle 3_2" d="M1045 605.4H1250V724.6H1045V605.4Z" fill="#4BA2F2"></path>
-                                <path id="Rectangle 4_2" d="M1045 727.6H1250V846.8H1045V727.6Z" fill="#BC4BF2"></path>
-                                <path id="Rectangle 5_2" d="M1045 849.8H1250V969H1045V849.8Z" fill="#F93CAD"></path>
+                                <path id="Rectangle_1_2" d="M1045 361H1250V480.2H1045V361Z" fill="#EF7733"></path>
+                                <path id="Rectangle_2_2" d="M1045 483.2H1250V602.4H1045V483.2Z" fill="#EFD02D"></path>
+                                <path id="Rectangle_3_2" d="M1045 605.4H1250V724.6H1045V605.4Z" fill="#4BA2F2"></path>
+                                <path id="Rectangle_4_2" d="M1045 727.6H1250V846.8H1045V727.6Z" fill="#BC4BF2"></path>
+                                <path id="Rectangle_5_2" d="M1045 849.8H1250V969H1045V849.8Z" fill="#F93CAD"></path>
                             </g>
                         </g>
                         <g id="Group 2_2">
                             <g id="2">
-                                <path id="Rectangle 1_3" d="M1252.57 1328.52L1355.07 1150.98L1458.3 1210.58L1355.8 1388.12L1252.57 1328.52Z" fill="#BC4BF2"></path>
-                                <path id="Rectangle 2_3" d="M1358.4 1389.62L1460.9 1212.08L1564.13 1271.68L1461.63 1449.22L1358.4 1389.62Z" fill="#EF7733"></path>
-                                <path id="Rectangle 3_3" d="M1464.22 1450.72L1566.72 1273.18L1669.95 1332.78L1567.45 1510.32L1464.22 1450.72Z" fill="#EFD02D"></path>
-                                <path id="Rectangle 4_3" d="M1570.05 1511.82L1672.55 1334.28L1775.78 1393.88L1673.28 1571.42L1570.05 1511.82Z" fill="#53D060"></path>
-                                <path id="Rectangle 5_3" d="M1675.88 1572.92L1778.38 1395.38L1881.61 1454.98L1779.11 1632.52L1675.88 1572.92Z" fill="#F93CAD"></path>
+                                <path id="Rectangle_1_3" d="M1252.57 1328.52L1355.07 1150.98L1458.3 1210.58L1355.8 1388.12L1252.57 1328.52Z" fill="#BC4BF2"></path>
+                                <path id="Rectangle_2_3" d="M1358.4 1389.62L1460.9 1212.08L1564.13 1271.68L1461.63 1449.22L1358.4 1389.62Z" fill="#EF7733"></path>
+                                <path id="Rectangle_3_3" d="M1464.22 1450.72L1566.72 1273.18L1669.95 1332.78L1567.45 1510.32L1464.22 1450.72Z" fill="#EFD02D"></path>
+                                <path id="Rectangle_4_3" d="M1570.05 1511.82L1672.55 1334.28L1775.78 1393.88L1673.28 1571.42L1570.05 1511.82Z" fill="#53D060"></path>
+                                <path id="Rectangle_5_3" d="M1675.88 1572.92L1778.38 1395.38L1881.61 1454.98L1779.11 1632.52L1675.88 1572.92Z" fill="#F93CAD"></path>
                             </g>
                             <g id="5">
-                                <path id="Rectangle 1_4" d="M413.389 844.018L515.889 666.483L619.119 726.083L516.619 903.618L413.389 844.018Z" fill="#4BA2F2"></path>
-                                <path id="Rectangle 2_4" d="M519.217 905.118L621.717 727.582L724.948 787.182L622.448 964.718L519.217 905.118Z" fill="#EF7733"></path>
-                                <path id="Rectangle 3_4" d="M625.046 966.218L727.546 788.683L830.776 848.283L728.276 1025.82L625.046 966.218Z" fill="#BC4BF2"></path>
-                                <path id="Rectangle 4_4" d="M730.874 1027.32L833.374 849.782L936.604 909.382L834.104 1086.92L730.874 1027.32Z" fill="#53D060"></path>
-                                <path id="Rectangle 5_4" d="M836.702 1088.42L939.202 910.882L1042.43 970.482L939.932 1148.02L836.702 1088.42Z" fill="#EFD02D"></path>
+                                <path id="Rectangle_1_4" d="M413.389 844.018L515.889 666.483L619.119 726.083L516.619 903.618L413.389 844.018Z" fill="#4BA2F2"></path>
+                                <path id="Rectangle_2_4" d="M519.217 905.118L621.717 727.582L724.948 787.182L622.448 964.718L519.217 905.118Z" fill="#EF7733"></path>
+                                <path id="Rectangle_3_4" d="M625.046 966.218L727.546 788.683L830.776 848.283L728.276 1025.82L625.046 966.218Z" fill="#BC4BF2"></path>
+                                <path id="Rectangle_4_4" d="M730.874 1027.32L833.374 849.782L936.604 909.382L834.104 1086.92L730.874 1027.32Z" fill="#53D060"></path>
+                                <path id="Rectangle_5_4" d="M836.702 1088.42L939.202 910.882L1042.43 970.482L939.932 1148.02L836.702 1088.42Z" fill="#EFD02D"></path>
                             </g>
                         </g>
                         <g id="Group 3_2">
                             <g id="6">
-                                <path id="Rectangle 1_5" d="M939.932 1150.98L1042.43 1328.52L939.202 1388.12L836.702 1210.58L939.932 1150.98Z" fill="#EF7733"></path>
-                                <path id="Rectangle 2_5" d="M834.104 1212.08L936.604 1389.62L833.374 1449.22L730.874 1271.68L834.104 1212.08Z" fill="#F93CAD"></path>
-                                <path id="Rectangle 3_5" d="M728.276 1273.18L830.776 1450.72L727.546 1510.32L625.046 1332.78L728.276 1273.18Z" fill="#53D060"></path>
-                                <path id="Rectangle 4_5" d="M622.448 1334.28L724.948 1511.82L621.717 1571.42L519.217 1393.88L622.448 1334.28Z" fill="#4BA2F2"></path>
-                                <path id="Rectangle 5_5" d="M516.619 1395.38L619.119 1572.92L515.889 1632.52L413.389 1454.98L516.619 1395.38Z" fill="#BC4BF2"></path>
+                                <path id="Rectangle_1_5" d="M939.932 1150.98L1042.43 1328.52L939.202 1388.12L836.702 1210.58L939.932 1150.98Z" fill="#EF7733"></path>
+                                <path id="Rectangle_2_5" d="M834.104 1212.08L936.604 1389.62L833.374 1449.22L730.874 1271.68L834.104 1212.08Z" fill="#F93CAD"></path>
+                                <path id="Rectangle_3_5" d="M728.276 1273.18L830.776 1450.72L727.546 1510.32L625.046 1332.78L728.276 1273.18Z" fill="#53D060"></path>
+                                <path id="Rectangle_4_5" d="M622.448 1334.28L724.948 1511.82L621.717 1571.42L519.217 1393.88L622.448 1334.28Z" fill="#4BA2F2"></path>
+                                <path id="Rectangle_5_5" d="M516.619 1395.38L619.119 1572.92L515.889 1632.52L413.389 1454.98L516.619 1395.38Z" fill="#BC4BF2"></path>
                             </g>
                             <g id="3">
-                                <path id="Rectangle 1_6" d="M1779.11 666.482L1881.61 844.018L1778.38 903.618L1675.88 726.082L1779.11 666.482Z" fill="#EFD02D"></path>
-                                <path id="Rectangle 2_6" d="M1673.28 727.582L1775.78 905.118L1672.55 964.718L1570.05 787.182L1673.28 727.582Z" fill="#F93CAD"></path>
-                                <path id="Rectangle 3_6" d="M1567.45 788.682L1669.95 966.218L1566.72 1025.82L1464.22 848.282L1567.45 788.682Z" fill="#EF7733"></path>
-                                <path id="Rectangle 4_6" d="M1461.63 849.782L1564.13 1027.32L1460.9 1086.92L1358.4 909.382L1461.63 849.782Z" fill="#4BA2F2"></path>
-                                <path id="Rectangle 5_6" d="M1355.8 910.882L1458.3 1088.42L1355.07 1148.02L1252.57 970.482L1355.8 910.882Z" fill="#53D060"></path>
+                                <path id="Rectangle_1_6" d="M1779.11 666.482L1881.61 844.018L1778.38 903.618L1675.88 726.082L1779.11 666.482Z" fill="#EFD02D"></path>
+                                <path id="Rectangle_2_6" d="M1673.28 727.582L1775.78 905.118L1672.55 964.718L1570.05 787.182L1673.28 727.582Z" fill="#F93CAD"></path>
+                                <path id="Rectangle_3_6" d="M1567.45 788.682L1669.95 966.218L1566.72 1025.82L1464.22 848.282L1567.45 788.682Z" fill="#EF7733"></path>
+                                <path id="Rectangle_4_6" d="M1461.63 849.782L1564.13 1027.32L1460.9 1086.92L1358.4 909.382L1461.63 849.782Z" fill="#4BA2F2"></path>
+                                <path id="Rectangle_5_6" d="M1355.8 910.882L1458.3 1088.42L1355.07 1148.02L1252.57 970.482L1355.8 910.882Z" fill="#53D060"></path>
                             </g>
                         </g>
                     </g>
                 </g>
                 <defs>
-                    <filter id="filter0_d_0_1" x="886.607" y="1921.05" width="158.97" height="226.067" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
-                    <feOffset dy="4"></feOffset>
-                    <feGaussianBlur stdDeviation="2"></feGaussianBlur>
-                    <feComposite in2="hardAlpha" operator="out"></feComposite>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"></feBlend>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"></feBlend>
-                    </filter>
-                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#img" transform="matrix(0.00240581 0 0 0.002 -0.101453 0)"></use>
+                    <pattern height="1" patternContentUnits="objectBoundingBox" id="pattern0" width="1">
+						<use xlink:href="#img" transform="matrix(0.00240581 0 0 0.002 -0.101453 0)"></use>
                     </pattern>
-                    <clipPath id="clip0_0_1">
-                    <rect width="2000" height="2000" fill="white" transform="translate(268.447 41) rotate(6.53)"></rect>
-                    </clipPath>
-                    <clipPath id="clip1_0_1">
-                    <rect width="2000" height="2000" fill="white" transform="translate(268.211 40.7641) rotate(6.53)"></rect>
-                    </clipPath>
+                    
                     <image id="img" width="500" height="500" href="svg/pedina.png"></image>
                 </defs>
             </svg>
