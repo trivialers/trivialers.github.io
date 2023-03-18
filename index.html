@@ -10,8 +10,8 @@
             }
             #pedina{
                 position: absolute;
-                top: 1452;
-                left: 1739;
+                top: 3;
+                left: 4;
             }
         </style>
     </head>
@@ -272,6 +272,15 @@
             let d = document.getElementById("Rectangle 4_3");
             let p = d.getBoundingClientRect();
             console.log(p);
+            const path = document.getElementsByTagName("g");
+
+            const pathpress = e => {
+                console.log(e.target.id); 
+            }
+
+            for (let g of path) {
+                g.addEventListener("click", pathpress);
+}
         </script>
     </body>
 </html>
