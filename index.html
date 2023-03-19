@@ -1,18 +1,6 @@
 <html>
     <head>
-        <style>
-            body{
-                background-color:#27678D;
-            }
-            #map{
-                display: flex;
-                justify-content: center;
-            }
-            #pedina{
-				position: absolute;
-				visibility: hidden;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 		<script>
 			let larghezza = 0;
@@ -279,12 +267,11 @@
 					posizione("Rectangle_5_6");
 				});
 			});
-			
         </script>
     </head>
     <body>
         <div id="map">
-            <svg width="100vh" height="100vh" viewBox="147 147 2003 2003" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink">
+            <svg width="98vh" height="98vh" viewBox="147 147 2003 2003" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/xlink">
                 <g id="trivial">
                     <g id="cerchio">
                         <g id="grandi" clip-path="url(#clip0_0_1)">
@@ -520,5 +507,64 @@
                 </g>
             </svg>
         </div>
+        <div class="container">
+        <div id="cube">
+            <div class="front">
+                <span class="dot dot1"></span>
+            </div>
+            <div class="back">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span>
+                <span class="dot dot4"></span>
+                <span class="dot dot5"></span>
+                <span class="dot dot6"></span>
+            </div>
+            <div class="right">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span>
+            </div>
+            <div class="left">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span>
+                <span class="dot dot4"></span>
+                <span class="dot dot5"></span>
+            </div>
+            <div class="top">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span>
+                <span class="dot dot4"></span>
+            </div>
+            <div class="bottom">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        let cube = document.getElementById("cube");
+        let y=1800, x=1080;
+        cube.onclick = function() {
+            let random = Math.ceil(Math.random()*6);
+            console.log(random);
+			let X, Y, Z;
+				switch(random){
+					case 1: X=0;Y=0;break;
+					case 2: X=0;Y=90;break;
+					case 3: X=90;Y=0;break;
+					case 4: X=-90;Y=0;break;
+					case 5: X=0;Y=-90;break;
+					case 6: X=0;Y=180;break;
+				}
+				x+=1800;
+				y+=1080;
+				Y=Y+y;
+				X=X+x;
+            cube.style.transform="rotateX("+X+"deg) "+"rotateY("+Y+"deg)"
+        }
+    </script>
     </body>
 </html>
