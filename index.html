@@ -3,27 +3,14 @@
         <link rel="stylesheet" href="style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 		<script>
-			let larghezza = 0;
-			let altezza = 0;
-			
-			function lunghezza_larghezza (){
-				let pedina = document.getElementById("pedina");
-				let posizione = pedina.getBoundingClientRect();
-				larghezza = posizione.right - posizione.left;
-				altezza = posizione.bottom - posizione.top ;
-				console.log(larghezza + " " + altezza);
-				pedina.style.visibility = "visible";
 
-			}
-			
 			function posizione (id){
-				console.log(id);
-				lunghezza_larghezza();
 				let pedina = document.getElementById("pedina");
+				let dimensioni = pedina.getBoundingClientRect();
 				let indirizzo = document.getElementById(id);
 				let posizione = indirizzo.getBoundingClientRect();
-				pedina.style.top = ( posizione.top - ( altezza / 2 ) ) + ( (  posizione.bottom - posizione.top ) / 2 ) + window.pageYOffset + "px";
-				pedina.style.left = ( posizione.left - ( larghezza / 2 ) ) + ( ( posizione.right - posizione.left ) / 2 ) + window.pageXOffset + "px";
+				pedina.style.top = ( posizione.top - ( dimensioni.height / 2 ) + ( posizione.height / 2 ) + window.pageYOffset) + "px";
+				pedina.style.left = ( posizione.left - ( dimensioni.width / 2 ) + (posizione.width / 2 ) + window.pageXOffset) + "px";
 			}
 			
 			$(document).ready(function() {
@@ -545,6 +532,7 @@
         </div>
     </div>
     <script>
+		posizione("esagono");
         let cube = document.getElementById("cube");
         let y=1800, x=1080;
         cube.onclick = function() {
