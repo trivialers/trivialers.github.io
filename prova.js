@@ -1,7 +1,8 @@
 function gameplay(){
 	let Pedine = [];
-	let play = true;
+	let giocatore = -1;
 	let skipMove = false;
+	let again = false;
 	
 	function sleep(milliseconds) {
 	  const date = Date.now();
@@ -307,10 +308,30 @@ function gameplay(){
 			pedina.style.left = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
 			skipMove= true;
 		}
+		if(giocatore >= 0){
+			sleep(1000)
+			Pedine[giocatore].top = pedina.style.top;
+			Pedine[giocatore].left = pedina.style.left;
+			pedina.style.visibility = "hidden";
+			sleep(1000)
+			if (again){
+				turno()
+			}
+			else{
+				if (giocatore==(Pedine.length-1)){
+					giocatore = 0;
+				}
+				else{
+					giocatore += 1;
+				}
+				turno();
+			}
+		}
 	}
 	
 	function inizzializza(){	
 		posizione("esagono");
+		giocatore = 0;
 		let colori = ["#EF7733","#4BA2F2","#BC4BF2","#53D060","#F93CAD","#EFD02D" ]
 		let coloreDefault = [];
 		for (let i=0; i<6; i++){
@@ -333,34 +354,28 @@ function gameplay(){
 		}
 	}
 
-	inizzializza();
-	console.log(Pedine);
-	while(play){
+	function turno(){
+		console.log(giocatore);
 		let pedina = document.getElementById("pedina");
 		let contornoPedina = document.getElementById("contornoPedina");
-		let idTriangoli = ["Triangolino_1","Triangolino_2","Triangolino_3","Triangolino_4","Triangolino_5","Triangolino_6"]
-
-		for (let i=0; i<Pedine.length; i++){
-			
-			let turno = false;
-			pedina.style.visibility = "visible";
-			pedina.style.top = Pedine[i].top;
-			pedina.style.left = Pedine[i].left;
-			contornoPedina.style.fill = Pedine[i].colorePedina;
-			do {
-				for(let k=0; k<6; k++){
-					let triangolino = document.getElementById(idTriangoli[k]);
-					console.log(Pedine[i].triangoli[k]);
-					triangolino.style.fill = Pedine[i].triangoli[k];
-				}
-				skipMove = false;
-				clickElementi();
-				sleep(1000);
-				alert("aiuto")
-				//lanciaDado();
-				
-			} while (turno);
+		let idTriangoli = ["Triangolino_1","Triangolino_2","Triangolino_3","Triangolino_4","Triangolino_5","Triangolino_6"];
+		let turno = false;
+		pedina.style.visibility = "visible";
+		pedina.style.top = Pedine[giocatore].top;
+		pedina.style.left = Pedine[giocatore].left;
+		contornoPedina.style.fill = Pedine[giocatore].colorePedina;
+		for(let k=0; k<6; k++){
+			let triangolino = document.getElementById(idTriangoli[k]);
+			console.log(Pedine[giocatore].triangoli[k]);
+			triangolino.style.fill = Pedine[giocatore].triangoli[k];
 		}
-		break
+		skipMove = false;
+		//lanciaDado();
+		clickElementi();
+		
 	}
+	
+	inizzializza();
+	console.log(Pedine);
+	turno();
 }
