@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <style>
+        #img {
+            margin-top: 40px;
+            width: 195px;
+            height: 158px;
+        }
+
+        #bottone {
+            background: #774f33;
+            border-bottom: 3px inset rgba(0, 0, 0, 0.5);
+            border-left: 3px inset rgba(0, 0, 0, 0.5);
+            border-right: 3px inset rgba(255, 255, 255, 0.5);
+            border-top: 3px inset rgba(255, 255, 255, 0.5);
+            box-sizing: border-box;
+            color: #fff;
+            font-family: 'Tangerine', cursive;
+            cursor: pointer;
+            font-size: 20px;
+            margin: 30px;
+            padding-bottom: 2px;
+            padding-left: 18px;
+            padding-right: 18px;
+            padding-top: 3px;
+            border-radius: 10px;
+        }
+
+        #card {
+            transform-style: preserve-3d;
+            padding: 10px;
+            margin: 30px;
+            text-align: center;
+            width: 200px;
+            height: 300px;
+            background: #DFA207;
+            border-radius: 20px;
+            box-shadow: 15px 15px #27678D;
+        }
+
+        #front {
+            backface-visibility: hidden;
+        }
+
+        #back {
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+        }
+
+        #dom {
+            margin-top: 7px;
+            margin-bottom: 30px;
+            font-family: 'Tangerine', cursive;
+            padding: 3px;
+            background: #27678D;
+            color: #fff;
+            font-size: 25px;
+            border-radius: 10px;
+            padding-top: 3px;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        #ris {
+            display: grid;
+            grid-gap: 10px;
+        }
+
+
+        #ris label {
+            font-family: 'Tangerine', cursive;
+            background: #27678D;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #fff;
+            text-align: center;
+            padding: 4px;
+        }
+
+        #ris label.correct {
+            box-shadow: inset 0px 0px 0px 3px green;
+        }
+
+        #ris label.wrong {
+            box-shadow: inset 0px 0px 0px 3px red;
+        }
+    </style>
+    <script>
+        const storia = [{
+                domanda: "Chi &egrave; il padre degli dei?",
+                r_corretta: "Zeus",
+                opzioni: ["Ares", "Ade", "Zeus", "Apollo"]
+            },
+            {
+                domanda: "Chi era il presidente americano nel 2018?",
+                r_corretta: "Donald Trump",
+                opzioni: ["Donald Duck", "Donald Trump", "Barack Obama", "George Bush"]
+            },
+            {
+                domanda: "Cosa conquist&ograve; Giulio Cesare?",
+                r_corretta: "Gallia",
+                opzioni: ["Sicilia", "Russia", "Australia", "Gallia"]
+            },
+            {
+                domanda: "Quando entro l'Italia nella prima guerra mondiale?",
+                r_corretta: "1915",
+                opzioni: ["1914", "1915", "1916", "1917"]
+            },
+            {
+                domanda: "Come si chiama questo simbolo £?",
+                r_corretta: "sterlina",
+                opzioni: ["euro", "sterlina", "dollaro", "yuan"]
+            },
+            {
+                domanda: "Per Illuminismo cosa si intende?",
+                r_corretta: "diffondere i lumi della ragione",
+                opzioni: ["illuminare la città", "risparmiare sulla luce", "abbassare il prezzo delle lampade", "diffondere i lumi della ragione"]
+            },
+            {
+                domanda: "Quale città venne divisa da un muro?",
+                r_corretta: "Berlino",
+                opzioni: ["New York", "Milano", "Berlino", "Nessuna &egrave; corretta"]
+            },
+            {
+                domanda: "Quale filosofo morì avvelenato con la cicuta?",
+                r_corretta: "Socrate",
+                opzioni: ["Socrate", "Platone", "Aristotele", "Eraclito"]
+            },
+            {
+                domanda: "Chi furono i quattro imperatori della dinastia Giulio-Claudia?",
+                r_corretta: "Tiberio Caligola Claudio Nerone",
+                opzioni: ["Tiberio Caligola Brione Nerone", "Comodo Caligola Claudio Nerone", "Tito Domiziano Traiano Nerone", "Tiberio Caligola Claudio Nerone"]
+            },
+            {
+                domanda: "Nell'Antico Egitto che tecnica si utilizza per la sepoltura dei Faraoni?",
+                r_corretta: "mummificazione",
+                opzioni: ["cremazione", "in pasto ai cani", "purificazione", "mummificazione"]
+            },
+            {
+                domanda: "Chi ha scritto le 95 tesi che diedero inizio alla Riforma Protestante?",
+                r_corretta: "Martin Lutero",
+                opzioni: ["Immanuel Kant", "Thomas More", "Martin Lutero", "Giacomo Leopardi"]
+            },
+            {
+                domanda: "Quando l' Italia ha preso parte alla prima guerra mondiale a chi dichiara guerra?",
+                r_corretta: "Austria-Ungheria",
+                opzioni: ["Francia", "Austria-Ungheria", "Belgio", "Germania"]
+            },
+            {
+                domanda: "Come &egrave; stato ucciso Giulio Cesare?",
+                r_corretta: "pugnalato",
+                opzioni: ["picchiato a sangue", "ucciso da un infarto", "pugnalato", "&egrave; ancora vivo"]
+            }
+        ];
+
+        let quiz = {
+            conten: null,
+            domanda: null,
+            risposte: null,
+        }
+
+        let random = Math.floor(Math.random() * 13);
+
+        function gira() {
+            let card = document.getElementById("card");
+            card.style.transform = "rotatey(180deg)";
+            card.style.transition = "1s ease";
+            bottone = document.getElementById("bottone");
+            bottone.disabled = true;
+            let front = document.getElementById("front");
+            front.style.display = "none";
+            load();
+        }
+
+        function load() {
+            quiz.conten = document.getElementById("back");
+            quiz.domanda = document.createElement("div");
+            quiz.domanda.id = "dom";
+            quiz.conten.appendChild(quiz.domanda);
+            quiz.risposte = document.createElement("div");
+            quiz.risposte.id = "ris";
+            quiz.conten.appendChild(quiz.risposte);
+            inserisci();
+        }
+
+        function inserisci() {
+            quiz.domanda.innerHTML = storia[random].domanda;
+            quiz.risposte.innerHTML = "";
+            for (let i in storia[random].opzioni) {
+                let label = document.createElement("label");
+                label.innerHTML = storia[random].opzioni[i];
+                label.id = "quiz" + i;
+                label.addEventListener("click", () => {
+                    click(label.id, label);
+                });
+                quiz.risposte.appendChild(label);
+            }
+        }
+
+        function click(id, opzioni) {
+            let all = quiz.risposte.getElementsByTagName("label");
+            for (let label of all) {
+                label.style.pointerEvents = "none";
+            }
+            let scelta = document.getElementById(id).innerHTML;
+            let correct = (scelta == storia[random].r_corretta);
+            if (correct) {
+                console.log(correct);
+                opzioni.classList.add("correct");
+            } else {
+                opzioni.classList.add("wrong");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="card">
+        <div id="front">
+            <img src="carta.png" id="img">
+            <INPUT type="button" id="bottone" value="Rivela" onclick="gira();" />
+        </div>
+        <div id="back"></div>
+    </div>
+
+</body>
+
+</html>
