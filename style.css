@@ -12,6 +12,7 @@ body {
 
 #pedina {
     position: absolute;
+    visibility: hidden;
 }
 
 #cube .front {
