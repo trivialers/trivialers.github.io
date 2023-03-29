@@ -10,9 +10,13 @@ body {
     justify-content: center;
 }
 
-#pedina {
+.pedina {
     position: absolute;
     visibility: hidden;
+}
+
+.triangolini{
+    fill:rgb(228, 231, 231,0.4);
 }
 
 #cube .front {
