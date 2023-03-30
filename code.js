@@ -1,18 +1,10 @@
 function gameplay(){
 	let Pedine = [];
-	let skipMove = false;
+	let skipMove = true;
 	let again = false;
 	let giocatore = 0;
-	
-	function sleep(milliseconds) {
-	  const date = Date.now();
-	  let currentDate = null;
-	  do {
-		currentDate = Date.now();
-	  } while (currentDate - date < milliseconds);
-	}
 
-	function clickElementi(){	
+	function clickElementi(){
 		$(document).ready(function () {
 			$("#Ellipse").click(function () {
 				posizione("Polygon_2");
@@ -262,7 +254,7 @@ function gameplay(){
 		let y = 1800, x = 1080;
 		cube.onclick = function (){
 			let random = Math.ceil(Math.random()*6);
-			let X, Y, Z;
+			let X=0, Y=0, Z=0;
 			switch (random){
 				case 1:
 					X = 0;
@@ -293,8 +285,13 @@ function gameplay(){
 			y += 1080;
 			Y = Y + y;
 			X = X + x;
-			cube.style.transform = "rotateX(" + X + "deg) " + "rotateY(" + Y + "deg)"
+			cube.onclick="";
+			cube.style.transform = "rotateX(" + X + "deg) " + "rotateY(" + Y + "deg)";
+			setTimeout( function() { 
+				skipMove= false;
+			}, 5000);
 		}
+
 	}
 	
 	function posizione(id) {
@@ -303,26 +300,27 @@ function gameplay(){
 		let indirizzo = document.getElementById(id);
 		let posizione = indirizzo.getBoundingClientRect();
 		if (!skipMove){
-			pedina.style.top = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
-			pedina.style.left = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
-			//sleep(1000);
 			skipMove= true;
-			if (again){
-				turno();
-			}
-			else{
-				if (giocatore==(Pedine.length-1)){
-					giocatore = 0;
+			setTimeout( function() { 
+				pedina.style.top = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
+				pedina.style.left = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
+				if (again){
+					turno();
 				}
 				else{
-					giocatore += 1;
+					if (giocatore==(Pedine.length-1)){
+						giocatore = 0;
+					}
+					else{
+						giocatore += 1;
+					}
+					turno();
 				}
-				turno();
-			}
+			}, 1000);
 		}
 	}
 	
-	function inizzializza(){	
+	function inizzializza(){
 		let inizio = document.getElementById("pedina_esempio");
 		let dimensioni = inizio.getBoundingClientRect();
 		let esagono = document.getElementById("esagono");
@@ -379,8 +377,7 @@ function gameplay(){
 
 	function turno(){
 		console.log(giocatore);
-		//lanciaDado();
-		skipMove = false;
+		lanciaDado();
 	}
 	
 	inizzializza();
