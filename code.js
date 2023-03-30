@@ -335,7 +335,7 @@ function gameplay(){
 		
 		let numeroGiocatori = prompt("In quanti si vuole giocare? Da un minimo di 1 ad un massimo di 6 giocatori ");
 		while(numeroGiocatori<1 || numeroGiocatori>6){
-			let numeroGiocatori = prompt("In quanti si vuole giocare? Da un minimo di 1 ad un massimo di 6 giocatori ");
+			numeroGiocatori = prompt("In quanti si vuole giocare? Da un minimo di 1 ad un massimo di 6 giocatori ");
 		}
 		for (let i=numeroGiocatori; i>0; --i){
 			let text =
