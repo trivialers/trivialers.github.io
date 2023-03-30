@@ -332,9 +332,12 @@ function gameplay(){
 		let leftDefault = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
 		let colori = ["#EF7733","#4BA2F2","#BC4BF2","#53D060","#F93CAD","#EFD02D" ]
 
-
+		
 		let numeroGiocatori = prompt("In quanti si vuole giocare? Da un minimo di 1 ad un massimo di 6 giocatori ");
-		for (let i=0; i< numeroGiocatori; i++){
+		while(numeroGiocatori<1 || numeroGiocatori>6){
+			let numeroGiocatori = prompt("In quanti si vuole giocare? Da un minimo di 1 ad un massimo di 6 giocatori ");
+		}
+		for (let i=numeroGiocatori; i>0; i--){
 			let text =
 				` <div id="pedina_` + i + `" class="pedina">
 					<svg width="4vh" height="4vh" viewBox="52 40 390 435" fill="none">
