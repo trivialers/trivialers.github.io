@@ -333,7 +333,10 @@ function gameplay(){
 
 
 		let numeroGiocatori = prompt("In quanti si vuole giocare? Da un minimo di 1 ad un massimo di 6 giocatori ");
-		for (let i=0; i< numeroGiocatori; i++){
+		while (numeroGiocatori<0|| numeroGiocatori>6){
+			numeroGiocatori = prompt("Valore inserito non corretto. In quanti si vuole giocare? Da un minimo di 1 ad un massimo di 6 giocatori ");
+		}
+		for (let i=numeroGiocatori-1; i>=0; i--){
 			let text =
 				` <div id="pedina_` + i + `" class="pedina">
 					<svg width="4vh" height="4vh" viewBox="52 40 390 435" fill="none">
@@ -362,12 +365,15 @@ function gameplay(){
 				</div>`
 				;
 				
-				Pedine.push(`pedina_${i}`);
+				
 				document.getElementById("map").innerHTML +=text;
-				let elemento = document.getElementById(Pedine[i]);
-				elemento.style.top= topDefault;
-				elemento.style.left = leftDefault;
-				elemento.style.visibility= "visible";
+		}
+		for (let i=0; i<numeroGiocatori; i++){
+			Pedine.push(`pedina_${i}`);
+			let elemento = document.getElementById(Pedine[i]);
+			elemento.style.top= topDefault;
+			elemento.style.left = leftDefault;
+			elemento.style.visibility= "visible";
 		}
 	}
 
