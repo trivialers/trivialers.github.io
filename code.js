@@ -317,7 +317,6 @@ function gameplay(){
 				else{
 					giocatore += 1;
 				}
-				console.log("porca troia");
 				turno();
 			}
 		}
