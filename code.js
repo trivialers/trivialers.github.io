@@ -1,3 +1,4 @@
+let flip;
 function gameplay(){
 	let Pedine = [];
 	let skipMove = true;
@@ -667,7 +668,7 @@ function gameplay(){
             <div id="card">
                 <div id="davanti">
                     <img src="img/carta.png" id="pic">
-                    <INPUT type="button" id="bottone" value="Rivela" onclick="gira();" />
+                    <INPUT type="button" id="bottone" value="Rivela" onclick="flip();" />
                 </div>
                 <div id="dietro"></div>
             </div>`;
@@ -712,7 +713,9 @@ function gameplay(){
             dav.style.display = "none";
             load();
         }
-
+        
+        flip=gira;
+        
         function load() {
             quiz.conten = document.getElementById("dietro");
             quiz.domanda = document.createElement("div");
