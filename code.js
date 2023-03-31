@@ -756,6 +756,8 @@ function gameplay(){
             }
             setTimeout(function () {
                 if (again) {
+                    let element = document.getElementById("card");
+                    element.remove();
                     turno();
                 } else {
                     if (giocatore == (Pedine.length - 1)) {
