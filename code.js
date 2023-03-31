@@ -248,7 +248,9 @@ function gameplay(){
 			});
 		});
 	}
-    let y = 1800, x = 1080;
+    
+    let dadoy = 1800, dadox = 1080;
+    
 	function lanciaDado(){
 		let cube = document.getElementById("cube");
 		cube.onclick = function (){
@@ -280,10 +282,10 @@ function gameplay(){
 					Y = 180;
 					break;
 			}
-			x += 1800;
-			y += 1080;
-			Y = Y + y;
-			X = X + x;
+			dadox += 1800;
+			dadoy += 1080;
+			Y = Y + dadoy;
+			X = X + dadox;
             cube.onclick="";
 			cube.style.transform = "rotateX(" + X + "deg) " + "rotateY(" + Y + "deg)";
 			setTimeout(function() { 
@@ -303,21 +305,460 @@ function gameplay(){
 			setTimeout( function() { 
 				pedina.style.top = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
 				pedina.style.left = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
-				if (again){
-					turno();
-				}
-				else{
-					if (giocatore==(Pedine.length-1)){
-						giocatore = 0;
-					}
-					else{
-						giocatore += 1;
-					}
-					turno();
-				}
+                carta();
 			}, 1000);
 		}
 	}
+    
+    function carta() {
+        const storia = [
+            {
+                domanda: "Chi &egrave; il padre degli dei?",
+                r_corretta: "Zeus",
+                opzioni: ["Ares", "Ade", "Zeus", "Apollo"]
+            },
+            {
+                domanda: "Chi era il presidente americano nel 2018?",
+                r_corretta: "Donald Trump",
+                opzioni: ["Donald Duck", "Donald Trump", "Barack Obama", "George Bush"]
+            },
+            {
+                domanda: "Cosa conquist&ograve; Giulio Cesare?",
+                r_corretta: "Gallia",
+                opzioni: ["Sicilia", "Russia", "Australia", "Gallia"]
+            },
+            {
+                domanda: "Quando entro l'Italia nella prima guerra mondiale?",
+                r_corretta: "1915",
+                opzioni: ["1914", "1915", "1916", "1917"]
+            },
+            {
+                domanda: "Come si chiama questo simbolo £?",
+                r_corretta: "sterlina",
+                opzioni: ["euro", "sterlina", "dollaro", "yuan"]
+            },
+            {
+                domanda: "Per Illuminismo cosa si intende?",
+                r_corretta: "diffondere i lumi della ragione",
+                opzioni: ["illuminare la citt&agrave;", "risparmiare sulla luce", "abbassare il prezzo delle lampade", "diffondere i lumi della ragione"]
+            },
+            {
+                domanda: "Quale citt&agrave; venne divisa da un muro?",
+                r_corretta: "Berlino",
+                opzioni: ["New York", "Milano", "Berlino", "Nessuna &egrave; corretta"]
+            },
+            {
+                domanda: "Quale filosofo morì avvelenato con la cicuta?",
+                r_corretta: "Socrate",
+                opzioni: ["Socrate", "Platone", "Aristotele", "Eraclito"]
+            },
+            {
+                domanda: "Chi furono i quattro imperatori della dinastia Giulio-Claudia?",
+                r_corretta: "Tiberio Caligola Claudio Nerone",
+                opzioni: ["Tiberio Caligola Brione Nerone", "Comodo Caligola Claudio Nerone", "Tito Domiziano Traiano Nerone", "Tiberio Caligola Claudio Nerone"]
+            },
+            {
+                domanda: "Nell'Antico Egitto che tecnica si utilizza per la sepoltura dei Faraoni?",
+                r_corretta: "mummificazione",
+                opzioni: ["cremazione", "in pasto ai cani", "purificazione", "mummificazione"]
+            },
+            {
+                domanda: "Chi ha scritto le 95 tesi che diedero inizio alla Riforma Protestante?",
+                r_corretta: "Martin Lutero",
+                opzioni: ["Immanuel Kant", "Thomas More", "Martin Lutero", "Giacomo Leopardi"]
+            },
+            {
+                domanda: "Quando l' Italia ha preso parte alla prima guerra mondiale a chi dichiara guerra?",
+                r_corretta: "Austria-Ungheria",
+                opzioni: ["Francia", "Austria-Ungheria", "Belgio", "Germania"]
+            },
+            {
+                domanda: "Come &egrave; stato ucciso Giulio Cesare?",
+                r_corretta: "pugnalato",
+                opzioni: ["picchiato a sangue", "ucciso da un infarto", "pugnalato", "&egrave; ancora vivo"]
+            }
+        ];
+        
+        const geografia = [
+            {
+                domanda: "Dove si trova il Brasile?",
+                r_corretta: "Sud America",
+                opzioni: ["Centro America", "Sud America", "Australia", "Europa"]
+            }, {
+                domanda: "Cos'&egrave; la Sardegna?",
+                r_corretta: "isola",
+                opzioni: ["penisola", "arcipelago", "citt&agrave;", "isola"]
+            }, {
+                domanda: "Dove si trova la Piazza del Duomo?",
+                r_corretta: "Milano",
+                opzioni: ["Torino", "Milano", "Reggio Emilia", "Venezia"]
+            }, {
+                domanda: "Quali tra queste bandiere hanno il colore verde, bianco e rosso?",
+                r_corretta: "Messico e Ungheria",
+                opzioni: ["Olanda e Italia", "Irlanda e Russia", "Messico e Ungheria", "Svezia e Lettonia"]
+            }, {
+                domanda: "Quali tra le seguenti citt&agrave; non si trova negli Stati Uniti?",
+                r_corretta: "Dublino",
+                opzioni: ["Chicago", "Charleston", "Boston", "Dublino"]
+            }, {
+                domanda: "In quale provincia si trova Agropoli?",
+                r_corretta: "SA",
+                opzioni: ["SA", "PA", "CS", "TA"]
+            }, {
+                domanda: "Dove si trova Ginza?",
+                r_corretta: "Giappone",
+                opzioni: ["Giappone", "Libia", "Egitto", "Messico"]
+            }, {
+                domanda: "Qual &egrave; la lingua principale in Porto Rico?",
+                r_corretta: "spagnolo",
+                opzioni: ["inglese", "spagnolo", "francese", "italiano"]
+            }, {
+                domanda: "Dove si trova la stazione ferroviaria Tiburtina?",
+                r_corretta: "Roma",
+                opzioni: ["Genova", "Roma", "Venezia", "Milano"]
+            }, {
+                domanda: "Quali di questi stati non si trova nell'Unione Europea?",
+                r_corretta: "Islanda",
+                opzioni: ["Cipro", "Germania", "Malta", "Islanda"]
+            }, {
+                domanda: "Dov'&egrave; prodotta la Peroni?",
+                r_corretta: "Italia",
+                opzioni: ["Spagna", "Burundi", "Bangladesh", "Italia"]
+            }, {
+                domanda: "Dov'&egrave; lo Zimbabwe?",
+                r_corretta: "Sud Africa",
+                opzioni: ["Asia", "Nord Africa", "Sud America", "Sud Africa"]
+            }, {
+                domanda: "Qual'&egrave; il nome del canale che divide il Mar Mediterraneo dal Mar Rosso?",
+                r_corretta: "Suez",
+                opzioni: ["Corinto", "Panama", "Suez", "Nessuna risposta &egrave; corretta"]
+            }
+        ];
+
+        const sport_hobby = [
+            {
+                domanda: "Come si chiama il giocatore che gioca con una maglia diversa nel calcio?",
+                r_corretta: "portiere",
+                opzioni: ["portiere", "capitano", "playmaker", "rigorista"]
+            }, {
+                domanda: "Chi ha vinto il primo campionato di calcio italiano?",
+                r_corretta: "Genoa",
+                opzioni: ["Milan", "Inter", "Genoa", "Pro Vercelli"]
+            }, {
+                domanda: "In quale sport non si usa il pallone?",
+                r_corretta: "corsa ad ostacoli",
+                opzioni: ["basket", "pallavolo", "ginnastica ritmica", "corsa ad ostacoli"]
+            }, {
+                domanda: "Quale parole viene usata quando si buttano giù tutti i birilli nel Bowling?",
+                r_corretta: "strike",
+                opzioni: ["caput", "spare", "strike", "bingo"]
+            }, {
+                domanda: "Nel 2013 chi ha vinto il campionato italiano?",
+                r_corretta: "Juve",
+                opzioni: ["Roma", "Juve", "Sassuolo", "Napoli"]
+            }, {
+                domanda: "Quale squadra detiene il maggior numero di vittorie del campionato mondiali di calcio?",
+                r_corretta: "Brasile",
+                opzioni: ["Italia", "Argentina", "Qatar", "Brasile"]
+            }, {
+                domanda: "Quante volte &egrave; stato campione nazionale nei 200 metri piani Pietro Mennea?",
+                r_corretta: "11",
+                opzioni: ["5", "8", "11", "14"]
+            }, {
+                domanda: "Chi &egrave; il nuotatore italiano che ha vinto più medaglie a livello internazionale?",
+                r_corretta: "Gregorio Paltrinieri",
+                opzioni: ["Massimiliano Rosolino", "Gregorio Paltrinieri", "Domenico Fioravanti", "Luca Marin"]
+            }, {
+                domanda: "A quale disciplina sportiva appartiene la 'lanterna'?",
+                r_corretta: "Orienteering",
+                opzioni: ["Pesca sportiva", "Triathlon", "Orienteering", "Mountain bike"]
+            }, {
+                domanda: "Halterofilia significa?",
+                r_corretta: "sollevamento pesi",
+                opzioni: ["paura degli avversari", "disturbo nel processo di crescita", "alterazione dei livelli di ematocrito nel sangue", "sollevamento pesi"]
+            }, {
+                domanda: "Nel basket in quanti secondi occorre concludere la propria azione con tiro a canestro?",
+                r_corretta: "24",
+                opzioni: ["18", "20", "22", "24"]
+            }, {
+                domanda: "Quanti sono i giocatori di una squadra di pallamano?",
+                r_corretta: "7",
+                opzioni: ["5", "7", "9", "11"]
+            }, {
+                domanda: "Quali sono le due prove del biathlon?",
+                r_corretta: "Sci di fondo e tiro a segno",
+                opzioni: ["Corsa e nuoto", "Ciclismo e skeleton", "Discesa libera e slalom speciale", "Sci di fondo e tiro a segno"]
+            }
+        ];
+        
+        const art_letter = [
+            {
+                domanda: "Non &egrave; bello ci&ograve; che &egrave; bello…?",
+                r_corretta: "ma &egrave; bello ci&ograve; che piace",
+                opzioni: ["ma &egrave; bello ci&ograve; che non &egrave; bello", "perché nulla &egrave; bello", "ma &egrave; bello ci&ograve; che costa", "ma &egrave; bello ci&ograve; che piace"]
+            }, {
+                domanda: "Chi ha progettato Piazza San Pietro a Roma?",
+                r_corretta: "Bernini",
+                opzioni: ["Alighieri", "Leopardi", "Verga", "Bernini"]
+            }, {
+                domanda: "Chi &egrave; l'autore di Hamlet? ",
+                r_corretta: "William Shakespeare ",
+                opzioni: ["Jane Austen ", "Geoffrey Chaucer ", "William Shakespeare ", "Michael Jackson "]
+            }, {
+                domanda: "Chi era Gabriele D'Annunzio?",
+                r_corretta: "un poeta",
+                opzioni: ["un bodybuilder", "un miliardario", "un poeta", "un cuoco"]
+            }, {
+                domanda: "Alla fine dell'Ottocento &egrave; stato rubato dal museo Louvre,quale dipinto? ",
+                r_corretta: "La Gioconda",
+                opzioni: ["La Gioconda", "Incoronazione di Napoleone", "Il Cenacolo", "La festa del Rosario"]
+            }, {
+                domanda: "L'autore della poesia Marzo 1821?",
+                r_corretta : "Alessandro Manzoni",
+                opzioni: ["Giacomo Leopardi", "Ugo Foscolo", "Alessandro Manzoni", "Gabriele D'Annunzio"]
+            }, {
+                domanda: "L'autore del romanzo L'Esclusa ? ", 
+                r_corretta: "Luigi Pirandello", 
+                opzioni: ["Giovanni Verga", "Luigi Pirandello", "Italo Svevo", "Vittorio Alfieri"]
+            }, {
+                domanda: "La gloria di colui che tutto move per l'universo penetra, e risplende in una parte più e meno altrove...",
+                r_corretta : "&egrave; l'incipit del Paradiso di Dante", 
+                opzioni: ["&egrave; l'incipit del Paradiso di Dante", "&egrave; l'incipit del Purgatorio", "&egrave; una frase celebre di Virgilio", "&egrave; una frase celebre di Omero"]
+            }, {
+                domanda: "Qual &egrave; la citt&agrave; natale di Eugenio Montale?",
+                r_corretta: "Genova",
+                opzioni: ["Genova", "Milano", "Firenze", "Torino"]
+            }, {
+                domanda: "L'autore del romanzo Madame Bovary ? ", 
+                r_corretta: "Gustave Flaubert", 
+                opzioni: ["Paul Thomas Mann", "Gustave Flaubert", "Émile Édouard Charles Antoine Zola", "Guy de Maupassan"]
+            }, {
+                domanda: "Dove si trova la Torre degli Asinelli? ", 
+                r_corretta: "Bologna", 
+                opzioni: ["Roma", "Firenze", "Milano", "Bologna"]
+            }, {
+                domanda: "A quale corrente artistica fa parte Giorgio de Chirico? ", 
+                r_corretta: "Metafisico", 
+                opzioni: ["Metafisico", "Pop", "Minimalista", "Impressionismo"]
+            }, {
+                domanda: "Il nome Guernica del capolavoro di Pablo Picasso, deriva da... ? ", 
+                r_corretta: "una citt&agrave; bombardata", 
+                opzioni: ["un aereo in uso nella prima guerra mondiale", "una razza di cavallo", "una citt&agrave; bombardata", "il luogo dove stava il suo studio"]
+            } 
+        ]; 
+        
+        const intrattenimento = [
+            {
+                domanda: "Quale programma per bambini insegna a realizzare piccoli lavori con svariati materiali?", 
+                r_corretta: "Art Attack", 
+                opzioni: ["Art Attack", "Di tutto un p&ograve;", "Artisti in erba", "Riciclando"]
+            }, {
+                domanda: "Come si chiama il famoso personaggio di un videogame che ha per fratello Mario?", 
+                r_corretta: "Luigi", 
+                opzioni: ["Luigi", "Lucas", "Ligi", "Luis"]
+            }, {
+                domanda: "Geronimo Stilton, protagonista di vari libri, che animale &egrave;?", 
+                r_corretta: "topo", 
+                opzioni: ["gatto", "topo", "cane", "coniglio"]
+            }, {
+                domanda: "In quale cartone giapponese &egrave; coinvolto un bambino investigatore?", 
+                r_corretta: "Detective Conan", 
+                opzioni: ["Detective Conan", "Doraemon", "Naruto Shippuden", "Dragon ball"]
+            }, {
+                domanda: "Cosa usa per volare Mary Poppins?", 
+                r_corretta: "ombrello", 
+                opzioni: ["aereo", "tappeto", "ombrello", "scopa"]
+            }, {
+                domanda: "Chi &egrave; Woody Allen?", 
+                r_corretta: "regista", 
+                opzioni: ["regista", "cuoco", "politico", "pittore"]
+            }, {
+                domanda: "In Harry Potter cosa protegge il cane a tre teste?", 
+                r_corretta: "la pietra filosofale", 
+                opzioni: ["Harry Potter", "il mondo", "la pietra filosofale", "la bacchetta magica"]
+            }, {
+                domanda: "Qual &egrave; la protagonista del videogioco Life is strange?", 
+                r_corretta: "Max", 
+                opzioni: ["Max", "Alex", "Chloe", "Jessica"]
+            }, {
+                domanda: "Come si chiama la figlia di Marco ed Eva della serie TV i Cesaroni?", 
+                r_corretta: "Marta", 
+                opzioni: ["Marta", "Sara", "Martina", "Giulia"]
+            }, {
+                domanda: "Quale programma ha come logo un occhio?", 
+                r_corretta: "Grande Fratello", 
+                opzioni: ["X Factor", "Amici di Maria de Filippi", "The Voice", "Grande Fratello"]
+            }, {
+                domanda: "Quale di questi attori non ha interpretato un agente in Men in Black (1997)?", 
+                r_corretta: "Kevin Costner", 
+                opzioni: ["Will Smith", "Kevin Costner", "Rip Torn", "Tommy Lee Jones"]
+            }, {
+                domanda: "Come si chiamava Il Padrino?", 
+                r_corretta: "Vito Corleone", 
+                opzioni: ["Vito Corleone", "Sonny Corleone", "Michael Corleone", "Carlo Corleone"]
+            }, {
+                domanda: "Chi ha vinto sanremo 2023?", 
+                r_corretta: "Marco Mengoni", 
+                opzioni: ["Francesco Gabbani", "Marco Mengoni", "Ermal Meta", "Mahmood"]
+            }
+        ];
+        const nat_scienza = [
+            {
+                domanda: "Cosa manca al pane azzimo?", 
+                r_corretta: "sale", 
+                opzioni: ["lievito", "olio di palma", "mollica", "sale"]
+            }, {
+                domanda: "Quale organo serve per la formazione della bile?", 
+                r_corretta: "fegato", 
+                opzioni: ["pancreas", "fegato", "stomaco", "vescica"]
+            }, {
+                domanda: "Che cosa &egrave; C6H12O6?", 
+                r_corretta: "glucosio", 
+                opzioni: ["glicerina", "glucosio", "formaldeide", "acqua ossigenata"]
+            }, {
+                domanda: "Cos'&egrave; la pectina?", 
+                r_corretta: "polisaccaride", 
+                opzioni: ["gomma", "proteina", "polisaccaride", "colla"]
+            }, {
+                domanda: "Cosa mangiano prevalentemente i panda?", 
+                r_corretta: "bambù", 
+                opzioni: ["bambù", "insetti", "fieno", "piccoli mammiferi"]
+            }, {
+                domanda: "Qual &egrave; l'oggetto della Sociologia?", 
+                r_corretta: "studio scientifico della societ&agrave;", 
+                opzioni: ["le applicazioni", "il cinema", "i giochi di societ&agrave;", "studio scientifico della societ&agrave;"]
+            }, {
+                domanda: "Quale ortaggio viene decorato ad Halloween?", 
+                r_corretta: "zucca", 
+                opzioni: ["zucca", "pomodoro", "melanzana", "peperone"]
+            }, {
+                domanda: "Con quale materiale puoi costruire un origami?", 
+                r_corretta: "carta", 
+                opzioni: ["fiori", "carta", "plastica", "vetro"]
+            }, {
+                domanda: "Quanti elettroni formano un ottetto completo?", 
+                r_corretta: "8", 
+                opzioni: ["2", "4", "6", "8"]
+            }, {
+                domanda: "Quale pesce &egrave; famoso per nuotare controcorrente?", 
+                r_corretta: "salmone", 
+                opzioni: ["spigola", "luccio", "salmone", "sardina"]
+            }, {
+                domanda: "Quale virus ha provocato una pandemia all'inizio del 2020?", 
+                r_corretta: "COVID19", 
+                opzioni: ["TOVID19", "COVID19", "COVIT19", "VOCID19"]
+            }, {
+                domanda: "Qual &egrave; il composto chimico utilizzato nella piscina?", 
+                r_corretta: "cloro", 
+                opzioni: ["fluoro", "cloro", "bromo", "astato"]
+            }, {
+                domanda: "Il barracuda &egrave; un tipo di...?", 
+                r_corretta: "pesce", 
+                opzioni: ["pesce", "roditore", "uccello", "cane"]
+            }
+        ];
+        let t=`
+            <div id="card">
+                <div id="davanti">
+                    <img src="img/carta.png" id="pic">
+                    <INPUT type="button" id="bottone" value="Rivela" onclick="gira();" />
+                </div>
+                <div id="dietro"></div>
+            </div>`;
+        document.getElementById("map").innerHTML += t;
+        
+        let quiz = {
+            conten: null,
+            domanda: null,
+            risposte: null,
+        }
+
+        let random = Math.floor(Math.random() * 13);
+        const argomento = [];
+        switch () {
+            case 1:
+                argomento = storia;
+                break;
+            case 2:
+                argomento = geografia;
+                break;
+            case 3:
+                argomento = art_letter;
+                break;
+            case 4:
+                argomento = intrattenimento;
+                break;
+            case 5:
+                argomento = sport_hobby;
+                break;
+            case 6:
+                argomento = nat_scienza;
+                break;
+        }
+
+        function gira() {
+            let card = document.getElementById("card");
+            card.style.transform = "rotatey(180deg)";
+            card.style.transition = "1s ease";
+            bottone = document.getElementById("bottone");
+            bottone.disabled = true;
+            let dav = document.getElementById("davanti");
+            dav.style.display = "none";
+            load();
+        }
+
+        function load() {
+            quiz.conten = document.getElementById("dietro");
+            quiz.domanda = document.createElement("div");
+            quiz.domanda.id = "dom";
+            quiz.conten.appendChild(quiz.domanda);
+            quiz.risposte = document.createElement("div");
+            quiz.risposte.id = "ris";
+            quiz.conten.appendChild(quiz.risposte);
+            inserisci();
+        }
+
+        function inserisci() {
+            quiz.domanda.innerHTML = argomento[random].domanda;
+            quiz.risposte.innerHTML = "";
+            for (let i in argomento[random].opzioni) {
+                let label = document.createElement("label");
+                label.innerHTML = argomento[random].opzioni[i];
+                label.id = "quiz" + i;
+                label.addEventListener("click", () => {
+                    click(label.id, label);
+                });
+                quiz.risposte.appendChild(label);
+            }
+        }
+
+        function click(id, opzioni) {
+            let all = quiz.risposte.getElementsByTagName("label");
+            for (let label of all) {
+                label.style.pointerEvents = "none";
+            }
+            let scelta = document.getElementById(id).innerHTML;
+            let correct = (scelta == argomento[random].r_corretta);
+            if (correct) {
+                again = true;
+                opzioni.classList.add("correct");
+            } else {
+                opzioni.classList.add("wrong");
+            }
+            setTimeout(function () {
+                if (again) {
+                    turno();
+                } else {
+                    if (giocatore == (Pedine.length - 1)) {
+                        giocatore = 0;
+                    } else {
+                        giocatore += 1;
+                    }
+                    turno();
+                }
+            }, 1000);
+        }
+    }
 	
 	function inizzializza(){
 		let inizio = document.getElementById("pedina_esempio");

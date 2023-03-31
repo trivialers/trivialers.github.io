@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
     <style>
-        #img {
+        #pic {
             margin-top: 40px;
             width: 195px;
             height: 158px;
@@ -41,11 +41,11 @@
             box-shadow: 15px 15px #27678D;
         }
 
-        #front {
+        #davanti {
             backface-visibility: hidden;
         }
 
-        #back {
+        #dietro {
             backface-visibility: hidden;
             transform: rotateY(180deg);
         }
@@ -90,6 +90,14 @@
         }
 
     </style>
+
+</head>
+
+<body>
+    <div id="map">
+    </div>
+
+
     <script>
         const storia = [
             {
@@ -437,7 +445,16 @@
                 opzioni: ["pesce", "roditore", "uccello", "cane"]
             }
         ];
-
+            let t=`
+                <div id="card">
+                    <div id="davanti">
+                        <img src="img/carta.png" id="pic">
+                        <INPUT type="button" id="bottone" value="Rivela" onclick="gira();" />
+                    </div>
+                    <div id="dietro"></div>
+                </div>`;
+            document.getElementById("map").innerHTML += t;
+        
                 let quiz = {
                     conten: null,
                     domanda: null,
@@ -452,13 +469,12 @@
                     card.style.transition = "1s ease";
                     bottone = document.getElementById("bottone");
                     bottone.disabled = true;
-                    let front = document.getElementById("front");
-                    front.style.display = "none";
+                    let dav = document.getElementById("davanti");
+                    dav.style.display = "none";
                     load();
-                }
-
+                }       
                 function load() {
-                    quiz.conten = document.getElementById("back");
+                    quiz.conten = document.getElementById("dietro");
                     quiz.domanda = document.createElement("div");
                     quiz.domanda.id = "dom";
                     quiz.conten.appendChild(quiz.domanda);
@@ -498,17 +514,6 @@
                 }
 
     </script>
-</head>
-
-<body>
-    <div id="card">
-        <div id="front">
-            <img src="img/carta.png" id="img">
-            <INPUT type="button" id="bottone" value="Rivela" onclick="gira();" />
-        </div>
-        <div id="back"></div>
-    </div>
-
 </body>
 
 </html>
