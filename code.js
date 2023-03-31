@@ -763,6 +763,8 @@ function gameplay(){
                     } else {
                         giocatore += 1;
                     }
+                    let element = document.getElementById("card");
+                    element.remove();
                     turno();
                 }
             }, 1000);
