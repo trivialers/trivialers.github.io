@@ -207,7 +207,7 @@ body {
     border-top: 3px inset rgba(255, 255, 255, 0.5);
     box-sizing: border-box;
     color: #fff;
-    font-family: 'Tangerine', cursive;
+    font-family: 'Cookie', cursive;
     cursor: pointer;
     font-size: 20px;
     margin: 30px;
@@ -219,6 +219,7 @@ body {
 }
 
 #card {
+    position: absolute;
     transform-style: preserve-3d;
     padding: 10px;
     margin: 30px;
@@ -242,7 +243,7 @@ body {
 #dom {
     margin-top: 7px;
     margin-bottom: 30px;
-    font-family: 'Tangerine', cursive;
+    font-family: 'Cookie', cursive;
     padding: 3px;
     background: #27678D;
     color: #fff;
@@ -260,7 +261,7 @@ body {
 
 
 #ris label {
-    font-family: 'Tangerine', cursive;
+    font-family: 'Cookie', cursive;
     background: #27678D;
     border-radius: 10px;
     font-size: 20px;

@@ -680,7 +680,7 @@ function gameplay(){
         }
 
         let random = Math.floor(Math.random() * 13);
-        const argomento = [];
+        let argomento = [];
         switch (materia) {
             case "storia":
                 argomento = storia;
