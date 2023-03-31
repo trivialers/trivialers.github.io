@@ -291,12 +291,14 @@ function gameplay(){
 			cube.style.transform = "rotateX(" + X + "deg) " + "rotateY(" + Y + "deg)";
 			setTimeout(function() { 
 				skipMove= false;
+                console.log(skipMove)
 			}, 5000);
 		}
 
 	}
 	
 	function posizione(id, materia) {
+        console.log(skipMove)
 		let pedina = document.getElementById(Pedine[giocatore]);
 		let dimensioni = pedina.getBoundingClientRect();
 		let indirizzo = document.getElementById(id);
@@ -757,6 +759,7 @@ function gameplay(){
             setTimeout(function () {
                 let element = document.getElementById("card");
                 element.remove();
+                clickElementi();
                 if (again) {
                     turno();
                 } else {
