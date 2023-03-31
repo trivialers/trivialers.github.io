@@ -755,19 +755,17 @@ function gameplay(){
                 opzioni.classList.add("wrong");
             }
             setTimeout(function () {
+                let element = document.getElementById("card");
+                element.remove();
                 if (again) {
-                    let element = document.getElementById("card");
-                    element.remove();
                     turno();
                 } else {
                     if (giocatore == (Pedine.length - 1)) {
                         giocatore = 0;
                     } else {
                         giocatore += 1;
+                        turno();
                     }
-                    let element = document.getElementById("card");
-                    element.remove();
-                    turno();
                 }
             }, 1000);
         }
