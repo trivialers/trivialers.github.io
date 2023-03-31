@@ -7,244 +7,244 @@ function gameplay(){
 	function clickElementi(){
 		$(document).ready(function () {
 			$("#Ellipse").click(function () {
-				posizione("Polygon_2");
+				posizione("Polygon_2", "geografia");
 			});
 			$("#Polygon_2").click(function () {
-				posizione("Polygon_2");
+				posizione("Polygon_2", "geografia");
 			});
 			$("#Ellipse_2").click(function () {
-				posizione("Polygon_1");
+				posizione("Polygon_1", "sport_hobby");
 			});
 			$("#Polygon_1").click(function () {
-				posizione("Polygon_1");
+				posizione("Polygon_1", "sport_hobby");
 			});
 			$("#Ellipse_3").click(function () {
-				posizione("Polygon_6");
+				posizione("Polygon_6", "storia");
 			});
 			$("#Polygon_6").click(function () {
-				posizione("Polygon_6");
+				posizione("Polygon_6", "storia");
 			});
 			$("#Ellipse_4").click(function () {
-				posizione("Polygon_5");
+				posizione("Polygon_5", "intrattenimento");
 			});
 			$("#Polygon_5").click(function () {
-				posizione("Polygon_5");
+				posizione("Polygon_5", "intrattenimento");
 			});
 			$("#Ellipse_5").click(function () {
-				posizione("Polygon_4");
+				posizione("Polygon_4", "nat_scienza");
 			});
 			$("#Polygon_4").click(function () {
-				posizione("Polygon_4");
+				posizione("Polygon_4", "nat_scienza");
 			});
 			$("#Ellipse_6").click(function () {
-				posizione("Polygon_3");
+				posizione("Polygon_3", "art_letter");
 			});
 			$("#Polygon_3").click(function () {
-				posizione("Polygon_3");
+				posizione("Polygon_3", "art_letter");
 			});
 			$("#Ellipse_7").click(function () {
-				posizione("Ellipse_7");
+				posizione("Ellipse_7", "ritira");
 			});
 			$("#Ellipse_8").click(function () {
-				posizione("Ellipse_8");
+				posizione("Ellipse_8", "intrattenimento");
 			});
 			$("#Ellipse_9").click(function () {
-				posizione("Ellipse_9");
+				posizione("Ellipse_9", "intrattenimento");
 			});
 			$("#Ellipse_10").click(function () {
-				posizione("Ellipse_10");
+				posizione("Ellipse_10", "ritira");
 			});
 			$("#Ellipse_11").click(function () {
-				posizione("Ellipse_11");
+				posizione("Ellipse_11", "storia");
 			});
 			$("#Ellipse_12").click(function () {
-				posizione("Ellipse_12");
+				posizione("Ellipse_12", "art_letter");
 			});
 			$("#Ellipse_13").click(function () {
-				posizione("Ellipse_13");
+				posizione("Ellipse_13", "ritira");
 			});
 			$("#Ellipse_14").click(function () {
-				posizione("Ellipse_14");
+				posizione("Ellipse_14", "nat_scienza");
 			});
 			$("#Ellipse_15").click(function () {
-				posizione("Ellipse_15");
+				posizione("Ellipse_15", "nat_scienza");
 			});
 			$("#Ellipse_16").click(function () {
-				posizione("Ellipse_16");
+				posizione("Ellipse_16", "ritira");
 			});
 			$("#Ellipse_17").click(function () {
-				posizione("Ellipse_17");
+				posizione("Ellipse_17", "intrattenimento");
 			});
 			$("#Ellipse_18").click(function () {
-				posizione("Ellipse_18");
+				posizione("Ellipse_18", "geografia");
 			});
 			$("#Ellipse_19").click(function () {
-				posizione("Ellipse_19");
+				posizione("Ellipse_19", "ritira");
 			});
 			$("#Ellipse_20").click(function () {
-				posizione("Ellipse_20");
+				posizione("Ellipse_20", "art_letter");
 			});
 			$("#Ellipse_21").click(function () {
-				posizione("Ellipse_21");
+				posizione("Ellipse_21", "art_letter");
 			});
 			$("#Ellipse_22").click(function () {
-				posizione("Ellipse_22");
+				posizione("Ellipse_22", "ritira");
 			});
 			$("#Ellipse_23").click(function () {
-				posizione("Ellipse_23");
+				posizione("Ellipse_23", "nat_scienza");
 			});
 			$("#Ellipse_24").click(function () {
-				posizione("Ellipse_24");
+				posizione("Ellipse_24", "sport_hobby");
 			});
 			$("#Ellipse_25").click(function () {
-				posizione("Ellipse_25");
+				posizione("Ellipse_25", "ritira");
 			});
 			$("#Ellipse_26").click(function () {
-				posizione("Ellipse_26");
+				posizione("Ellipse_26", "geografia");
 			});
 			$("#Ellipse_27").click(function () {
-				posizione("Ellipse_27");
+				posizione("Ellipse_27", "geografia");
 			});
 			$("#Ellipse_28").click(function () {
-				posizione("Ellipse_28");
+				posizione("Ellipse_28", "ritira");
 			});
 			$("#Ellipse_29").click(function () {
-				posizione("Ellipse_29");
+				posizione("Ellipse_29", "art_letter");
 			});
 			$("#Ellipse_30").click(function () {
-				posizione("Ellipse_30");
+				posizione("Ellipse_30", "storia");
 			});
 			$("#Ellipse_31").click(function () {
-				posizione("Ellipse_31");
+				posizione("Ellipse_31", "ritira");
 			});
 			$("#Ellipse_32").click(function () {
-				posizione("Ellipse_32");
+				posizione("Ellipse_32", "sport_hobby");
 			});
 			$("#Ellipse_33").click(function () {
-				posizione("Ellipse_33");
+				posizione("Ellipse_33", "sport_hobby");
 			});
 			$("#Ellipse_34").click(function () {
-				posizione("Ellipse_34");
+				posizione("Ellipse_34", "ritira");
 			});
 			$("#Ellipse_35").click(function () {
-				posizione("Ellipse_35");
+				posizione("Ellipse_35", "geografia");
 			});
 			$("#Ellipse_36").click(function () {
-				posizione("Ellipse_36");
+				posizione("Ellipse_36", "intrattenimento");
 			});
 			$("#Ellipse_37").click(function () {
-				posizione("Ellipse_37");
+				posizione("Ellipse_37", "ritira");
 			});
 			$("#Ellipse_38").click(function () {
-				posizione("Ellipse_38");
+				posizione("Ellipse_38", "storia");
 			});
 			$("#Ellipse_39").click(function () {
-				posizione("Ellipse_39");
+				posizione("Ellipse_39", "storia");
 			});
 			$("#Ellipse_40").click(function () {
-				posizione("Ellipse_40");
+				posizione("Ellipse_40", "ritira");
 			});
 			$("#Ellipse_41").click(function () {
-				posizione("Ellipse_41");
+				posizione("Ellipse_41", "sport_hobby");
 			});
 			$("#Ellipse_42").click(function () {
-				posizione("Ellipse_42");
+				posizione("Ellipse_42", "nat_scienza");
 			});
 			$("#esagono").click(function () {
-				posizione("esagono");
+				posizione("esagono", "ritira");
 			});
 			$("#centro").click(function () {
-				posizione("esagono");
+				posizione("esagono", "ritira");
 			});
 			$("#Rectangle_1_1").click(function () {
-				posizione("Rectangle_1_1");
+				posizione("Rectangle_1_1", "geografia");
 			});
 			$("#Rectangle_2_1").click(function () {
-				posizione("Rectangle_2_1");
+				posizione("Rectangle_2_1", "storia");
 			});
 			$("#Rectangle_3_1").click(function () {
-				posizione("Rectangle_3_1");
+				posizione("Rectangle_3_1", "intrattenimento");
 			});
 			$("#Rectangle_4_1").click(function () {
-				posizione("Rectangle_4_1");
+				posizione("Rectangle_4_1", "art_letter");
 			});
 			$("#Rectangle_5_1").click(function () {
-				posizione("Rectangle_5_1");
+				posizione("Rectangle_5_1", "nat_scienza");
 			});
 			$("#Rectangle_1_2").click(function () {
-				posizione("Rectangle_1_2");
+				posizione("Rectangle_1_2", "sport_hobby");
 			});
 			$("#Rectangle_2_2").click(function () {
-				posizione("Rectangle_2_2");
+				posizione("Rectangle_2_2", "storia");
 			});
 			$("#Rectangle_3_2").click(function () {
-				posizione("Rectangle_3_2");
+				posizione("Rectangle_3_2", "geografia");
 			});
 			$("#Rectangle_4_2").click(function () {
-				posizione("Rectangle_4_2");
+				posizione("Rectangle_4_2", "art_letter");
 			});
 			$("#Rectangle_5_2").click(function () {
-				posizione("Rectangle_5_2");
+				posizione("Rectangle_5_2", "intrattenimento");
 			});
 			$("#Rectangle_1_3").click(function () {
-				posizione("Rectangle_1_3");
+				posizione("Rectangle_1_3", "art_letter");
 			});
 			$("#Rectangle_2_3").click(function () {
-				posizione("Rectangle_2_3");
+				posizione("Rectangle_2_3", "sport_hobby");
 			});
 			$("#Rectangle_3_3").click(function () {
-				posizione("Rectangle_3_3");
+				posizione("Rectangle_3_3", "storia");
 			});
 			$("#Rectangle_4_3").click(function () {
-				posizione("Rectangle_4_3");
+				posizione("Rectangle_4_3", "nat_scienza");
 			});
 			$("#Rectangle_5_3").click(function () {
-				posizione("Rectangle_5_3");
+				posizione("Rectangle_5_3", "intrattenimento");
 			});
 			$("#Rectangle_1_4").click(function () {
-				posizione("Rectangle_1_4");
+				posizione("Rectangle_1_4", "geografia");
 			});
 			$("#Rectangle_2_4").click(function () {
-				posizione("Rectangle_2_4");
+				posizione("Rectangle_2_4", "sport_hobby");
 			});
 			$("#Rectangle_3_4").click(function () {
-				posizione("Rectangle_3_4");
+				posizione("Rectangle_3_4", "art_letter");
 			});
 			$("#Rectangle_4_4").click(function () {
-				posizione("Rectangle_4_4");
+				posizione("Rectangle_4_4", "nat_scienza");
 			});
 			$("#Rectangle_5_4").click(function () {
-				posizione("Rectangle_5_4");
+				posizione("Rectangle_5_4", "storia");
 			});
 			$("#Rectangle_1_5").click(function () {
-				posizione("Rectangle_1_5");
+				posizione("Rectangle_1_5", "sport_hobby");
 			});
 			$("#Rectangle_2_5").click(function () {
-				posizione("Rectangle_2_5");
+				posizione("Rectangle_2_5", "intrattenimento");
 			});
 			$("#Rectangle_3_5").click(function () {
-				posizione("Rectangle_3_5");
+				posizione("Rectangle_3_5", "nat_scienza");
 			});
 			$("#Rectangle_4_5").click(function () {
-				posizione("Rectangle_4_5");
+				posizione("Rectangle_4_5", "geografia");
 			});
 			$("#Rectangle_5_5").click(function () {
-				posizione("Rectangle_5_5");
+				posizione("Rectangle_5_5", "art_letter");
 			});
 			$("#Rectangle_1_6").click(function () {
-				posizione("Rectangle_1_6");
+				posizione("Rectangle_1_6", "storia");
 			});
 			$("#Rectangle_2_6").click(function () {
-				posizione("Rectangle_2_6");
+				posizione("Rectangle_2_6", "intrattenimento");
 			});
 			$("#Rectangle_3_6").click(function () {
-				posizione("Rectangle_3_6");
+				posizione("Rectangle_3_6", "sport_hobby");
 			});
 			$("#Rectangle_4_6").click(function () {
-				posizione("Rectangle_4_6");
+				posizione("Rectangle_4_6", "geografia");
 			});
 			$("#Rectangle_5_6").click(function () {
-				posizione("Rectangle_5_6");
+				posizione("Rectangle_5_6", "nat_scienza");
 			});
 		});
 	}
@@ -295,7 +295,7 @@ function gameplay(){
 
 	}
 	
-	function posizione(id) {
+	function posizione(id, materia) {
 		let pedina = document.getElementById(Pedine[giocatore]);
 		let dimensioni = pedina.getBoundingClientRect();
 		let indirizzo = document.getElementById(id);
@@ -305,12 +305,18 @@ function gameplay(){
 			setTimeout( function() { 
 				pedina.style.top = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
 				pedina.style.left = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
-                carta();
+				setTimeout( function() {
+					if (materia=="ritira"){
+						turno();
+					}else{
+						carta(materia);
+					}
+				}, 300);
 			}, 1000);
 		}
 	}
     
-    function carta() {
+    function carta(materia) {
         const storia = [
             {
                 domanda: "Chi &egrave; il padre degli dei?",
@@ -675,23 +681,23 @@ function gameplay(){
 
         let random = Math.floor(Math.random() * 13);
         const argomento = [];
-        switch () {
-            case 1:
+        switch (materia) {
+            case "storia":
                 argomento = storia;
                 break;
-            case 2:
+            case "geografia":
                 argomento = geografia;
                 break;
-            case 3:
+            case "art_letter":
                 argomento = art_letter;
                 break;
-            case 4:
+            case "intrattenimento":
                 argomento = intrattenimento;
                 break;
-            case 5:
+            case "sport_hobby":
                 argomento = sport_hobby;
                 break;
-            case 6:
+            case "nat_scienza":
                 argomento = nat_scienza;
                 break;
         }
