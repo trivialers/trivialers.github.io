@@ -248,10 +248,9 @@ function gameplay(){
 			});
 		});
 	}
-
+    let y = 1800, x = 1080;
 	function lanciaDado(){
 		let cube = document.getElementById("cube");
-		let y = 1800, x = 1080;
 		cube.onclick = function (){
 			let random = Math.ceil(Math.random()*6);
 			let X=0, Y=0, Z=0;
@@ -285,9 +284,9 @@ function gameplay(){
 			y += 1080;
 			Y = Y + y;
 			X = X + x;
-			cube.onclick="";
+            cube.onclick="";
 			cube.style.transform = "rotateX(" + X + "deg) " + "rotateY(" + Y + "deg)";
-			setTimeout( function() { 
+			setTimeout(function() { 
 				skipMove= false;
 			}, 5000);
 		}
