@@ -761,6 +761,7 @@ function gameplay(){
                 element.remove();
                 clickElementi();
                 if (again) {
+		    		again = false;	
                     turno();
                 } else {
                     if (giocatore == (Pedine.length - 1)) {
