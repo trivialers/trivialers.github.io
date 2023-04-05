@@ -768,8 +768,8 @@ function gameplay(){
                         giocatore = 0;
                     } else {
                         giocatore += 1;
-                        turno();
                     }
+					turno();
                 }
             }, 1000);
         }
