@@ -15,10 +15,6 @@ body {
     visibility: hidden;
 }
 
-.triangolini{
-    fill:rgb(228, 231, 231,0.4);
-}
-
 #cube .front {
     transform: translateZ(100px);
 }
