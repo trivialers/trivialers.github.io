@@ -8,40 +8,40 @@ function gameplay(){
 	function clickElementi(){
 		$(document).ready(function () {
 			$("#Ellipse").click(function () {
-				posizione("Polygon_2", "geografia");
+				posizione("Polygon_2", "geografia", true);
 			});
 			$("#Polygon_2").click(function () {
-				posizione("Polygon_2", "geografia");
+				posizione("Polygon_2", "geografia", true);
 			});
 			$("#Ellipse_2").click(function () {
-				posizione("Polygon_1", "sport_hobby");
+				posizione("Polygon_1", "sport_hobby", true);
 			});
 			$("#Polygon_1").click(function () {
-				posizione("Polygon_1", "sport_hobby");
+				posizione("Polygon_1", "sport_hobby", true);
 			});
 			$("#Ellipse_3").click(function () {
-				posizione("Polygon_6", "storia");
+				posizione("Polygon_6", "storia", true);
 			});
 			$("#Polygon_6").click(function () {
-				posizione("Polygon_6", "storia");
+				posizione("Polygon_6", "storia", true);
 			});
 			$("#Ellipse_4").click(function () {
-				posizione("Polygon_5", "intrattenimento");
+				posizione("Polygon_5", "intrattenimento", true);
 			});
 			$("#Polygon_5").click(function () {
-				posizione("Polygon_5", "intrattenimento");
+				posizione("Polygon_5", "intrattenimento", true);
 			});
 			$("#Ellipse_5").click(function () {
-				posizione("Polygon_4", "nat_scienza");
+				posizione("Polygon_4", "nat_scienza", true);
 			});
 			$("#Polygon_4").click(function () {
-				posizione("Polygon_4", "nat_scienza");
+				posizione("Polygon_4", "nat_scienza", true);
 			});
 			$("#Ellipse_6").click(function () {
-				posizione("Polygon_3", "art_letter");
+				posizione("Polygon_3", "art_letter", true);
 			});
 			$("#Polygon_3").click(function () {
-				posizione("Polygon_3", "art_letter");
+				posizione("Polygon_3", "art_letter", true);
 			});
 			$("#Ellipse_7").click(function () {
 				posizione("Ellipse_7", "ritira");
@@ -297,7 +297,7 @@ function gameplay(){
 
 	}
 	
-	function posizione(id, materia) {
+	function posizione(id, materia, triangolo = false) {
         console.log(skipMove)
 		let pedina = document.getElementById(Pedine[giocatore]);
 		let dimensioni = pedina.getBoundingClientRect();
@@ -312,14 +312,14 @@ function gameplay(){
 					if (materia=="ritira"){
 						turno();
 					}else{
-						carta(materia);
+						carta(materia, triangolo);
 					}
 				}, 300);
 			}, 1000);
 		}
 	}
     
-    function carta(materia) {
+    function carta(materia, triangolo) {
         const storia = [
             {
                 domanda: "Chi &egrave; il padre degli dei?",
@@ -684,24 +684,31 @@ function gameplay(){
 
         let random = Math.floor(Math.random() * 13);
         let argomento = [];
+        let colore_triangolino;
         switch (materia) {
             case "storia":
                 argomento = storia;
+                colore_triangolino = "#EFD02D";
                 break;
             case "geografia":
                 argomento = geografia;
+                colore_triangolino = "#4BA2F2";
                 break;
             case "art_letter":
                 argomento = art_letter;
+                colore_triangolino = "#BC4BF2";
                 break;
             case "intrattenimento":
                 argomento = intrattenimento;
+                colore_triangolino = "#F93CAD";
                 break;
             case "sport_hobby":
                 argomento = sport_hobby;
+                colore_triangolino = "#EF7733";
                 break;
             case "nat_scienza":
                 argomento = nat_scienza;
+                colore_triangolino = "#53D060";
                 break;
         }
 
@@ -762,6 +769,18 @@ function gameplay(){
                 clickElementi();
                 if (again) {
 		    		again = false;	
+		    		if (triangolo){
+		    		    for(let i=1; i<=6; i++){
+		    		        id_triangolino = document.getElementById("Triangolino_"+i+"_"+ giocatore );
+		    		        if (id_triangolino.fill==colore_triangolino){
+		    		            break;
+		    		        }
+		    		        if (id_triangolino.fill==rgb(228, 231, 231,0.4)){
+		    		            id_triangolino.fill=colore_triangolino;
+		    		            break;
+		    		        }
+		    		    }
+		    		}
                     turno();
                 } else {
                     if (giocatore == (Pedine.length - 1)) {
