@@ -688,27 +688,27 @@ function gameplay(){
         switch (materia) {
             case "storia":
                 argomento = storia;
-                colore_triangolino = "#EFD02D";
+                colore_triangolino = "rgb(239, 208, 45)";
                 break;
             case "geografia":
                 argomento = geografia;
-                colore_triangolino = "#4BA2F2";
+                colore_triangolino = "rgb(75, 162, 242)";
                 break;
             case "art_letter":
                 argomento = art_letter;
-                colore_triangolino = "#BC4BF2";
+                colore_triangolino = "rgb(188, 75, 242)";
                 break;
             case "intrattenimento":
                 argomento = intrattenimento;
-                colore_triangolino = "#F93CAD";
+                colore_triangolino = "rgb(249, 60, 173)";
                 break;
             case "sport_hobby":
                 argomento = sport_hobby;
-                colore_triangolino = "#EF7733";
+                colore_triangolino = "rgb(239, 119, 51)";
                 break;
             case "nat_scienza":
                 argomento = nat_scienza;
-                colore_triangolino = "#53D060";
+                colore_triangolino = "rgb(83, 208, 96)";
                 break;
         }
 
@@ -766,17 +766,16 @@ function gameplay(){
             setTimeout(function () {
                 let element = document.getElementById("card");
                 element.remove();
-                clickElementi();
                 if (again) {
 		    		again = false;	
 		    		if (triangolo){
 		    		    for(let i=1; i<=6; i++){
 		    		        id_triangolino = document.getElementById("Triangolino_"+i+"_"+ giocatore );
-		    		        if (id_triangolino.fill==colore_triangolino){
+		    		        if (id_triangolino.style.fill===colore_triangolino){
 		    		            break;
 		    		        }
-		    		        if (id_triangolino.fill==rgb(228, 231, 231,0.4)){
-		    		            id_triangolino.fill=colore_triangolino;
+		    		        if (id_triangolino.style.fill==="rgba(228, 231, 231, 0.4)"){
+                                id_triangolino.style.fill=colore_triangolino;
 		    		            break;
 		    		        }
 		    		    }
@@ -801,7 +800,7 @@ function gameplay(){
 		let posizione = esagono.getBoundingClientRect();
 		let topDefault = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
 		let leftDefault = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
-		let colori = ["#EF7733","#4BA2F2","#BC4BF2","#53D060","#F93CAD","#EFD02D" ]
+		let colori = ["rgb(239, 119, 51)","rgb(75, 162, 242)","rgb(188, 75, 242)","rgb(83, 208, 96)","rgb(249, 60, 173)","rgb(239, 208, 45)" ]
 
 
 		let numeroGiocatori = prompt("In quanti si vuole giocare? Da un minimo di 1 ad un massimo di 6 giocatori ");
@@ -814,23 +813,23 @@ function gameplay(){
 					<svg width="4vh" height="4vh" viewBox="52 40 390 435" fill="none">
 						<g id="Radial 1">
 							<circle id="contornoPedina" fill="`+ colori[i] +`" cx="246" cy="257" r="215" fill="#B31818"/>
-							<g id="Segment 5"> 
-								<path id="Triangolino_1_`+ i +`" class="triangolini" d="M155.103 79.2909C183.332 64.8241 214.597 57.2793 246.318 57.2793C278.038 57.2793 309.303 64.8241 337.532 79.2909L255.439 239.48C252.616 238.034 249.49 237.279 246.318 237.279C243.145 237.279 240.019 238.034 237.196 239.48L155.103 79.2909Z" fill="#EFD02D"/>
-							</g>
 							<g id="Segment 1">
-								<path id="Triangolino_2_`+ i +`" class="triangolini" d="M446.067 267.279C444.481 298.96 435.383 329.809 419.523 357.279C403.662 384.75 381.496 408.054 354.853 425.268L257.171 274.078C259.835 272.357 262.052 270.026 263.638 267.279C265.224 264.532 266.134 261.447 266.292 258.279L446.067 267.279Z" fill="#F93CAD"/>
+								<path id="Triangolino_1_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M354.853 89.2909C381.496 106.505 403.662 129.809 419.523 157.279C435.383 184.75 444.481 215.599 446.067 247.279L266.292 256.279C266.134 253.111 265.224 250.026 263.638 247.279C262.052 244.532 259.835 242.202 257.171 240.48L354.853 89.2909Z" />                    
 							</g>
 							<g id="Segment 2">
-								<path id="Triangolino_3_`+ i +`" class="triangolini" d="M337.532 435.268C309.303 449.734 278.038 457.279 246.318 457.279C214.597 457.279 183.332 449.734 155.103 435.268L237.196 275.078C240.019 276.525 243.145 277.279 246.318 277.279C249.49 277.279 252.616 276.525 255.439 275.078L337.532 435.268Z" fill="#EF7733"/>
+								<path id="Triangolino_2_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M446.067 267.279C444.481 298.96 435.383 329.809 419.523 357.279C403.662 384.75 381.496 408.054 354.853 425.268L257.171 274.078C259.835 272.357 262.052 270.026 263.638 267.279C265.224 264.532 266.134 261.447 266.292 258.279L446.067 267.279Z" />
 							</g>
 							<g id="Segment 3">
-								<path id="Triangolino_4_`+ i +`" class="triangolini" d="M137.782 425.268C111.139 408.054 88.9725 384.75 73.1124 357.279C57.2523 329.809 48.1537 298.96 46.5677 267.279L226.343 258.279C226.501 261.447 227.411 264.532 228.997 267.279C230.583 270.026 232.8 272.357 235.464 274.078L137.782 425.268Z" fill="#3C88F9"/>
+								<path id="Triangolino_3_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M337.532 435.268C309.303 449.734 278.038 457.279 246.318 457.279C214.597 457.279 183.332 449.734 155.103 435.268L237.196 275.078C240.019 276.525 243.145 277.279 246.318 277.279C249.49 277.279 252.616 276.525 255.439 275.078L337.532 435.268Z" />
 							</g>
 							<g id="Segment 4">
-								<path id="Triangolino_5_`+ i +`" class="triangolini" d="M46.5677 247.279C48.1537 215.599 57.2523 184.75 73.1124 157.279C88.9725 129.809 111.139 106.505 137.782 89.2909L235.464 240.48C232.8 242.202 230.583 244.532 228.997 247.279C227.411 250.026 226.501 253.111 226.343 256.279L46.5677 247.279Z" fill="#53D060"/>
+								<path id="Triangolino_4_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M137.782 425.268C111.139 408.054 88.9725 384.75 73.1124 357.279C57.2523 329.809 48.1537 298.96 46.5677 267.279L226.343 258.279C226.501 261.447 227.411 264.532 228.997 267.279C230.583 270.026 232.8 272.357 235.464 274.078L137.782 425.268Z" />
 							</g>
-							<g id="Segment 6">
-								<path id="Triangolino_6_`+ i +`" class="triangolini" d="M354.853 89.2909C381.496 106.505 403.662 129.809 419.523 157.279C435.383 184.75 444.481 215.599 446.067 247.279L266.292 256.279C266.134 253.111 265.224 250.026 263.638 247.279C262.052 244.532 259.835 242.202 257.171 240.48L354.853 89.2909Z" fill="#BC4BF2"/>                    
+							<g id="Segment 5">
+								<path id="Triangolino_5_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M46.5677 247.279C48.1537 215.599 57.2523 184.75 73.1124 157.279C88.9725 129.809 111.139 106.505 137.782 89.2909L235.464 240.48C232.8 242.202 230.583 244.532 228.997 247.279C227.411 250.026 226.501 253.111 226.343 256.279L46.5677 247.279Z" />
+							</g>
+                            <g id="Segment 6"> 
+								<path id="Triangolino_6_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M155.103 79.2909C183.332 64.8241 214.597 57.2793 246.318 57.2793C278.038 57.2793 309.303 64.8241 337.532 79.2909L255.439 239.48C252.616 238.034 249.49 237.279 246.318 237.279C243.145 237.279 240.019 238.034 237.196 239.48L155.103 79.2909Z" />
 							</g>
 						</g>
 					</svg>
@@ -851,11 +850,11 @@ function gameplay(){
 
 	function turno(){
 		console.log(giocatore);
+        clickElementi();
 		lanciaDado();
 	}
 	
 	inizzializza();
-	clickElementi();
 	console.log(Pedine);
 	turno();
 }
