@@ -1,4 +1,4 @@
-let flip;
+let flip, nuovoGioco;
 function gameplay(){
 	let Pedine = [];
 	let skipMove = true;
@@ -342,7 +342,7 @@ function gameplay(){
                 opzioni: ["1914", "1915", "1916", "1917"]
             },
             {
-                domanda: "Come si chiama questo simbolo £?",
+                domanda: "Come si chiama questo simbolo &#8356;?",
                 r_corretta: "sterlina",
                 opzioni: ["euro", "sterlina", "dollaro", "yuan"]
             },
@@ -357,7 +357,7 @@ function gameplay(){
                 opzioni: ["New York", "Milano", "Berlino", "Nessuna &egrave; corretta"]
             },
             {
-                domanda: "Quale filosofo morì avvelenato con la cicuta?",
+                domanda: "Quale filosofo mor&igrave; avvelenato con la cicuta?",
                 r_corretta: "Socrate",
                 opzioni: ["Socrate", "Platone", "Aristotele", "Eraclito"]
             },
@@ -458,7 +458,7 @@ function gameplay(){
                 r_corretta: "corsa ad ostacoli",
                 opzioni: ["basket", "pallavolo", "ginnastica ritmica", "corsa ad ostacoli"]
             }, {
-                domanda: "Quale parole viene usata quando si buttano giù tutti i birilli nel Bowling?",
+                domanda: "Quale parole viene usata quando si buttano gi&ugrave; tutti i birilli nel Bowling?",
                 r_corretta: "strike",
                 opzioni: ["caput", "spare", "strike", "bingo"]
             }, {
@@ -474,7 +474,7 @@ function gameplay(){
                 r_corretta: "11",
                 opzioni: ["5", "8", "11", "14"]
             }, {
-                domanda: "Chi &egrave; il nuotatore italiano che ha vinto più medaglie a livello internazionale?",
+                domanda: "Chi &egrave; il nuotatore italiano che ha vinto pi&ugrave; medaglie a livello internazionale?",
                 r_corretta: "Gregorio Paltrinieri",
                 opzioni: ["Massimiliano Rosolino", "Gregorio Paltrinieri", "Domenico Fioravanti", "Luca Marin"]
             }, {
@@ -518,7 +518,7 @@ function gameplay(){
                 r_corretta: "un poeta",
                 opzioni: ["un bodybuilder", "un miliardario", "un poeta", "un cuoco"]
             }, {
-                domanda: "Alla fine dell'Ottocento &egrave; stato rubato dal museo Louvre,quale dipinto? ",
+                domanda: "Alla fine dell'Ottocento &egrave; stato rubato dal museo Louvre, quale dipinto? ",
                 r_corretta: "La Gioconda",
                 opzioni: ["La Gioconda", "Incoronazione di Napoleone", "Il Cenacolo", "La festa del Rosario"]
             }, {
@@ -530,7 +530,7 @@ function gameplay(){
                 r_corretta: "Luigi Pirandello", 
                 opzioni: ["Giovanni Verga", "Luigi Pirandello", "Italo Svevo", "Vittorio Alfieri"]
             }, {
-                domanda: "La gloria di colui che tutto move per l'universo penetra, e risplende in una parte più e meno altrove...",
+                domanda: "La gloria di colui che tutto move per l'universo penetra, e risplende in una parte pi&ugrave; e meno altrove...",
                 r_corretta : "&egrave; l'incipit del Paradiso di Dante", 
                 opzioni: ["&egrave; l'incipit del Paradiso di Dante", "&egrave; l'incipit del Purgatorio", "&egrave; una frase celebre di Virgilio", "&egrave; una frase celebre di Omero"]
             }, {
@@ -630,8 +630,8 @@ function gameplay(){
                 opzioni: ["gomma", "proteina", "polisaccaride", "colla"]
             }, {
                 domanda: "Cosa mangiano prevalentemente i panda?", 
-                r_corretta: "bambù", 
-                opzioni: ["bambù", "insetti", "fieno", "piccoli mammiferi"]
+                r_corretta: "bamb&ugrave;", 
+                opzioni: ["bamb&ugrave;", "insetti", "fieno", "piccoli mammiferi"]
             }, {
                 domanda: "Qual &egrave; l'oggetto della Sociologia?", 
                 r_corretta: "studio scientifico della societ&agrave;", 
@@ -776,6 +776,11 @@ function gameplay(){
 		    		        }
 		    		        if (id_triangolino.style.fill==="rgba(228, 231, 231, 0.4)"){
                                 id_triangolino.style.fill=colore_triangolino;
+                                if(i == 6){
+                                setTimeout(function(){
+                                    win(giocatore);
+                                }, 2000);
+                            }
 		    		            break;
 		    		        }
 		    		    }
@@ -792,6 +797,24 @@ function gameplay(){
             }, 1000);
         }
     }
+    
+    function win(giocatore){
+        let t=`
+            <div id="vincita">
+                <img src="img/scritta.png" id="congra">
+                <img src="img/lista.png" id="lista">
+                <h3>Giocatore ` + (giocatore+1) + ` ha vinto la partita!</h3>
+                <input type="button" id="btn" value="Gioca un'altra partita" onclick="nuovoGioco();"/>
+            </div>`;
+        document.body.innerHTML += t;
+    }
+    
+    function partita(){
+        let element = document.getElementById("vincita");
+        element.remove();
+        gameplay();
+    }
+    nuovoGioco=partita;
 	
 	function inizzializza(){
 		let inizio = document.getElementById("pedina_esempio");

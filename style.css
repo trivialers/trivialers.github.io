@@ -1,7 +1,7 @@
 body {
     background-color: #27678D;
-    margin: 0; 
-    height: 99%; 
+    margin: 0;
+    height: 99%;
 }
 
 #map {
@@ -36,8 +36,7 @@ body {
 }
 
 #cube .bottom {
-    transform: rotateY(-90deg) translateZ(100px)
-    ;
+    transform: rotateY(-90deg) translateZ(100px);
 }
 
 .container {
@@ -48,8 +47,8 @@ body {
     height: 200px;
     position: relative;
     top: -60%;
-    left: 65%; 
-    padding: 10% 15%;  
+    left: 65%;
+    padding: 10% 15%;
 }
 
 #cube {
@@ -238,7 +237,7 @@ body {
 
 #dom {
     margin-top: 7px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-family: 'Cookie', cursive;
     padding: 3px;
     background: #27678D;
@@ -273,4 +272,54 @@ body {
 
 #ris label.wrong {
     box-shadow: inset 0px 0px 0px 3px red;
+}
+
+#vincita {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #27678d;
+    text-align: center;
+    border-radius: 3rem;
+    width: 60%;
+    height: 40%;
+    box-shadow: -1px -2px 42px -19px rgba(0, 0, 0, 0.74);
+}
+
+#congra {
+    margin-top: 1%;
+    width: 50%;
+    height: 40%;
+}
+
+h3{
+    color: white;
+    letter-spacing: 1px;
+    font-family: 'Cookie', cursive;
+    font-size: 2em;
+}
+
+#btn {
+    font-family: 'Cookie', cursive;
+    background: #DFA207;
+    border-radius: 1rem;
+    border: 0px;
+    width: 12rem;
+    height: 2rem;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+}
+
+#lista {
+    transform: rotate(40deg);
+    text-align: initial;
+    position: absolute;
+    width: 13%;
+    height: 30%;
+    margin-top: 3%;
+    margin-left: 9%;
 }
