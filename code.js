@@ -508,9 +508,9 @@ function gameplay(){
         
         const art_letter = [
             {
-                domanda: "Non &egrave; bello ci&ograve; che &egrave; bello. . .",
-                r_corretta: "ma &egrave; bello ci&ograve; che piace",
-                opzioni: ["ma &egrave; bello ci&ograve; che non &egrave; bello", "perch&egrave; nulla &egrave; bello", "ma &egrave; bello ci&ograve; che costa", "ma &egrave; bello ci&ograve; che piace"]
+                domanda: "Non &#232; bello ci&&#242;; che &#232; bello. . .",
+                r_corretta: "ma &#232; bello ci&&#242;; che piace",
+                opzioni: ["ma &#232; bello ci&&#242;; che non &#232; bello", "perch&#232; nulla &#232; bello", "ma &#232; bello ci&&#242;; che costa", "ma &#232; bello ci&&#242;; che piace"]
             }, {
                 domanda: "Chi ha progettato Piazza San Pietro a Roma?",
                 r_corretta: "Bernini",
@@ -537,8 +537,8 @@ function gameplay(){
                 opzioni: ["Giovanni Verga", "Luigi Pirandello", "Italo Svevo", "Vittorio Alfieri"]
             }, {
                 domanda: "La gloria di colui che tutto move per l'universo penetra, e risplende in una parte pi&ugrave; e meno altrove...",
-                r_corretta : "&egrave; l'incipit del Paradiso di Dante", 
-                opzioni: ["&egrave; l'incipit del Paradiso di Dante", "&egrave; l'incipit del Purgatorio", "&egrave; una frase celebre di Virgilio", "&egrave; una frase celebre di Omero"]
+                r_corretta : "&#232; l'incipit del Paradiso di Dante", 
+                opzioni: ["&#232; l'incipit del Paradiso di Dante", "&#232; l'incipit del Purgatorio", "&#232; una frase celebre di Virgilio", "&#232; una frase celebre di Omero"]
             }, {
                 domanda: "Qual &egrave; la citt&agrave; natale di Eugenio Montale?",
                 r_corretta: "Genova",
@@ -557,8 +557,8 @@ function gameplay(){
                 opzioni: ["Metafisico", "Pop", "Minimalista", "Impressionismo"]
             }, {
                 domanda: "Il nome Guernica del capolavoro di Pablo Picasso, deriva da... ? ", 
-                r_corretta: "una citt&agrave; bombardata", 
-                opzioni: ["un aereo in uso nella prima guerra mondiale", "una razza di cavallo", "una citt&agrave; bombardata", "il luogo dove stava il suo studio"]
+                r_corretta: "una citt&#224; bombardata", 
+                opzioni: ["un aereo in uso nella prima guerra mondiale", "una razza di cavallo", "una citt&#224; bombardata", "il luogo dove stava il suo studio"]
             } 
         ]; 
         
@@ -636,12 +636,12 @@ function gameplay(){
                 opzioni: ["gomma", "proteina", "polisaccaride", "colla"]
             }, {
                 domanda: "Cosa mangiano prevalentemente i panda?", 
-                r_corretta: "bamb&ugrave;", 
-                opzioni: ["bamb&ugrave;", "insetti", "fieno", "piccoli mammiferi"]
+                r_corretta: "bamb&&#249;ve;", 
+                opzioni: ["bamb&&#249;ve;", "insetti", "fieno", "piccoli mammiferi"]
             }, {
                 domanda: "Qual &egrave; l'oggetto della Sociologia?", 
-                r_corretta: "studio scientifico della societ&agrave;", 
-                opzioni: ["le applicazioni", "il cinema", "i giochi di societ&agrave;", "studio scientifico della societ&agrave;"]
+                r_corretta: "studio scientifico della societ&#224;", 
+                opzioni: ["le applicazioni", "il cinema", "i giochi di societ&#224;", "studio scientifico della societ&#224;"]
             }, {
                 domanda: "Quale ortaggio viene decorato ad Halloween?", 
                 r_corretta: "zucca", 
