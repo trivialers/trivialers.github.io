@@ -1,7 +1,78 @@
 body {
     background-color: #27678D;
+}
+
+#gioco {
+    filter: blur(10px);
     margin: 0;
     height: 99%;
+}
+
+#inizia {
+    width: 50%;
+    height: 50%;
+}
+
+#nrGiocatori {
+    box-shadow: 1px 2px 40px -5px rgba(0, 0, 0, 1);
+    text-align: center;
+    position: absolute;
+    background: #27678D;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40%;
+    height: 40%;
+    border-radius: 30px;
+}
+
+#play {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 10rem;
+    height: 10rem;
+    background: radial-gradient(#DFA207 60%, rgba(255, 255, 255, 1) 67%);
+    border-radius: 50%;
+    position: fixed;
+    margin: auto;
+    border: none;
+    box-shadow: 0px 0px 25px 3px rgb(223, 162, 7, 0.8);
+}
+
+#play:before {
+    font-family: 'Cookie';
+    color: rgba(255, 255, 255);
+    content: "!click me!";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    animation: pulsate 2s;
+    animation-iteration-count: infinite;
+    opacity: 1;
+    border-radius: 50%;
+    border: 0.3rem solid rgba(255, 255, 255, .75);
+    top: -28%;
+    left: -28%;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(0.7);
+        opacity: 1;
+        box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+        box-shadow: none;
+    }
 }
 
 #map {
@@ -189,9 +260,8 @@ body {
 }
 
 #pic {
-    margin-top: 40px;
-    width: 195px;
-    height: 158px;
+    width: 90%;
+    height: 70%;
 }
 
 #bottone {
@@ -211,16 +281,21 @@ body {
     padding-right: 18px;
     padding-top: 3px;
     border-radius: 10px;
+    transform: scale(1.2);
 }
 
 #card {
     position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     transform-style: preserve-3d;
     padding: 10px;
-    margin: 30px;
+    margin: auto;
     text-align: center;
-    width: 200px;
-    height: 300px;
+    width: 20%;
+    height: 60%;
     background: #DFA207;
     border-radius: 20px;
     box-shadow: 15px 15px #27678D;
@@ -236,22 +311,19 @@ body {
 }
 
 #dom {
-    margin-top: 7px;
-    margin-bottom: 20px;
+    margin-top: 0.2rem;
+    margin-bottom: 0.7rem;
     font-family: 'Cookie', cursive;
-    padding: 3px;
+    padding: 0.1rem;
     background: #27678D;
     color: #fff;
-    font-size: 25px;
+    font-size: 2rem;
     border-radius: 10px;
-    padding-top: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
 }
 
 #ris {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 1rem;
 }
 
 
@@ -259,11 +331,11 @@ body {
     font-family: 'Cookie', cursive;
     background: #27678D;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 1.5rem;
     cursor: pointer;
     color: #fff;
     text-align: center;
-    padding: 4px;
+    padding: 0.1rem;
 }
 
 #ris label.correct {
@@ -276,7 +348,7 @@ body {
 
 #vincita {
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
@@ -284,7 +356,7 @@ body {
     background: #27678d;
     text-align: center;
     border-radius: 3rem;
-    width: 60%;
+    width: 50%;
     height: 40%;
     box-shadow: -1px -2px 42px -19px rgba(0, 0, 0, 0.74);
 }
@@ -295,11 +367,12 @@ body {
     height: 40%;
 }
 
-h3{
+h3 {
     color: white;
     letter-spacing: 1px;
     font-family: 'Cookie', cursive;
     font-size: 2em;
+    margin-bottom: 3%;
 }
 
 #btn {
@@ -318,8 +391,8 @@ h3{
     transform: rotate(40deg);
     text-align: initial;
     position: absolute;
-    width: 13%;
+    width: 10%;
     height: 30%;
     margin-top: 3%;
-    margin-left: 9%;
+    margin-left: 7%;
 }

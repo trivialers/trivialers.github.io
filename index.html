@@ -1,11 +1,17 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-		<script type ="text/javascript" src="code.js"></script>
-    </head>
-    <body onload="gameplay()">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script type="text/javascript" src="code.js"></script>
+</head>
+
+<body>
+    <button id="play" onclick="play();">
+        <img src="img/play.png" id="inizia"/>
+    </button>
+    <div id="gioco">
         <div id="map">
             <svg width="98vh" height="98vh" viewBox="147 147 2003 2003">
                 <g id="trivial">
@@ -211,18 +217,18 @@
                 </g>
                 <defs>
                     <pattern height="1" patternContentUnits="objectBoundingBox" id="pattern0" width="1">
-						<use xlink:href="#img" transform="matrix(0.00240581 0 0 0.002 -0.101453 0)"></use>
+                        <use xlink:href="#img" transform="matrix(0.00240581 0 0 0.002 -0.101453 0)"></use>
                     </pattern>
-                    
+
                     <image id="img" width="500" height="500" href="img/pedina.png"></image>
                 </defs>
             </svg>
-			<div id="pedina_esempio" class="pedina">
-				<svg width="4vh" height="4vh" viewBox="52 40 390 435" fill="none">
-                    <circle id="contornoPedina" cx="246" cy="257" r="215" fill="#B31818"/>
-				</svg>
-			</div>
-		</div>
+            <div id="pedina_esempio" class="pedina">
+                <svg width="4vh" height="4vh" viewBox="52 40 390 435" fill="none">
+                    <circle id="contornoPedina" cx="246" cy="257" r="215" fill="#B31818" />
+                </svg>
+            </div>
+        </div>
         <div class="container">
             <div id="cube">
                 <div class="front">
@@ -260,5 +266,7 @@
                 </div>
             </div>
         </div>
-	</body>
+    </div>
+</body>
+
 </html>

@@ -1,6 +1,14 @@
-let flip, nuovoGioco;
+function play() {
+    let element = document.getElementById("play");
+    element.remove();
+    let gioco = document.getElementById("gioco");
+    gioco.style.filter = "none";
+    gameplay();
+}
+
+let insert, flip, nuovoGioco;
 function gameplay(){
-	let Pedine = [];
+    let Pedine = [];
 	let skipMove = true;
 	let again = false;
 	let giocatore = 0;
@@ -291,14 +299,12 @@ function gameplay(){
 			cube.style.transform = "rotateX(" + X + "deg) " + "rotateY(" + Y + "deg)";
 			setTimeout(function() { 
 				skipMove= false;
-                console.log(skipMove)
 			}, 5000);
 		}
 
 	}
 	
 	function posizione(id, materia, triangolo = false) {
-        console.log(skipMove)
 		let pedina = document.getElementById(Pedine[giocatore]);
 		let dimensioni = pedina.getBoundingClientRect();
 		let indirizzo = document.getElementById(id);
@@ -502,9 +508,9 @@ function gameplay(){
         
         const art_letter = [
             {
-                domanda: "Non &egrave; bello ci&ograve; che &egrave; bello…?",
+                domanda: "Non &egrave; bello ci&ograve; che &egrave; bello. . .",
                 r_corretta: "ma &egrave; bello ci&ograve; che piace",
-                opzioni: ["ma &egrave; bello ci&ograve; che non &egrave; bello", "perché nulla &egrave; bello", "ma &egrave; bello ci&ograve; che costa", "ma &egrave; bello ci&ograve; che piace"]
+                opzioni: ["ma &egrave; bello ci&ograve; che non &egrave; bello", "perch&egrave; nulla &egrave; bello", "ma &egrave; bello ci&ograve; che costa", "ma &egrave; bello ci&ograve; che piace"]
             }, {
                 domanda: "Chi ha progettato Piazza San Pietro a Roma?",
                 r_corretta: "Bernini",
@@ -682,7 +688,7 @@ function gameplay(){
             risposte: null,
         }
 
-        let random = Math.floor(Math.random() * 13);
+        let random = Math.floor(Math.random() * (Object.keys(storia).length));
         let argomento = [];
         let colore_triangolino;
         switch (materia) {
@@ -812,11 +818,30 @@ function gameplay(){
     function partita(){
         let element = document.getElementById("vincita");
         element.remove();
+        for(let i=0; i<Pedine.length; i++){
+            let el = document.getElementById("pedina_"+i);
+            el.remove();
+        }
         gameplay();
     }
     nuovoGioco=partita;
 	
-	function inizzializza(){
+    function nrGiocatori(){
+        let t=`
+            <div id="nrGiocatori">
+                <form onsubmit="insert();">
+                    <h3>In quanti si vuole giocare? Da un minimo di 1 ad un massimo di 6 giocatori? "</h3><br>
+                    <input type="number" id="nGiocatori" min="1" max="6" step="1" required><br><br>
+                    <input type="submit" value="Fatto!" id="btn">
+                </form>
+            </div>`;
+        document.body.innerHTML += t;
+    }
+    
+    insert=inizializza;
+    
+	function inizializza(){
+        event.preventDefault();
 		let inizio = document.getElementById("pedina_esempio");
 		let dimensioni = inizio.getBoundingClientRect();
 		let esagono = document.getElementById("esagono");
@@ -825,11 +850,9 @@ function gameplay(){
 		let leftDefault = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
 		let colori = ["rgb(239, 119, 51)","rgb(75, 162, 242)","rgb(188, 75, 242)","rgb(83, 208, 96)","rgb(249, 60, 173)","rgb(239, 208, 45)" ]
 
-
-		let numeroGiocatori = prompt("In quanti si vuole giocare? Da un minimo di 1 ad un massimo di 6 giocatori ");
-		while (numeroGiocatori<0|| numeroGiocatori>6){
-			numeroGiocatori = prompt("Valore inserito non corretto. In quanti si vuole giocare? Da un minimo di 1 ad un massimo di 6 giocatori ");
-		}
+		let numeroGiocatori = document.getElementById("nGiocatori").value;
+        let element=document.getElementById("nrGiocatori");
+        element.remove();
 		for (let i=numeroGiocatori-1; i>=0; i--){
 			let text =
 				` <div id="pedina_` + i + `" class="pedina">
@@ -837,7 +860,7 @@ function gameplay(){
 						<g id="Radial 1">
 							<circle id="contornoPedina" fill="`+ colori[i] +`" cx="246" cy="257" r="215" fill="#B31818"/>
 							<g id="Segment 1">
-								<path id="Triangolino_1_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M354.853 89.2909C381.496 106.505 403.662 129.809 419.523 157.279C435.383 184.75 444.481 215.599 446.067 247.279L266.292 256.279C266.134 253.111 265.224 250.026 263.638 247.279C262.052 244.532 259.835 242.202 257.171 240.48L354.853 89.2909Z" />                    
+								<path id="Triangolino_1_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M354.853 89.2909C381.496 106.505 403.662 129.809 419.523 157.279C435.383 184.75 444.481 215.599 446.067 247.279L266.292 256.279C266.134 253.111 265.224 250.026 263.638 247.279C262.052 244.532 259.835 242.202 257.171 240.48L354.853 89.2909Z" />         
 							</g>
 							<g id="Segment 2">
 								<path id="Triangolino_2_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M446.067 267.279C444.481 298.96 435.383 329.809 419.523 357.279C403.662 384.75 381.496 408.054 354.853 425.268L257.171 274.078C259.835 272.357 262.052 270.026 263.638 267.279C265.224 264.532 266.134 261.447 266.292 258.279L446.067 267.279Z" />
@@ -869,15 +892,14 @@ function gameplay(){
 			elemento.style.left = leftDefault;
 			elemento.style.visibility= "visible";
 		}
+        turno();
 	}
+    
 
 	function turno(){
-		console.log(giocatore);
         clickElementi();
 		lanciaDado();
 	}
 	
-	inizzializza();
-	console.log(Pedine);
-	turno();
+	nrGiocatori();
 }
