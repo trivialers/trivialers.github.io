@@ -1682,6 +1682,8 @@ function gameplay(){
         
         function load() {
             quiz.conten = document.getElementById("dietro");
+            let t = `<p id="tempo"></p>`;
+            document.getElementById("dietro").innerHTML += t;
             quiz.domanda = document.createElement("div");
             quiz.domanda.id = "dom";
             quiz.conten.appendChild(quiz.domanda);
@@ -1692,6 +1694,19 @@ function gameplay(){
         }
 
         function inserisci() {
+            var tempo = 7;
+            var timer = setInterval(function(){
+                if(tempo <= 0){
+                    clearInterval(timer);
+                    again=false;
+                    verifica();
+                }else{
+                    document.getElementById("tempo").innerHTML="";
+                    let t="Tempo: "+tempo;
+                    document.getElementById("tempo").innerHTML+=t;
+                    tempo -= 1;
+                }
+            }, 1000);
             quiz.domanda.innerHTML = argomento[random].domanda;
             quiz.risposte.innerHTML = "";
             for (let i in argomento[random].opzioni) {
@@ -1699,6 +1714,7 @@ function gameplay(){
                 label.innerHTML = argomento[random].opzioni[i];
                 label.id = "quiz" + i;
                 label.addEventListener("click", () => {
+                    clearInterval(timer);
                     click(label.id, label);
                 });
                 quiz.risposte.appendChild(label);
@@ -1718,6 +1734,10 @@ function gameplay(){
             } else {
                 opzioni.classList.add("wrong");
             }
+            verifica();
+        }
+        
+        function verifica(){
             setTimeout(function () {
                 let element = document.getElementById("card");
                 element.remove();
