@@ -6,11 +6,13 @@ function play() {
     gameplay();
 }
 
-let insert, flip, nuovoGioco;
+let insert, nomiGiocatori, flip, nuovoGioco;
 function gameplay(){
     let Pedine = [];
+    let players = [];
 	let skipMove = true;
 	let again = false;
+    let numeroGiocatori=0;
 	let giocatore = 0;
 
 	function clickElementi(){
@@ -368,7 +370,7 @@ function gameplay(){
                 r_corretta: "crolla il ponte Morandi",
                 opzioni: ["Presidente dimesso", "elezione Presidente", "crolla il ponte Morandi", " terremoto di magnitudo 6"]
             }, {
-                domanda: "In quale data si scopre l’America?",
+                domanda: "In quale data si scopre l&#39;America?",
                 r_corretta: "12 Ottobre 1492",
                 opzioni: ["12 Ottobre 1491", "12 Ottobre 1492", "12 Ottobre 1493", "12 Ottobre 1494"]
             },{
@@ -380,7 +382,7 @@ function gameplay(){
                 r_corretta: "Gallia",
                 opzioni: ["Sicilia", "Russia", "Australia", "Gallia"]
             }, {
-                domanda: "Quando entro l'Italia nella prima guerra mondiale?",
+                domanda: "Quando entro l&#39;Italia nella prima guerra mondiale?",
                 r_corretta: "1915",
                 opzioni: ["1914", "1915", "1916", "1917"]
             }, {
@@ -404,7 +406,7 @@ function gameplay(){
                 r_corretta: "Tiberio Caligola Claudio Nerone",
                 opzioni: ["Tiberio Caligola Brione Nerone", "Comodo Caligola Claudio Nerone", "Tito Domiziano Traiano Nerone", "Tiberio Caligola Claudio Nerone"]
             }, {
-                domanda: "Nell'Antico Egitto che tecnica si utilizza per la sepoltura dei Faraoni?",
+                domanda: "Nell&#39;Antico Egitto che tecnica si utilizza per la sepoltura dei Faraoni?",
                 r_corretta: "mummificazione",
                 opzioni: ["cremazione", "in pasto ai cani", "purificazione", "mummificazione"]
             }, {
@@ -412,7 +414,7 @@ function gameplay(){
                 r_corretta: "Martin Lutero",
                 opzioni: ["Immanuel Kant", "Thomas More", "Martin Lutero", "Giacomo Leopardi"]
             }, {
-                domanda: "Quando l' Italia ha preso parte alla prima guerra mondiale a chi dichiara guerra?",
+                domanda: "Quando l&#39; Italia ha preso parte alla prima guerra mondiale a chi dichiara guerra?",
                 r_corretta: "Austria-Ungheria",
                 opzioni: ["Francia", "Austria-Ungheria", "Belgio", "Germania"]
             }, {
@@ -425,26 +427,26 @@ function gameplay(){
                 opzioni: ["Ad Anzio", "A Marsala", "A Trieste", "A Quarto"]
             }, {
                 domanda: "Di quale giornale fu direttore Mussolini?",
-                r_corretta: "L'Avanti",
-                opzioni: ["La Repubblica", "Il fatto quotidiano", "L'Avanti", "Non &#232; mai stato direttore di alcun giornale"]
+                r_corretta: "L&#39;Avanti",
+                opzioni: ["La Repubblica", "Il fatto quotidiano", "L&#39;Avanti", "Non &#232; mai stato direttore di alcun giornale"]
             }, {
-                domanda: "In che anno il governo Giolitti diede le dimissioni dopo l'uscita dei radicali?",
+                domanda: "In che anno il governo Giolitti diede le dimissioni dopo l&#39;uscita dei radicali?",
                 r_corretta: "1914",
                 opzioni: ["1913", "1914", "1915", "1916"]
             }, {
                 domanda: "In seguito a cosa inizi&#242; la Seconda Guerra Mondiale?",
-                r_corretta: "L'invasione della Polonia",
-                opzioni: ["L'invasione della Francia", "Nessuna delle risposte precendenti", "L'invasione della Polonia", "L'invasione dell'Inghilterra"]
+                r_corretta: "L&#39;invasione della Polonia",
+                opzioni: ["L&#39;invasione della Francia", "Nessuna delle risposte precendenti", "L&#39;invasione della Polonia", "L&#39;invasione dell&#39;Inghilterra"]
             }, {
                 domanda: "Il sindacato dei lavoratori italiani fondato nel 1906 si chiamava:",
                 r_corretta: "Confederazione Generale del Lavoro",
-                opzioni: ["Unione Lavoratori", "Confederazione Italiana Dirigenti d'Azienda", "Confederazione Generale del Lavoro", "Confederazione Italiana Sindacati Lavoratori"]
+                opzioni: ["Unione Lavoratori", "Confederazione Italiana Dirigenti d&#39;Azienda", "Confederazione Generale del Lavoro", "Confederazione Italiana Sindacati Lavoratori"]
             }, {
                 domanda: "Uno dei piani politici-economici messi in atto dagli Stati Uniti dopo la Seconda Guerra Mondiale si chiamava:",
                 r_corretta: "Il Piano Marshall",
                 opzioni: ["Il Piano Marshall", "Il Trattato di Lisbona", "Il Trattato di Maastricht", "I Patti Lateranensi"]
             }, {
-                domanda: "In che anno fu firmato l'armistizio che port&#242; alla conclusione della prima guerra mondiale?",
+                domanda: "In che anno fu firmato l&#39;armistizio che port&#242; alla conclusione della prima guerra mondiale?",
                 r_corretta: "Novembre 1918",
                 opzioni: ["Aprile 1919", "Novembre 1919", "Marzo 1918", "Novembre 1918"]
             }, {
@@ -452,7 +454,7 @@ function gameplay(){
                 r_corretta: "1940",
                 opzioni: ["1939", "1940", "1941", "1938"]
             }, {
-                domanda: "Come si chiama una parte dell'India che divenne uno stato autonomo nel 1947?",
+                domanda: "Come si chiama una parte dell&#39;India che divenne uno stato autonomo nel 1947?",
                 r_corretta: "Pakistan",
                 opzioni: ["Pakistan", "Delhi", "Manipur", "Tibet"]
             }, {
@@ -462,7 +464,7 @@ function gameplay(){
             }, {
                 domanda: "Che legge venne approvata in Italia dal Parlamento nel 1970?",
                 r_corretta: "La legge sul divorzio",
-                opzioni: ["La legge sull'aborto", "La legge sulle carceri", "La legge sull'omosessualit&#224;", "La legge sul divorzio"]
+                opzioni: ["La legge sull&#39;aborto", "La legge sulle carceri", "La legge sull&#39;omosessualit&#224;", "La legge sul divorzio"]
             }, {
                 domanda: "Chi era Presidente del Consiglio dei Ministri nel 1984 quando si firm&#242; il concordato tra Stato e Chiesa?",
                 r_corretta: "Craxi",
@@ -476,17 +478,17 @@ function gameplay(){
                 r_corretta: "16 marzo 1978",
                 opzioni: ["16 gennaio 1968", "16 gennaio 1978", "16 marzo 1978", "16 luglio 1978"]
             }, {
-                domanda: "In che scandalo fu coinvolto l’ex-presidente americano Reagan?",
+                domanda: "In che scandalo fu coinvolto l&#39;ex-presidente americano Reagan?",
                 r_corretta: "Irangate",
-                opzioni: ["Irangate", "Watergate", "Fu coinvolto sia nel watergate che nell'irangate", "Non fu coinvolto in nessuno scandalo"]
+                opzioni: ["Irangate", "Watergate", "Fu coinvolto sia nel watergate che nell&#39;irangate", "Non fu coinvolto in nessuno scandalo"]
             }, {
                 domanda: "Che fenomeno demografico particolarmente importante ci fu tra il 1950 e il 1970?",
-                r_corretta: "L’emigrazione dal Sud verso il nord Italia",
-                opzioni: ["L’emigrazione dal Sud verso il nord Italia", "L'immigrazione di albanesi", "Lo sbarco di profughi albanesi", "L'aumento della mortalit&#224; a causa della malaria"]
+                r_corretta: "L&#39;emigrazione dal Sud verso il nord Italia",
+                opzioni: ["L&#39;emigrazione dal Sud verso il nord Italia", "L&#39;immigrazione di albanesi", "Lo sbarco di profughi albanesi", "L&#39;aumento della mortalit&#224; a causa della malaria"]
             }, {
                 domanda: "Cosa venne approvato nel 1947?",
-                r_corretta: "L'abolizione della pena di morte",
-                opzioni: ["La legge sull'aborto", "La legge sul divorzio", "La dichiarazione sulla discriminazione razziale", "L'abolizione della pena di morte"]
+                r_corretta: "L&#39;abolizione della pena di morte",
+                opzioni: ["La legge sull&#39;aborto", "La legge sul divorzio", "La dichiarazione sulla discriminazione razziale", "L&#39;abolizione della pena di morte"]
             }, {
                 domanda: "A che anno risale il periodo di liberalizzazione della storia cecoslovacca, noto come primavera di Praga ?",
                 r_corretta: "1968",
@@ -516,13 +518,13 @@ function gameplay(){
                 r_corretta: "Stele di Rosetta",
                 opzioni: ["Stele di Rosetta", "Stele di Caltanissetta", "Menhir", "Dolmen"]
             }, {
-                domanda: "Elisabetta I d'Inghilterra fu figlia di Enrico VIII e:",
+                domanda: "Elisabetta I d&#39;Inghilterra fu figlia di Enrico VIII e:",
                 r_corretta: "Anna Bolena",
-                opzioni: ["Catherine Howard", "Caterina d'Aragona", "Anna Bolena", "Jane Seymour"]
+                opzioni: ["Catherine Howard", "Caterina d&#39;Aragona", "Anna Bolena", "Jane Seymour"]
             }, {
                 domanda: "Federico II di Svevia fu imperatore:",
                 r_corretta: "del Sacro Romano Impero",
-                opzioni: ["dell'impero Bizantino", "dell'impero coloniale Francese", "dell'impero Russo ", "del Sacro Romano Impero"]
+                opzioni: ["dell&#39;impero Bizantino", "dell&#39;impero coloniale Francese", "dell&#39;impero Russo ", "del Sacro Romano Impero"]
             }, {
                 domanda: "Fino a quale anno regn&#242; in Russia la dinastia dei Romanov?",
                 r_corretta: "1917",
@@ -536,9 +538,9 @@ function gameplay(){
                 r_corretta: "mongolo",
                 opzioni: ["cinese", "siamese", "persiano", "mongolo"]
             }, {
-                domanda: "Giovanna D'Arco guid&#242; i Francesi:",
-                r_corretta: "nella guerra dei cent'anni",
-                opzioni: ["nella guerra dei sette anni", "nella guerra dei cent'anni", "nel conflitto greco-gotico", "nella prima crociata"]
+                domanda: "Giovanna D&#39;Arco guid&#242; i Francesi:",
+                r_corretta: "nella guerra dei cent&#39;anni",
+                opzioni: ["nella guerra dei sette anni", "nella guerra dei cent&#39;anni", "nel conflitto greco-gotico", "nella prima crociata"]
             }
         ];
         
@@ -548,7 +550,7 @@ function gameplay(){
                 r_corretta: "Sud America",
                 opzioni: ["Centro America", "Sud America", "Australia", "Europa"]
             }, {
-                domanda: "Cos'&#232; la Sardegna?",
+                domanda: "Cos&#39;&#232; la Sardegna?",
                 r_corretta: "isola",
                 opzioni: ["penisola", "arcipelago", "citt&#224;", "isola"]
             }, {
@@ -572,7 +574,7 @@ function gameplay(){
                 r_corretta: "Giappone",
                 opzioni: ["Giappone", "Libia", "Egitto", "Messico"]
             }, {
-                domanda: "Qual'&#232; la lingua principale in Porto Rico?",
+                domanda: "Qual&#39;&#232; la lingua principale in Porto Rico?",
                 r_corretta: "spagnolo",
                 opzioni: ["inglese", "spagnolo", "francese", "italiano"]
             }, {
@@ -580,23 +582,23 @@ function gameplay(){
                 r_corretta: "Roma",
                 opzioni: ["Genova", "Roma", "Venezia", "Milano"]
             }, {
-                domanda: "Quali di questi stati non si trova nell'Unione Europea?",
+                domanda: "Quali di questi stati non si trova nell&#39;Unione Europea?",
                 r_corretta: "Islanda",
                 opzioni: ["Cipro", "Germania", "Malta", "Islanda"]
             }, {
-                domanda: "Dov'&#232; prodotta la Peroni?",
+                domanda: "Dov&#39;&#232; prodotta la Peroni?",
                 r_corretta: "Italia",
                 opzioni: ["Spagna", "Burundi", "Bangladesh", "Italia"]
             }, {
-                domanda: "Dov'&#232; lo Zimbabwe?",
+                domanda: "Dov&#39;&#232; lo Zimbabwe?",
                 r_corretta: "Sud Africa",
                 opzioni: ["Asia", "Nord Africa", "Sud America", "Sud Africa"]
             }, {
-                domanda: "Qual'&#232; il nome del canale che divide il Mar Mediterraneo dal Mar Rosso?",
+                domanda: "Qual&#39;&#232; il nome del canale che divide il Mar Mediterraneo dal Mar Rosso?",
                 r_corretta: "Suez",
                 opzioni: ["Corinto", "Panama", "Suez", "Nessuna risposta &#232; corretta"]
             }, {
-                domanda: "Dov’&#232; la Citt&#224; Proibita?", 
+                domanda: "Dov&#39;&#232; la Citt&#224; Proibita?", 
                 r_corretta: "Pechino", 
                 opzioni: ["Pechino", "La Mecca", "El Cairo", "Bombay"]
             }, {
@@ -604,7 +606,7 @@ function gameplay(){
                 r_corretta: "Milano", 
                 opzioni: ["Roma", "Firenze", "Milano", "Napoli"]
             }, {
-                domanda: "Dove si trova l'Eretteo?", 
+                domanda: "Dove si trova l&#39;Eretteo?", 
                 r_corretta: "Atene", 
                 opzioni: ["Asmara", "Atene", "Istanbul", "Tripoli"]
             }, {
@@ -640,9 +642,9 @@ function gameplay(){
                 r_corretta: "Francia", 
                 opzioni: ["Italia", "Lussemburgo", "Spagna", "Francia"]
             }, {
-                domanda: "Quale di questi paesi non &#232; nel Corno d’Africa?", 
-                r_corretta: "Costa d’Avorio", 
-                opzioni: ["Gibuti", "Somalia", "Etiopia", "Costa d’Avorio"]
+                domanda: "Quale di questi paesi non &#232; nel Corno d&#39;Africa?", 
+                r_corretta: "Costa d&#39;Avorio", 
+                opzioni: ["Gibuti", "Somalia", "Etiopia", "Costa d&#39;Avorio"]
             }, {
                 domanda: "Il fiume Yalu &#232; un fiume di confine tra:", 
                 r_corretta: "Cina e Corea del Nord", 
@@ -652,7 +654,7 @@ function gameplay(){
                 r_corretta: "San Marino", 
                 opzioni: ["Malta", "Monaco", "Andorra", "San Marino"]
             }, {
-                domanda: "Quale di questi paesi non &#232; un territorio britannico d’oltremare?", 
+                domanda: "Quale di questi paesi non &#232; un territorio britannico d&#39;oltremare?", 
                 r_corretta: "Antigua e Barbuda", 
                 opzioni: ["Isole Cayman", "Bermuda", "Isole Turks e Caicos", "Antigua e Barbuda"]
             }, {
@@ -692,19 +694,19 @@ function gameplay(){
                 r_corretta: "333", 
                 opzioni: ["19", "333", "6852", "95"]
             }, {
-                domanda: "Quale fu la capitale d’Italia tra il 1865 e il 1871?", 
+                domanda: "Quale fu la capitale d&#39;Italia tra il 1865 e il 1871?", 
                 r_corretta: "Firenze", 
                 opzioni: ["Torino", "Napoli", "Firenze", "Roma"]
             }, {
-                domanda: "Qual’&#232; la capitale della Repubblica Democratica del Congo?", 
+                domanda: "Qual&#39;&#232; la capitale della Repubblica Democratica del Congo?", 
                 r_corretta: "Kinshasa", 
                 opzioni: ["Aba", "Kinshasa", "Maseru", "Lilongwe"]
             }, {
-                domanda: "Il Mare di Ross appartiene all’oceano:", 
+                domanda: "Il Mare di Ross appartiene all&#39;oceano:", 
                 r_corretta: "Antartico", 
                 opzioni: ["Pacifico", "Indiano", "Atlantico", "Antartico"]
             }, {
-                domanda: "Qual &#232; il principale passaggio naturale tra il Pacifico e l’Oceano Atlantico?", 
+                domanda: "Qual &#232; il principale passaggio naturale tra il Pacifico e l&#39;Oceano Atlantico?", 
                 r_corretta: "Lo stretto di Magellano", 
                 opzioni: ["Lo stretto di Bering", "Lo stretto di Malacca", "Lo stretto di Messina", "Lo stretto di Magellano"]
             }, {
@@ -788,15 +790,15 @@ function gameplay(){
                 r_corretta: "Associazione Mondiale Anti Doping",
                 opzioni: ["Associazione Mondiale Anti Doping", "Associazione Mondiale Anti Dropping", "Associazione Mondiale Anti Drop", "Associazione Mondiale Doping"]
             }, {
-                domanda: "Cos’&#232; un agente mascherante?",
-                r_corretta: "mascherare l’uso di sostanze proibite",
-                opzioni: ["Chi fornisce le sostanze proibite", "mascherare l’uso di sostanze proibite", "rappresentante di un atleta", "maschera teatrale"]
+                domanda: "Cos&#39;&#232; un agente mascherante?",
+                r_corretta: "mascherare l&#39;uso di sostanze proibite",
+                opzioni: ["Chi fornisce le sostanze proibite", "mascherare l&#39;uso di sostanze proibite", "rappresentante di un atleta", "maschera teatrale"]
             }, {
                 domanda: "il CIO &#232;?",
                 r_corretta: "comitato olimpico internazionale",
                 opzioni: ["centro olimpico interno", "comitato olimpico internazionale", "una lista di farmaci proibita", "codice internazionale antidoping"]
             }, {
-                domanda: "Che cos'&#232; il doping? L’uso di. . . per migliorare la prestazione sportiva",
+                domanda: "Che cos&#39;&#232; il doping? L&#39;uso di. . . per migliorare la prestazione sportiva",
                 r_corretta: "metodi nocivi alla salute",
                 opzioni: ["metodi nocivi alla salute", "farmaci antinfiammatori", "allenamenti intensivi", "integratori"]
             },{
@@ -812,11 +814,11 @@ function gameplay(){
                 r_corretta: "Sci di fondo e tiro a segno",
                 opzioni: ["Corsa e nuoto", "Ciclismo e skeleton", "Discesa libera e slalom speciale", "Sci di fondo e tiro a segno"]
             }, {
-                domanda: "L’atleta Oscar Pistorius, che correva i 400 m con due protesi in fibra di carbonio, &#232; di nazionalit&#224;:",
+                domanda: "L&#39;atleta Oscar Pistorius, che correva i 400 m con due protesi in fibra di carbonio, &#232; di nazionalit&#224;:",
                 r_corretta: "sudafricana",
                 opzioni: ["finlandese", "brasiliana", "argentina", "sudafricana"]
             }, {
-                domanda: "In atletica leggera, l'impugnatura a maniglia &#232; riferita a lanciatori di:",
+                domanda: "In atletica leggera, l&#39;impugnatura a maniglia &#232; riferita a lanciatori di:",
                 r_corretta: "martello",
                 opzioni: ["martello", "peso", "giavellotto", "disco"]
             }, {
@@ -880,7 +882,7 @@ function gameplay(){
                 r_corretta: "336",
                 opzioni: ["336", "300", "20", "186"]
             }, {
-                domanda: "Quale paese ha gareggiato pi&#249; volte alle Olimpiadi estive ma non ha vinto una medaglia d'oro?",
+                domanda: "Quale paese ha gareggiato pi&#249; volte alle Olimpiadi estive ma non ha vinto una medaglia d&#39;oro?",
                 r_corretta: "Le Filippine",
                 opzioni: ["Le Filippine", "San Marino", "Birmania", "Laos"]
             }, {
@@ -925,8 +927,8 @@ function gameplay(){
                 opzioni: ["35 min", "20 min", "15 min", "29 min"]
             }, {
                 domanda: "Durante le prime Olimpiadi moderne, con cosa sono stati premiati i primi classificati?",
-                r_corretta: "Medaglie d'argento",
-                opzioni: ["Medaglie d'argento", "Medaglie d'oro", "Collane di diamanti", "Coppe dorate"]
+                r_corretta: "Medaglie d&#39;argento",
+                opzioni: ["Medaglie d&#39;argento", "Medaglie d&#39;oro", "Collane di diamanti", "Coppe dorate"]
             }, {
                 domanda: "Cosa rappresentano gli anelli alle Olimpiadi?",
                 r_corretta: "I continenti del mondo",
@@ -944,7 +946,7 @@ function gameplay(){
                 r_corretta: "Bernini",
                 opzioni: ["Alighieri", "Leopardi", "Verga", "Bernini"]
             }, {
-                domanda: "Chi &#232; l'autore di Hamlet? ",
+                domanda: "Chi &#232; l&#39;autore di Hamlet? ",
                 r_corretta: "William Shakespeare ",
                 opzioni: ["Jane Austen ", "Geoffrey Chaucer ", "William Shakespeare ", "Michael Jackson "]
             }, {
@@ -976,7 +978,7 @@ function gameplay(){
                 r_corretta: "Oriana Fallaci",
                 opzioni: ["Umberto Eco", "Luciana Littizzetto", "Oriana Fallaci", "Federico Moccia"]
             }, {
-                domanda: "Chi compose l'opera Madama Butterfly?",
+                domanda: "Chi compose l&#39;opera Madama Butterfly?",
                 r_corretta: "Puccini",
                 opzioni: ["Mozart", "Puccini", "Bernini", "Monet"]
             }, {
@@ -988,31 +990,31 @@ function gameplay(){
                 r_corretta: "Ravenna",
                 opzioni: ["Roma ", "Londra", "Firenze", "Ravenna"]
             },{
-                domanda: "Chi era Gabriele D'Annunzio?",
+                domanda: "Chi era Gabriele D&#39;Annunzio?",
                 r_corretta: "un poeta",
                 opzioni: ["un bodybuilder", "un miliardario", "un poeta", "un cuoco"]
             }, {
-                domanda: "Alla fine dell'Ottocento &#232; stato rubato dal museo Louvre, quale dipinto? ",
+                domanda: "Alla fine dell&#39;Ottocento &#232; stato rubato dal museo Louvre, quale dipinto? ",
                 r_corretta: "La Gioconda",
                 opzioni: ["La Gioconda", "Incoronazione di Napoleone", "Il Cenacolo", "La festa del Rosario"]
             }, {
-                domanda: "L'autore della poesia Marzo 1821?",
+                domanda: "L&#39;autore della poesia Marzo 1821?",
                 r_corretta : "Alessandro Manzoni",
-                opzioni: ["Giacomo Leopardi", "Ugo Foscolo", "Alessandro Manzoni", "Gabriele D'Annunzio"]
+                opzioni: ["Giacomo Leopardi", "Ugo Foscolo", "Alessandro Manzoni", "Gabriele D&#39;Annunzio"]
             }, {
-                domanda: "L'autore del romanzo L'Esclusa ? ", 
+                domanda: "L&#39;autore del romanzo L&#39;Esclusa ? ", 
                 r_corretta: "Luigi Pirandello", 
                 opzioni: ["Giovanni Verga", "Luigi Pirandello", "Italo Svevo", "Vittorio Alfieri"]
             }, {
-                domanda: "La gloria di colui che tutto move per l'universo penetra, e risplende in una parte pi&#249; e meno altrove...",
-                r_corretta : "&#232; l'incipit del Paradiso di Dante", 
-                opzioni: ["&#232; l'incipit del Paradiso di Dante", "&#232; l'incipit del Purgatorio", "&#232; una frase celebre di Virgilio", "&#232; una frase celebre di Omero"]
+                domanda: "La gloria di colui che tutto move per l&#39;universo penetra, e risplende in una parte pi&#249; e meno altrove...",
+                r_corretta : "incipit del Paradiso", 
+                opzioni: ["incipit del Paradiso", "incipit del Purgatorio", "frase celebre di Virgilio", "frase celebre di Omero"]
             }, {
                 domanda: "Qual &#232; la citt&#224; natale di Eugenio Montale?",
                 r_corretta: "Genova",
                 opzioni: ["Genova", "Milano", "Firenze", "Torino"]
             }, {
-                domanda: "L'autore del romanzo Madame Bovary ? ", 
+                domanda: "L&#39;autore del romanzo Madame Bovary ? ", 
                 r_corretta: "Gustave Flaubert", 
                 opzioni: ["Paul Thomas Mann", "Gustave Flaubert", "&#201;mile &#201;douard Charles Antoine Zola", "Guy de Maupassan"]
             }, {
@@ -1048,7 +1050,7 @@ function gameplay(){
                 r_corretta: "Machu Picchu",
                 opzioni: ["Machu Picchu", "K2", "Everest", "Elbrus"]
             }, {
-                domanda: "Qual’&#232; l'isola pi&#249; grande del mondo?",
+                domanda: "Qual&#39;&#232; l&#39;isola pi&#249; grande del mondo?",
                 r_corretta: "Groenlandia",
                 opzioni: ["Groenlandia", "Sardegna", "Giappone", "Gran Bretagna"]
             }, {
@@ -1056,7 +1058,7 @@ function gameplay(){
                 r_corretta: "Napoli",
                 opzioni: ["Verona", "Napoli", "Venezia", "Roma"]
             }, {
-                domanda: "Di quale dei seguenti arcipelaghi fa parte l’isola Panarea?",
+                domanda: "Di quale dei seguenti arcipelaghi fa parte l&#39;isola Panarea?",
                 r_corretta: "Isole Eolie",
                 opzioni: [" Isola di Capo", "Isola Verde", "Isole Eolie", "Isole delle Antille"]
             }, {
@@ -1068,7 +1070,7 @@ function gameplay(){
                 r_corretta: "portoghese",
                 opzioni: ["tedesco", "inglese", "olandese", "portoghese"]
             }, {
-                domanda: "Qual'&#232; il quinto pianeta del nostro sistema solare?",
+                domanda: "Qual&#39;&#232; il quinto pianeta del nostro sistema solare?",
                 r_corretta: "Giove",
                 opzioni: ["Giove", "Nettuno", "Terra", "Mercurio"]
             }, {
@@ -1080,7 +1082,7 @@ function gameplay(){
                 r_corretta: "Uno scultore", 
                 opzioni: ["Uno scultore", "Un filosofo", "Un cantante", "Un ceramista"]
             }, {
-                domanda: "Chi &#232; l'architetto autore della prospettiva della Galleria di Palazzo Spada, a Roma?", 
+                domanda: "Chi &#232; l&#39;architetto autore della prospettiva della Galleria di Palazzo Spada, a Roma?", 
                 r_corretta: "Borromini", 
                 opzioni: ["Borromini", "Bernini", "Vanvitelli", "Michelangelo"]
             }, {
@@ -1093,20 +1095,20 @@ function gameplay(){
                 opzioni: ["Roma", "Urbino", "Pisa", "Napoli"]
             }, {
                 domanda: "Dove si trova la Fontana delle 99 cannelle?", 
-                r_corretta: "L’Aquila", 
-                opzioni: ["Viterbo", "L'Aquila", "Mantova", "Perugia"]
+                r_corretta: "L&#39;Aquila", 
+                opzioni: ["Viterbo", "L&#39;Aquila", "Mantova", "Perugia"]
             }, {
                 domanda: "Qual era il vero nome della Gioconda?", 
                 r_corretta: "Lisa Gherardini", 
                 opzioni: ["Maria Luigia", "Lisa Gherardini", "Beatrice Cenci", "Bianca Cappello"]
             }, {
-                domanda: "Come si chiama il protagonista de L'avaro, di Moli&#232;re?", 
+                domanda: "Come si chiama il protagonista de L&#39;avaro, di Moli&#232;re?", 
                 r_corretta: "Arpagone", 
                 opzioni: ["Carlone", "Salvatore", "Ganimede", "Arpagone"]
             }, {
-                domanda: "Shakespeare ha scritto un’opera in cui muoiono i quattro protagonisti: qual &#232;?", 
+                domanda: "Shakespeare ha scritto un&#39;opera in cui muoiono i quattro protagonisti: qual &#232;?", 
                 r_corretta: "Amleto", 
-                opzioni: ["Sogno d'una notte di mezza estate", "La tempesta", "Romeo e Giulietta", "Amleto"]
+                opzioni: ["Sogno d&#39;una notte di mezza estate", "La tempesta", "Romeo e Giulietta", "Amleto"]
             }, {
                 domanda: "Quanti sono i samurai di Kurosawa?", 
                 r_corretta: "Sette", 
@@ -1128,7 +1130,7 @@ function gameplay(){
                 r_corretta: "Calabria", 
                 opzioni: ["Puglia", "Friuli Venezia Giulia", "Molise", "Calabria"]
             }, {
-                domanda: "Cos'&#232; un oboe?", 
+                domanda: "Cos&#39;&#232; un oboe?", 
                 r_corretta: "Uno strumento musicale", 
                 opzioni: ["Un tipo di capitello", "Una elemento teatrale", "Uno strumento musicale", "Una danza"]
             }, {
@@ -1144,7 +1146,7 @@ function gameplay(){
                 r_corretta: "Leonardo da Vinci", 
                 opzioni: ["Tiziano", "Guido Reni", "Tintoretto", "Leonardo da Vinci"]
             }, {
-                domanda: "Nel Sahara tunisino e pi&#249; precisamente a El Djem, cosa c’&#232;?", 
+                domanda: "Nel Sahara tunisino e pi&#249; precisamente a El Djem, cosa c&#39;&#232;?", 
                 r_corretta: "Un anfiteatro romano", 
                 opzioni: ["La statua di una creatura marina", "La prima ferrovia del continente africano", "Un anfiteatro romano", "Una piramide di mattoni rossi"]
             }, {
@@ -1156,11 +1158,11 @@ function gameplay(){
                 r_corretta: "Charleroi, citt&#224; industriale", 
                 opzioni: ["Anversa, citt&#224; portuale", "Bruges cittadina romantica caratterizzata dai canali", "Charleroi, citt&#224; industriale", "Liegi centro commerciale e culturale"]
             }, {
-                domanda: "Famoso scultore autore de La porta dell’inferno", 
+                domanda: "Famoso scultore autore de La porta dell&#39;inferno", 
                 r_corretta: "Auguste Rodin", 
                 opzioni: ["Auguste Rodin", "Antonio Canova", "Giacomo Balla", "Amedeo Modigliani"]
             }, {
-                domanda: "Rappresentava i suoi dipinti attraverso l'utilizzo di frutti e vegetali. Chi era?", 
+                domanda: "Rappresentava i suoi dipinti attraverso l&#39;utilizzo di frutti e vegetali. Chi era?", 
                 r_corretta: "Arcimboldo", 
                 opzioni: ["Arcimboldo", "Fontana", "Picasso", "Botero"]
             }, {
@@ -1176,7 +1178,7 @@ function gameplay(){
                 r_corretta: "Franz Kafka", 
                 opzioni: ["Friedrich Nietzsche", "Franz Kafka", "Sigmund Freud", "Johann von Goethe"]
             }, {
-                domanda: "Quale delle seguenti non &#232; un'opera di italo calvino?	", 
+                domanda: "Quale delle seguenti non &#232; un&#39;opera di italo calvino?	", 
                 r_corretta: "Il fu Mattia Pascal", 
                 opzioni: ["Il visconte dimezzato", "Il barone rampante", "Il fu Mattia Pascal", "Il cavaliere inesistente"]
             }, {
@@ -1222,7 +1224,7 @@ function gameplay(){
             }, {
                 domanda: "Gallina che non becca...",
                 r_corretta: "ha gi&#224; beccato",
-                opzioni: ["fa l'uovo", "ha gi&#224; dorme", "beccher&#224;"]
+                opzioni: ["fa l&#39;uovo", "ha gi&#224; dorme", "beccher&#224;"]
             }, {
                 domanda: "Chi sono i Pentatonix?",
                 r_corretta: "dei cantanti",
@@ -1236,7 +1238,7 @@ function gameplay(){
                 r_corretta: "Reazione a Catena",
                 opzioni: ["Ciao Darwin", "Avanti un altro", "Reazione a Catena", "Non &#232; la Rai"]
             }, {
-                domanda: "Nella serie Friends chi ha detto -how you doin' ?",
+                domanda: "Nella serie Friends chi ha detto -how you doin&#39; ?",
                 r_corretta: "Joey",
                 opzioni: ["Joey", "Rachel", "Ross", "David"]
             }, {
@@ -1296,39 +1298,39 @@ function gameplay(){
                 r_corretta: "Deserto rosso", 
                 opzioni: ["Profondo rosso", "Sorgo rosso", "Deserto rosso", "Il fiume rosso"]
             }, {
-                domanda: "&#200; stato assegnato, alla Mostra del Cinema di Venezia del 1992, il Leone D'oro alla carriera ad un famoso comico e scrittore italiano. Chi &#232;?", 
+                domanda: "&#200; stato assegnato, alla Mostra del Cinema di Venezia del 1992, il Leone D&#39;oro alla carriera ad un famoso comico e scrittore italiano. Chi &#232;?", 
                 r_corretta: "Paolo Villaggio", 
                 opzioni: ["Raimondo Vinello", "Ugo Tognazzi", "Paolo Villaggio", "Macario"]
             }, {
-                domanda: "Ermanno Olmi traccia storie che sono favole proiettate verso l'affermazione dei valori essenziali della vita. Sono sue opere i seguenti film tranne:", 
+                domanda: "Ermanno Olmi traccia storie che sono favole proiettate verso l&#39;affermazione dei valori essenziali della vita. Sono sue opere i seguenti film tranne:", 
                 r_corretta: "Il posto delle fragole", 
-                opzioni: ["La leggenda del Santo Bevitore", "Genesi", "L'albero degli zoccoli", "Il posto delle fragole"]
+                opzioni: ["La leggenda del Santo Bevitore", "Genesi", "L&#39;albero degli zoccoli", "Il posto delle fragole"]
             }, {
                 domanda: "I film di Luis Bunuel sono caratterizzati da uno stile secco e da un sottile umorismo che trasforma il quotidiano in fantastico, come avviene in:", 
                 r_corretta: "Il fascino discreto della borghesia", 
-                opzioni: ["Amarcord", "Il fascino discreto della borghesia", "L'eclisse", "nessuna delle precedenti"]
+                opzioni: ["Amarcord", "Il fascino discreto della borghesia", "L&#39;eclisse", "nessuna delle precedenti"]
             }, {
                 domanda: " Il successo internazionale di un romanzo postumo &#232; davvero eccezionale. Tale &#232; stato il caso di:", 
                 r_corretta: "Il Gattopardo", 
                 opzioni: ["Il Gattopardo", "Ossi di Seppia", "V&#224; dove ti porta il cuore", "Gomorra"]
             }, {
-                domanda: "“L'insostenibile leggerezza dell'essere” &#232; opera di:", 
+                domanda: "“L&#39;insostenibile leggerezza dell&#39;essere” &#232; opera di:", 
                 r_corretta: "Kundera", 
                 opzioni: ["Kazan", "Kubrick", "Kundera", "Hesse"]
             }, {
-                domanda: "La morsa e Lumie di Sicilia sono due atti unici che costituirono l'esordio teatrale di", 
+                domanda: "La morsa e Lumie di Sicilia sono due atti unici che costituirono l&#39;esordio teatrale di", 
                 r_corretta: "L. Pirandello", 
                 opzioni: ["L. Pirandello", "G. Verga", "C. Pavese", "F. Tozzi"]
             }, {
-                domanda: "Cos’&#232; la sceneggiatura di un film?", 
+                domanda: "Cos&#39;&#232; la sceneggiatura di un film?", 
                 r_corretta: "la stesura definitiva del testo del film", 
-                opzioni: ["l’insieme degli ambienti in cui si svolge l’azione filmica", "la scaletta degli argomenti da trattare nel film", "l’insieme delle inquadrature riferibili all’inizio e alla fine del film", "la stesura definitiva del testo del film"]
+                opzioni: ["l&#39;insieme degli ambienti in cui si svolge l&#39;azione filmica", "la scaletta degli argomenti da trattare nel film", "l&#39;insieme delle inquadrature riferibili all&#39;inizio e alla fine del film", "la stesura definitiva del testo del film"]
             }, {
                 domanda: "Come si definisce il procedimento cinematografico che permette di ampliare il formato delle proiezioni per scopi spettacolari?", 
                 r_corretta: "cinemascope", 
                 opzioni: ["editing", "cinemascope", " infotainment", "colophon"]
             }, {
-                domanda: "Quali sono invece le uniche due attrici italiane ad aver conquistato l'Oscar?", 
+                domanda: "Quali sono invece le uniche due attrici italiane ad aver conquistato l&#39;Oscar?", 
                 r_corretta: "Anna Magnani e Sophia Loren", 
                 opzioni: ["Gina Lollobrigida e Silvana Mangano", "Monica Vitti e Mariangela Melato", "Claudia Cardinale e Virna Lisi", "Anna Magnani e Sophia Loren"]
             }, {
@@ -1348,7 +1350,7 @@ function gameplay(){
                 r_corretta: "Guerra nucleare", 
                 opzioni: ["Attentato terroristico", "Pandemia", "Incidente aereo", "Guerra nucleare"]
             }, {
-                domanda: "Quale citt&#224; fa da sfondo alle vicende di Grey’s Anatomy?", 
+                domanda: "Quale citt&#224; fa da sfondo alle vicende di Grey&#39;s Anatomy?", 
                 r_corretta: "Chicago", 
                 opzioni: ["New York", "Los Angeles", "Seattle", "Chicago"]
             }, {
@@ -1376,11 +1378,11 @@ function gameplay(){
                 r_corretta: "Downtown Abbey", 
                 opzioni: ["Riverdale", "Emily in Paris", "Downtown Abbey", "The Walking Dead"]
             }, {
-                domanda: "Di quale regista &#232; fan Dawson Leery, protagonista di Dawson’s Creek?", 
+                domanda: "Di quale regista &#232; fan Dawson Leery, protagonista di Dawson&#39;s Creek?", 
                 r_corretta: "Ridley Scott", 
                 opzioni: ["Stanley Kubrick", "Steven Spielberg", "Chris Columbus", "Ridley Scott"]
             }, {
-                domanda: "Ne L’uomo nell’alto castello quali potenze si spartiscono il territorio degli Stati Uniti?", 
+                domanda: "Ne L&#39;uomo nell&#39;alto castello quali potenze si spartiscono il territorio degli Stati Uniti?", 
                 r_corretta: "Cina e India", 
                 opzioni: ["Germania e Giappone", "Regno Unito e Francia", "Italia e Spagna", "Cina e India"]
             }, {
@@ -1388,13 +1390,13 @@ function gameplay(){
                 r_corretta: "Jack", 
                 opzioni: ["Jack", "Julio", "Joseph", "Jos&#233;"]
             }, {
-                domanda: "Cosa s'intende per binge watching?", 
+                domanda: "Cosa s&#39;intende per binge watching?", 
                 r_corretta: "guardare gli episodi tutti di fila", 
                 opzioni: ["guardare gli episodi con calma", "guardare gli episodi tutti di fila", "saltare gli episodi", "riguardare gli episodi"]
             }, {
                 domanda: "Qual &#232; il nome del bar dove si trovano i protagonisti di Friends?",
                 r_corretta: "Central Perk", 
-                opzioni: ["Baretto", "Amigos", "Mc Laren's", "Central Perk"]
+                opzioni: ["Baretto", "Amigos", "Mc Laren&#39;s", "Central Perk"]
             }, {
                 domanda: "Twin Peaks ruota attorno alla misteriosa morte di...", 
                 r_corretta: "Laura Palmer", 
@@ -1412,11 +1414,11 @@ function gameplay(){
                 r_corretta: "fegato", 
                 opzioni: ["pancreas", "fegato", "stomaco", "vescica"]
             }, {
-                domanda: "Che cos'&#232; C6H12O6?", 
+                domanda: "Che cos&#39;&#232; C6H12O6?", 
                 r_corretta: "glucosio", 
                 opzioni: ["glicerina", "glucosio", "formaldeide", "acqua ossigenata"]
             }, {
-                domanda: "Cos'&#232; la pectina?", 
+                domanda: "Cos&#39;&#232; la pectina?", 
                 r_corretta: "polisaccaride", 
                 opzioni: ["gomma", "proteina", "polisaccaride", "colla"]
             }, {
@@ -1424,7 +1426,7 @@ function gameplay(){
                 r_corretta: "bamb&#249;", 
                 opzioni: ["bamb&#249;", "insetti", "fieno", "piccoli mammiferi"]
             }, {
-                domanda: "Com'&#232; chiamata una reazione chimica che produce calore?",
+                domanda: "Com&#39;&#232; chiamata una reazione chimica che produce calore?",
                 r_corretta: "esotermica",
                 opzioni: ["endotermica", "esotermica", "endobarica", "isobarica"]
             }, {
@@ -1432,7 +1434,7 @@ function gameplay(){
                 r_corretta: "oro",
                 opzioni: ["rame", "magnesio", "ferro", "oro"]
             }, {
-                domanda: "Quale elemento contenuto nel pesce pu&#242; essere tossico per l'uomo?",
+                domanda: "Quale elemento contenuto nel pesce pu&#242; essere tossico per l&#39;uomo?",
                 r_corretta: "mercurio",
                 opzioni: ["tellurio", "ossigeno", "mercurio", "magnesio"]
             }, {
@@ -1456,15 +1458,15 @@ function gameplay(){
                 r_corretta: "6m",
                 opzioni: ["3m", "4m", "5m", "6m"]
             }, {
-                domanda: "Che cos'&#232; il pangasio?",
+                domanda: "Che cos&#39;&#232; il pangasio?",
                 r_corretta: "pesce",
                 opzioni: ["pane", "pesce", "uccello", "insetto"]
             }, {
-                domanda: "Cosa s’intende per miraggio?",
+                domanda: "Cosa s&#39;intende per miraggio?",
                 r_corretta: "illusione ottica",
                 opzioni: ["illusione ottica", "arcobaleno", "forte vento", "stelle cadenti"]
             },{
-                domanda: "Qual'&#232; l'oggetto della Sociologia?", 
+                domanda: "Qual&#39;&#232; l&#39;oggetto della Sociologia?", 
                 r_corretta: "studio scientifico della societ&#224;", 
                 opzioni: ["le applicazioni", "il cinema", "i giochi di societ&#224;", "studio scientifico della societ&#224;"]
             }, {
@@ -1484,11 +1486,11 @@ function gameplay(){
                 r_corretta: "salmone", 
                 opzioni: ["spigola", "luccio", "salmone", "sardina"]
             }, {
-                domanda: "Quale virus ha provocato una pandemia all'inizio del 2020?", 
+                domanda: "Quale virus ha provocato una pandemia all&#39;inizio del 2020?", 
                 r_corretta: "COVID19", 
                 opzioni: ["TOVID19", "COVID19", "COVIT19", "VOCID19"]
             }, {
-                domanda: "Qual'&#232; il composto chimico utilizzato nella piscina?", 
+                domanda: "Qual&#39;&#232; il composto chimico utilizzato nella piscina?", 
                 r_corretta: "cloro", 
                 opzioni: ["fluoro", "cloro", "bromo", "astato"]
             }, {
@@ -1498,7 +1500,7 @@ function gameplay(){
             }, {
                 domanda: "Benjamin Franklin invent&#242;...", 
                 r_corretta: "il parafulmine", 
-                opzioni: ["la ruota", "il parafulmine", "Il motoscafo", "l'aceto"]
+                opzioni: ["la ruota", "il parafulmine", "Il motoscafo", "l&#39;aceto"]
             }, {
                 domanda: "Il primo termometro fu realizzato da...", 
                 r_corretta: "Galileo Galilei", 
@@ -1532,7 +1534,7 @@ function gameplay(){
                 r_corretta: "Isaac Singer", 
                 opzioni: ["Georges Audemars", "George Pullman", "Levi Strauss", "Isaac Singer"]
             }, {
-                domanda: "Nel 1901 trasmette via radio una lettera dell'alfabeto Morse attraverso l'oceano Atlantico:", 
+                domanda: "Nel 1901 trasmette via radio una lettera dell&#39;alfabeto Morse attraverso l&#39;oceano Atlantico:", 
                 r_corretta: "Guglielmo Marconi", 
                 opzioni: ["Guglielmo Marconi", "Samuel Morse", "Antonio Meucci", "Nikola Tesla"]
             }, {
@@ -1540,7 +1542,7 @@ function gameplay(){
                 r_corretta: "Alexander Fleming", 
                 opzioni: ["Louis Pasteur", "Ernst Boris Chain", "Alexander Fleming", "James Parkinson"]
             }, {
-                domanda: "Secondo gli studiosi la ruota fu inventata nell'antica Mesopotamia...", 
+                domanda: "Secondo gli studiosi la ruota fu inventata nell&#39;antica Mesopotamia...", 
                 r_corretta: "dai Sumeri", 
                 opzioni: ["dagli Egiziani", "dai Maya", "dai Sumeri", "dai Romani"]
             }, {
@@ -1568,7 +1570,7 @@ function gameplay(){
                 r_corretta: "27 giorni circa", 
                 opzioni: ["27 giorni circa", "24 ore circa", "un anno circa", "due mesi"]
             }, {
-                domanda: "Quali tra questi animali &#232; il pi&#249; pericoloso per l'uomo?", 
+                domanda: "Quali tra questi animali &#232; il pi&#249; pericoloso per l&#39;uomo?", 
                 r_corretta: "Zanzara tigre", 
                 opzioni: ["Squalo bianco", "Zanzara tigre", "Leone", "Serpente a sonagli"]
             }, {
@@ -1576,7 +1578,7 @@ function gameplay(){
                 r_corretta: "in Australia", 
                 opzioni: ["in Australia", "in Germania", "in Venezuela", "in Cina"]
             }, {
-                domanda: "L’ orso dagli occhiali vive in...", 
+                domanda: "L&#39; orso dagli occhiali vive in...", 
                 r_corretta: "America meridionale", 
                 opzioni: ["Mongolia", "America meridionale", "Cina", "Giappone"]
             }, {
@@ -1596,7 +1598,7 @@ function gameplay(){
                 r_corretta: "bianchi", 
                 opzioni: ["verdi", "rossi", "bianchi", "gialli"]
             }, {
-                domanda: "L’alloro ha fiori...", 
+                domanda: "L&#39;alloro ha fiori...", 
                 r_corretta: "gialli", 
                 opzioni: ["blu", "rossi", "verdi", "gialli"]
             }, {
@@ -1661,8 +1663,9 @@ function gameplay(){
                 argomento = nat_scienza;
                 colore_triangolino = "rgb(83, 208, 96)";
                 break;
-        let random = Math.floor(Math.random() * (argomento.length));
         }
+        
+        let random = Math.floor(Math.random() * (argomento.length));
 
         function gira() {
             let card = document.getElementById("card");
@@ -1756,7 +1759,7 @@ function gameplay(){
                 <img src="img/scritta.png" id="congra">
                 <img src="img/lista.png" id="lista">
                 <h3>Giocatore ` + (giocatore+1) + ` ha vinto la partita!</h3>
-                <input type="button" id="btn" value="Gioca un'altra partita" onclick="nuovoGioco();"/>
+                <input type="button" id="btn" value="Gioca un&#39;altra partita" onclick="nuovoGioco();"/>
             </div>`;
         document.body.innerHTML += t;
     }
@@ -1775,16 +1778,52 @@ function gameplay(){
     function nrGiocatori(){
         let t=`
             <div id="nrGiocatori">
-                <form onsubmit="insert();">
-                    <h3>In quanti si vuole giocare? Da un minimo di 1 ad un massimo di 6 giocatori? "</h3><br>
+                <form onsubmit="nomiGiocatori();">
+                    <h3>In quanti si vuole giocare? Da un minimo di 1 ad un massimo di 6 giocatori?</h3><br>
                     <input type="number" id="nGiocatori" min="1" max="6" step="1" required><br><br>
                     <input type="submit" value="Fatto!" id="btn">
                 </form>
             </div>`;
         document.body.innerHTML += t;
     }
+    nomiGiocatori=nicknames;
     
+    function nicknames() {
+        numeroGiocatori = document.getElementById("nGiocatori").value;
+        let element=document.getElementById("nrGiocatori");
+        element.remove();
+        let a=`
+            <div id="nicknames">
+                <form onsubmit="insert();">
+                    <h2> Inserisci nomi dei giocatori: </h2>
+                    <div id="nome">
+                    </div><br>
+                    <input type="submit" value="Fatto!" id="btn">
+                </form>
+            </div>`;
+        document.body.innerHTML += a;
+        for (let i=0; i<numeroGiocatori; i++){
+            let b = `
+                <p>Giocatore `+(i+1)+`</p>
+                <input type="text" id="nome`+i+`" required>`;
+            document.getElementById("nome").innerHTML += b;
+        }
+    }
     insert=inizializza;
+    function visualizzaNomi() {
+        let t = `<div id="players">
+                    <h2>Giocatori:</h2>
+                    <div id="nomi">
+                    </div>
+                </div>`;
+        document.getElementById("gioco").innerHTML += t;
+        for (let i=0; i<numeroGiocatori; i++) {
+            let li = document.createElement("li");
+            li.innerHTML = players[i];
+            li.id = "li" + i;
+            document.getElementById("nomi").appendChild(li);
+        }
+    }
     
 	function inizializza(){
 		let inizio = document.getElementById("pedina_esempio");
@@ -1794,10 +1833,14 @@ function gameplay(){
 		let topDefault = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
 		let leftDefault = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
 		let colori = ["rgb(239, 119, 51)","rgb(75, 162, 242)","rgb(188, 75, 242)","rgb(83, 208, 96)","rgb(249, 60, 173)","rgb(239, 208, 45)" ]
-
-		let numeroGiocatori = document.getElementById("nGiocatori").value;
-        let element=document.getElementById("nrGiocatori");
+        
+        for (let i=0; i<numeroGiocatori; i++){
+            let nome = document.getElementById("nome"+i).value;
+            players.push(nome);
+        }
+        let element=document.getElementById("nicknames");
         element.remove();
+        visualizzaNomi();
 		for (let i=numeroGiocatori-1; i>=0; i--){
 			let text =
 				` <div id="pedina_` + i + `" class="pedina">
@@ -1825,7 +1868,6 @@ function gameplay(){
 						</g>
 					</svg>
 				</div>`
-				;
 				
 				
 				document.getElementById("map").innerHTML +=text;
@@ -1842,6 +1884,11 @@ function gameplay(){
     
 
 	function turno(){
+        let divPlayers=document.getElementById("players");
+        divPlayers.remove();
+        visualizzaNomi();
+        turnoGiocatore=document.getElementById("li"+giocatore);
+        turnoGiocatore.style.color="black";
         clickElementi();
 		lanciaDado();
 	}
