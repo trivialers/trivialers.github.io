@@ -332,6 +332,46 @@ function gameplay(){
                 r_corretta: "Zeus",
                 opzioni: ["Ares", "Ade", "Zeus", "Apollo"]
             }, {
+                domanda: "Come fu ucciso Robespierre?",
+                r_corretta: "ghigliottinato",
+                opzioni: ["impiccato", "assassinata", "ghigliottinato", "pugnalato"]
+            }, {
+                domanda: "Quali sono stati i maggiori esponenti della Riforma Protestante?",
+                r_corretta: "Lutero e Calvino",
+                opzioni: ["Mandela e Madre Teresa", "Boccaccio e Machiavelli", "Lutero e Calvino", "Montesquieu e Rosseau"]
+            }, {
+                domanda: "Chi diede inizio alla costruzione del colosseo?",
+                r_corretta: "Tito Flavio Vespasiano",
+                opzioni: ["Caio Giulio Cesare", "Diocleziano", "Nerone", "Tito Flavio Vespasiano"]
+            }, {
+                domanda: "Dove viveva il popolo Inca?",
+                r_corretta: "Per&#249;",
+                opzioni: ["Messico", "Per&#249;", "Brasile", "India"]
+            }, {
+                domanda: "In che giorno &#232; avvenuto sbarco in Normandia?",
+                r_corretta: "6 giugno 1944",
+                opzioni: ["6 giugno 1944", "7 giugno 1944", "6 giugno 1947", "7 giugno 1947"]
+            }, {
+                domanda: "In che giorno &#232; stata fondata la Repubblica italiana?",
+                r_corretta: "2 giugno 1946",
+                opzioni: ["2 giugno 1946", "2 giugno 1947", "2 giugno 1948", "2 giugno 1949"]
+            }, {
+                domanda: "Chi fu il primo presidente italiano?",
+                r_corretta: "Enrico De Nicola",
+                opzioni: ["Luigi Einaudi", "Enrico De Nicola", "Giovanni Grochi", "Antonio Segni"]
+            }, {
+                domanda: "Di quale paese erano originari gli aragonesi?",
+                r_corretta: "Spagna",
+                opzioni: ["Francia", "Austria", "Germania", "Spagna"]
+            }, {
+                domanda: "Cosa accade il 14 agosto 2018 in Italia?",
+                r_corretta: "crolla il ponte Morandi",
+                opzioni: ["Presidente dimesso", "elezione Presidente", "crolla il ponte Morandi", " terremoto di magnitudo 6"]
+            }, {
+                domanda: "In quale data si scopre l’America?",
+                r_corretta: "12 Ottobre 1492",
+                opzioni: ["12 Ottobre 1491", "12 Ottobre 1492", "12 Ottobre 1493", "12 Ottobre 1494"]
+            },{
                 domanda: "Chi era il presidente americano nel 2018?",
                 r_corretta: "Donald Trump",
                 opzioni: ["Donald Duck", "Donald Trump", "Barack Obama", "George Bush"]
@@ -720,6 +760,46 @@ function gameplay(){
                 r_corretta: "sollevamento pesi",
                 opzioni: ["paura degli avversari", "disturbo nel processo di crescita", "alterazione dei livelli di ematocrito nel sangue", "sollevamento pesi"]
             }, {
+                domanda: "Il soprannome di Clarence Seedorf?",
+                r_corretta: "professore",
+                opzioni: ["poeta", "genio", "scienziato", "professore"]
+            }, {
+                domanda: "Quale squadre &#232; definita A maggica?",
+                r_corretta: "Roma",
+                opzioni: ["Lazio", "Roma", "Napoli", "Juventus"]
+            }, {
+                domanda: "Quale sport praticava Bud Spencer?",
+                r_corretta: "nuoto",
+                opzioni: ["calcio", "ciclismo", "nuoto", "rugby"]
+            }, {
+                domanda: "Quanti giocatori formano una squadra di Baseball?",
+                r_corretta: "9",
+                opzioni: ["7", "8", "9", "10"]
+            }, {
+                domanda: "Quale giocatore di calcio viene chiamato El principe?",
+                r_corretta: "Milito",
+                opzioni: ["Ronaldinho", "Milito", "Pel&#232;", "Maradona"]
+            }, {
+                domanda: "Cosa vuol dire FIN?",
+                r_corretta: "Federazione Italiana Nuoto",
+                opzioni: ["Frazione Italiana Nuoto", "Ferrovia Italiana Nuova", "Federazione Italiana Nuoto", "Federazione Italiana Nuova"]
+            }, {
+                domanda: "WADA significa?",
+                r_corretta: "Associazione Mondiale Anti Doping",
+                opzioni: ["Associazione Mondiale Anti Doping", "Associazione Mondiale Anti Dropping", "Associazione Mondiale Anti Drop", "Associazione Mondiale Doping"]
+            }, {
+                domanda: "Cos’&#232; un agente mascherante?",
+                r_corretta: "mascherare l’uso di sostanze proibite",
+                opzioni: ["Chi fornisce le sostanze proibite", "mascherare l’uso di sostanze proibite", "rappresentante di un atleta", "maschera teatrale"]
+            }, {
+                domanda: "il CIO &#232;?",
+                r_corretta: "comitato olimpico internazionale",
+                opzioni: ["centro olimpico interno", "comitato olimpico internazionale", "una lista di farmaci proibita", "codice internazionale antidoping"]
+            }, {
+                domanda: "Che cos'&#232; il doping? L’uso di. . . per migliorare la prestazione sportiva",
+                r_corretta: "metodi nocivi alla salute",
+                opzioni: ["metodi nocivi alla salute", "farmaci antinfiammatori", "allenamenti intensivi", "integratori"]
+            },{
                 domanda: "Nel basket in quanti secondi occorre concludere la propria azione con tiro a canestro?",
                 r_corretta: "24",
                 opzioni: ["18", "20", "22", "24"]
@@ -868,6 +948,46 @@ function gameplay(){
                 r_corretta: "William Shakespeare ",
                 opzioni: ["Jane Austen ", "Geoffrey Chaucer ", "William Shakespeare ", "Michael Jackson "]
             }, {
+                domanda: "Chi dipinse la Scuola di Atene?",
+                r_corretta: "Raffaello",
+                opzioni: ["da Vinci", "Raffaello", "Michelangelo", "Tiziano"]
+            }, {
+                domanda: "Quale colore ottieni mescolando il giallo e il blu?",
+                r_corretta: "verde",
+                opzioni: ["verde", "arancione", "rosso", "viola"]
+            }, {
+                domanda: "In quale paese &#232; nato Vincent Van Gogh?",
+                r_corretta: "Paesi bassi",
+                opzioni: ["Paesi bassi", "Russia", "Austria", "Francia"]
+            }, {
+                domanda: "Chi &#232; Simone de beauvoir?",
+                r_corretta: "scrittrice",
+                opzioni: ["scrittrice", "cantante", "ballerina", "attrice"]
+            }, {
+                domanda: "Chi scrisse la Fattoria degli animali?",
+                r_corretta: "George Orwell",
+                opzioni: ["J. K. Rowling.", "Dan Brown", "George Orwell", "Italo Calvino"]
+            }, {
+                domanda: "Chi scrisse il fu Mattia Pascal?",
+                r_corretta: "Luigi Pirandello",
+                opzioni: ["Ugo Foscolo", "Luigi Pirandello", "Niccol&#242; Machiavelli", "Italo Calvino"]
+            }, {
+                domanda: "Chi ha scritto Lettera a un bambino mai nato?",
+                r_corretta: "Oriana Fallaci",
+                opzioni: ["Umberto Eco", "Luciana Littizzetto", "Oriana Fallaci", "Federico Moccia"]
+            }, {
+                domanda: "Chi compose l'opera Madama Butterfly?",
+                r_corretta: "Puccini",
+                opzioni: ["Mozart", "Puccini", "Bernini", "Monet"]
+            }, {
+                domanda: "Chi nacque durante il Rinascimento?",
+                r_corretta: "Ludovico Ariosto",
+                opzioni: ["Ludovico Ariosto", "Dante Alighieri", "Claude Monet", "Geoffrey Chaucer"]
+            }, {
+                domanda: "Dove hanno sepolto il corpo di Dante Alighieri?",
+                r_corretta: "Ravenna",
+                opzioni: ["Roma ", "Londra", "Firenze", "Ravenna"]
+            },{
                 domanda: "Chi era Gabriele D'Annunzio?",
                 r_corretta: "un poeta",
                 opzioni: ["un bodybuilder", "un miliardario", "un poeta", "un cuoco"]
@@ -916,6 +1036,46 @@ function gameplay(){
                 r_corretta: "Piazza Navona", 
                 opzioni: ["Arena di Verona", "Piazza Navona", "Spianata delle Moschee", "Parco dei Principi"]
             }, {
+                domanda: "Dove si trova Ciad?",
+                r_corretta: "Africa",
+                opzioni: ["Africa", "Asia", "America", "Canada"]
+            }, {
+                domanda: "Dove si trova la famosa provincia dello Champagne?",
+                r_corretta: "Francia",
+                opzioni: ["Svizzera ", "Francia", "Spagna", "Germania"]
+            }, {
+                domanda: "Qual &#232; il nome di un monte situato nel Per&#249;?",
+                r_corretta: "Machu Picchu",
+                opzioni: ["Machu Picchu", "K2", "Everest", "Elbrus"]
+            }, {
+                domanda: "Qual’&#232; l'isola pi&#249; grande del mondo?",
+                r_corretta: "Groenlandia",
+                opzioni: ["Groenlandia", "Sardegna", "Giappone", "Gran Bretagna"]
+            }, {
+                domanda: "Dove ci troviamo se siamo a Piazza Plebiscito?",
+                r_corretta: "Napoli",
+                opzioni: ["Verona", "Napoli", "Venezia", "Roma"]
+            }, {
+                domanda: "Di quale dei seguenti arcipelaghi fa parte l’isola Panarea?",
+                r_corretta: "Isole Eolie",
+                opzioni: [" Isola di Capo", "Isola Verde", "Isole Eolie", "Isole delle Antille"]
+            }, {
+                domanda: "Che cosa sono i pupi siciliani?",
+                r_corretta: "marionette",
+                opzioni: ["dolci", "marionette", "giochi", "accessori"]
+            }, {
+                domanda: "Quale lingua si parla in Mozambico?",
+                r_corretta: "portoghese",
+                opzioni: ["tedesco", "inglese", "olandese", "portoghese"]
+            }, {
+                domanda: "Qual'&#232; il quinto pianeta del nostro sistema solare?",
+                r_corretta: "Giove",
+                opzioni: ["Giove", "Nettuno", "Terra", "Mercurio"]
+            }, {
+                domanda: "La capitale della Bulgaria?",
+                r_corretta: "Sofia",
+                opzioni: ["Vienna", "Chisinau ", "Bucarest", "Sofia"]
+            },{
                 domanda: "Chi era Lisippo?", 
                 r_corretta: "Uno scultore", 
                 opzioni: ["Uno scultore", "Un filosofo", "Un cantante", "Un ceramista"]
@@ -1048,6 +1208,46 @@ function gameplay(){
                 r_corretta: "ombrello", 
                 opzioni: ["aereo", "tappeto", "ombrello", "scopa"]
             }, {
+                domanda: "Chi sono gli Arteteca?",
+                r_corretta: "comici",
+                opzioni: ["cantanti", "comici", "ballerini", "attori"]
+            }, {
+                domanda: "-Mii non ci posso credere; Quale attore pronuncia questa frase?",
+                r_corretta: "Aldo",
+                opzioni: ["Aldo", "Luca", "Giacomo", "Giovanni"]
+            }, {
+                domanda: "Quale di questi cartoni animati ha come protagonista un robot?",
+                r_corretta: "Futurama",
+                opzioni: ["Futurama", "Simpson", "Griffin", "Winx"]
+            }, {
+                domanda: "Gallina che non becca...",
+                r_corretta: "ha gi&#224; beccato",
+                opzioni: ["fa l'uovo", "ha gi&#224; dorme", "beccher&#224;"]
+            }, {
+                domanda: "Chi sono i Pentatonix?",
+                r_corretta: "dei cantanti",
+                opzioni: ["una band", "dei ballerini", "dei cantanti", " degli artisti"]
+            }, {
+                domanda: "Come si chiama la protagonista di Stranger Things?",
+                r_corretta: "Eleven",
+                opzioni: ["Max", "Samantha", "Emma", "Eleven"]
+            }, {
+                domanda: "Quale di questi programmi televisivi non &#232; condotto da Paolo Bonolis?",
+                r_corretta: "Reazione a Catena",
+                opzioni: ["Ciao Darwin", "Avanti un altro", "Reazione a Catena", "Non &#232; la Rai"]
+            }, {
+                domanda: "Nella serie Friends chi ha detto -how you doin' ?",
+                r_corretta: "Joey",
+                opzioni: ["Joey", "Rachel", "Ross", "David"]
+            }, {
+                domanda: "Di che colore sono i capelli di Poison Ivy in Batman?",
+                r_corretta: "rossi",
+                opzioni: ["viola", "rossi", "verdi", "neri"]
+            }, {
+                domanda: "Qual &#232; il nome del protagonista in Dr.House?",
+                r_corretta: "Gregory",
+                opzioni: ["iTerence ", "Sheldon  ", "Gregory", "Willy"]
+            },{
                 domanda: "Chi &#232; Woody Allen?", 
                 r_corretta: "regista", 
                 opzioni: ["regista", "cuoco", "politico", "pittore"]
@@ -1224,6 +1424,46 @@ function gameplay(){
                 r_corretta: "bamb&#249;", 
                 opzioni: ["bamb&#249;", "insetti", "fieno", "piccoli mammiferi"]
             }, {
+                domanda: "Com'&#232; chiamata una reazione chimica che produce calore?",
+                r_corretta: "esotermica",
+                opzioni: ["endotermica", "esotermica", "endobarica", "isobarica"]
+            }, {
+                domanda: "Quale elemento pesa di pi&#249;?",
+                r_corretta: "oro",
+                opzioni: ["rame", "magnesio", "ferro", "oro"]
+            }, {
+                domanda: "Quale elemento contenuto nel pesce pu&#242; essere tossico per l'uomo?",
+                r_corretta: "mercurio",
+                opzioni: ["tellurio", "ossigeno", "mercurio", "magnesio"]
+            }, {
+                domanda: "Quale elemento ha un odore sgradevole se bruciato?",
+                r_corretta: "zolfo",
+                opzioni: ["idrogeno", "potassio", "neon", "zolfo"]
+            }, {
+                domanda: "Quale fenomeno non &#232; il risultato di una reazione chimica?",
+                r_corretta: "evaporazione",
+                opzioni: ["evaporazione", "arrugginimento", "cambiamento di colore", "sviluppo del calore"]
+            }, {
+                domanda: "Che cosa sono gram positivi e gram negativi?",
+                r_corretta: "batteri",
+                opzioni: ["funghi", "virus", "batteri", "proteine"]
+            }, {
+                domanda: "Che cosa fanno i ribosomi della cellula?",
+                r_corretta: "sintesi proteica",
+                opzioni: ["sintesi proteica", "respirazione cellulare", "fagocitosi", "glicolisi"]
+            }, {
+                domanda: "Quanto pu&#242; essere alta una giraffa?",
+                r_corretta: "6m",
+                opzioni: ["3m", "4m", "5m", "6m"]
+            }, {
+                domanda: "Che cos'&#232; il pangasio?",
+                r_corretta: "pesce",
+                opzioni: ["pane", "pesce", "uccello", "insetto"]
+            }, {
+                domanda: "Cosa s’intende per miraggio?",
+                r_corretta: "illusione ottica",
+                opzioni: ["illusione ottica", "arcobaleno", "forte vento", "stelle cadenti"]
+            },{
                 domanda: "Qual'&#232; l'oggetto della Sociologia?", 
                 r_corretta: "studio scientifico della societ&#224;", 
                 opzioni: ["le applicazioni", "il cinema", "i giochi di societ&#224;", "studio scientifico della societ&#224;"]
@@ -1394,7 +1634,6 @@ function gameplay(){
             risposte: null,
         }
 
-        let random = Math.floor(Math.random() * (Object.keys(storia).length));
         let argomento = [];
         let colore_triangolino;
         switch (materia) {
@@ -1422,6 +1661,7 @@ function gameplay(){
                 argomento = nat_scienza;
                 colore_triangolino = "rgb(83, 208, 96)";
                 break;
+        let random = Math.floor(Math.random() * (argomento.length));
         }
 
         function gira() {
@@ -1547,7 +1787,6 @@ function gameplay(){
     insert=inizializza;
     
 	function inizializza(){
-        event.preventDefault();
 		let inizio = document.getElementById("pedina_esempio");
 		let dimensioni = inizio.getBoundingClientRect();
 		let esagono = document.getElementById("esagono");
