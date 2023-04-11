@@ -10,6 +10,7 @@ let insert, nomiGiocatori, flip, nuovoGioco;
 function gameplay(){
     let Pedine = [];
     let players = [];
+    let id_possibili = [];
 	let skipMove = true;
 	let again = false;
     let numeroGiocatori=0;
@@ -299,13 +300,73 @@ function gameplay(){
 			X = X + dadox;
             cube.onclick="";
 			cube.style.transform = "rotateX(" + X + "deg) " + "rotateY(" + Y + "deg)";
-			setTimeout(function() { 
+			setTimeout(function() {
 				skipMove= false;
 			}, 5000);
 		}
 
 	}
 	
+    function previsione(mosse, id_attuale, id_passato){
+        let id_futuro="";
+        if (mosse==0){
+            id_possibili.push(id_attuale);
+        }
+        else if (id_attuale=="esagono"){
+            for (let i=1; i<=6; i++){
+                id_futuro="Ellipse_"+(i*7)+"_1";
+                if (id_futuro != id_passato){
+                    previsione(mosse-1, id_futuro, id_attuale);
+                }
+            }
+        }
+        else {
+            let id_diviso = id_attuale.split("_");
+            id_diviso[1]= Number(id_diviso[1]);
+            if (id_diviso[1] % 7 ==0 && id_diviso.length==2){
+                id_futuro = "Ellipse_"+(id_diviso[1]+1);
+                if (id_futuro != id_passato){
+                    previsione(mosse-1, id_futuro, id_attuale);
+                }
+                id_futuro = "Ellipse_"+(id_diviso[1]-1);
+                if (id_futuro != id_passato){
+                    previsione(mosse-1, id_futuro, id_attuale);
+                }
+                id_futuro = "Ellipse_"+id_diviso[1]+"_5";
+                if (id_futuro != id_passato){
+                    previsione(mosse-1, id_futuro, id_attuale);
+                }
+            }
+            else if (id_diviso.length==3){
+                id_diviso[2]= Number(id_diviso[2]);
+                id_futuro = "Ellipse_"+id_diviso[1]+"_"+(id_diviso[2]+1);
+                if(id_diviso[2]==5){
+                    id_futuro = "Ellipse_"+id_diviso[1];
+                }
+                if (id_futuro != id_passato){
+                    previsione(mosse-1, id_futuro, id_attuale);
+                }
+                id_futuro = "Ellipse_"+id_diviso[1]+"_"+(id_diviso[2]-1);
+                if(id_diviso[2]==1){
+                    id_futuro = "esagono";
+                }
+                if (id_futuro != id_passato){
+                    previsione(mosse-1, id_futuro, id_attuale);
+                }
+            }
+            else {
+                id_futuro = "Ellipse_"+(id_diviso[1]+1);
+                if (id_futuro != id_passato){
+                    previsione(mosse-1, id_futuro, id_attuale);
+                }
+                id_futuro = "Ellipse_"+(id_diviso[1]-1);
+                if (id_futuro != id_passato){
+                    previsione(mosse-1, id_futuro, id_attuale);
+                }
+            }
+        }
+    }
+
 	function posizione(id, materia, triangolo = false) {
 		let pedina = document.getElementById(Pedine[giocatore]);
 		let dimensioni = pedina.getBoundingClientRect();
