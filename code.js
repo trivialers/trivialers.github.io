@@ -8,13 +8,12 @@ function play() {
 
 let insert, nomiGiocatori, flip, nuovoGioco;
 function gameplay(){
-    let Pedine = [];
-    let players = [];
     let id_possibili = [];
 	let skipMove = true;
 	let again = false;
     let numeroGiocatori=0;
 	let giocatore = 0;
+    let players[];
 
 	function clickElementi(){
 		$(document).ready(function () {
@@ -300,11 +299,11 @@ function gameplay(){
 			X = X + dadox;
             cube.onclick="";
 			cube.style.transform = "rotateX(" + X + "deg) " + "rotateY(" + Y + "deg)";
-			setTimeout(function() {
+            previsione(random, players[giocatore].id_casella, players[giocatore].id_casella);
+			setTimeout(function(){
 				skipMove= false;
 			}, 5000);
 		}
-
 	}
 	
     function previsione(mosse, id_attuale, id_passato){
@@ -368,12 +367,14 @@ function gameplay(){
     }
 
 	function posizione(id, materia, triangolo = false) {
-		let pedina = document.getElementById(Pedine[giocatore]);
+		let pedina = document.getElementById(players[giocatore].id_pedina);
 		let dimensioni = pedina.getBoundingClientRect();
 		let indirizzo = document.getElementById(id);
 		let posizione = indirizzo.getBoundingClientRect();
 		if (!skipMove){
 			skipMove= true;
+            players[giocatore].id_casella=id;
+            id_possibili[];
 			setTimeout( function() { 
 				pedina.style.top = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
 				pedina.style.left = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
@@ -1824,7 +1825,7 @@ function gameplay(){
 		    		}
                     turno();
                 } else {
-                    if (giocatore == (Pedine.length - 1)) {
+                    if (giocatore == (numeroGiocatori - 1)) {
                         giocatore = 0;
                     } else {
                         giocatore += 1;
@@ -1849,7 +1850,7 @@ function gameplay(){
     function partita(){
         let element = document.getElementById("vincita");
         element.remove();
-        for(let i=0; i<Pedine.length; i++){
+        for(let i=0; i<numeroGiocatori; i++){
             let el = document.getElementById("pedina_"+i);
             el.remove();
         }
@@ -1892,6 +1893,7 @@ function gameplay(){
         }
     }
     insert=inizializza;
+    
     function visualizzaNomi() {
         let t = `<div id="players">
                     <h2>Giocatori:</h2>
@@ -1901,7 +1903,7 @@ function gameplay(){
         document.getElementById("gioco").innerHTML += t;
         for (let i=0; i<numeroGiocatori; i++) {
             let li = document.createElement("li");
-            li.innerHTML = players[i];
+            li.innerHTML = players[i].nome;
             li.id = "li" + i;
             document.getElementById("nomi").appendChild(li);
         }
@@ -1918,7 +1920,12 @@ function gameplay(){
         
         for (let i=0; i<numeroGiocatori; i++){
             let nome = document.getElementById("nome"+i).value;
-            players.push(nome);
+            let giocator = {
+                nome: nome,
+                id_casella: "esagono",
+                id_pedina: `pedina_${i}`,
+            }
+            players.push(giocator);
         }
         let element=document.getElementById("nicknames");
         element.remove();
@@ -1949,17 +1956,14 @@ function gameplay(){
 							</g>
 						</g>
 					</svg>
-				</div>`
-				
+				</div>`		
 				
 				document.getElementById("map").innerHTML +=text;
 		}
 		for (let i=0; i<numeroGiocatori; i++){
-			Pedine.push(`pedina_${i}`);
-			let elemento = document.getElementById(Pedine[i]);
+			let elemento = document.getElementById(players[i].id_pedina);
 			elemento.style.top= topDefault;
 			elemento.style.left = leftDefault;
-			elemento.style.visibility= "visible";
 		}
         turno();
 	}
