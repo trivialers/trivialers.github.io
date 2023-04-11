@@ -548,12 +548,12 @@ function gameplay(){
                 opzioni: ["Irangate", "Watergate", "Watergate che nell&#39;Irangate", "Non fu coinvolto in nessuno scandalo"]
             }, {
                 domanda: "Che fenomeno demografico particolarmente importante ci fu tra il 1950 e il 1970?",
-                r_corretta: "L&#39;emigrazione dal Sud verso il nord Italia",
-                opzioni: ["L&#39;emigrazione dal Sud verso il nord Italia", "L&#39;immigrazione di albanesi", "Lo sbarco di profughi albanesi", "L&#39;aumento della mortalit&#224; a causa della malaria"]
+                r_corretta: "emigrazione dal Sud verso il nord",
+                opzioni: ["emigrazione dal Sud verso il nord", "immigrazione di albanesi", "Lo sbarco di profughi albanesi", "aumento della mortalit&#224; per la malaria"]
             }, {
                 domanda: "Cosa venne approvato nel 1947?",
-                r_corretta: "L&#39;abolizione della pena di morte",
-                opzioni: ["La legge sull&#39;aborto", "La legge sul divorzio", "La dichiarazione sulla discriminazione razziale", "L&#39;abolizione della pena di morte"]
+                r_corretta: "abolizione della pena di morte",
+                opzioni: ["La legge sull&#39;aborto", "La legge sul divorzio", "La dichiarazione sulla discriminazione razziale", "abolizione della pena di morte"]
             }, {
                 domanda: "A che anno risale il periodo di liberalizzazione della storia cecoslovacca, noto come primavera di Praga ?",
                 r_corretta: "1968",
@@ -603,9 +603,9 @@ function gameplay(){
                 r_corretta: "mongolo",
                 opzioni: ["cinese", "siamese", "persiano", "mongolo"]
             }, {
-                domanda: "Giovanna D&#39;Arco guid&#242; i Francesi:",
-                r_corretta: "nella guerra dei cent&#39;anni",
-                opzioni: ["nella guerra dei sette anni", "nella guerra dei cent&#39;anni", "nel conflitto greco-gotico", "nella prima crociata"]
+                domanda: "Giovanna D&#39;Arco guid&#242; i Francesi nella:",
+                r_corretta: "guerra dei cento anni",
+                opzioni: ["guerra dei sette anni", "guerra dei cento anni", "guerra greco-gotico", "prima crociata"]
             }
         ];
         
@@ -856,14 +856,14 @@ function gameplay(){
                 opzioni: ["Associazione Mondiale Anti Doping", "Associazione Mondiale Anti Dropping", "Associazione Mondiale Anti Drop", "Associazione Mondiale Doping"]
             }, {
                 domanda: "Cos&#39;&#232; un agente mascherante?",
-                r_corretta: "mascherare l&#39;uso di sostanze proibite",
-                opzioni: ["Chi fornisce le sostanze proibite", "mascherare l&#39;uso di sostanze proibite", "rappresentante di un atleta", "maschera teatrale"]
+                r_corretta: "mascherare le sostanze proibite",
+                opzioni: ["Chi fornisce le sostanze proibite", "mascherare le sostanze proibite", "rappresentante di un atleta", "maschera teatrale"]
             }, {
                 domanda: "il CIO &#232;?",
                 r_corretta: "comitato olimpico internazionale",
                 opzioni: ["centro olimpico interno", "comitato olimpico internazionale", "una lista di farmaci proibita", "codice internazionale antidoping"]
             }, {
-                domanda: "Che cos&#39;&#232; il doping? L&#39;uso di. . . per migliorare la prestazione sportiva",
+                domanda: "Che cos&#39;&#232; il doping? L&#39;uso di . . . per migliorare la prestazione sportiva",
                 r_corretta: "metodi nocivi alla salute",
                 opzioni: ["metodi nocivi alla salute", "farmaci antinfiammatori", "allenamenti intensivi", "integratori"]
             },{
@@ -888,8 +888,8 @@ function gameplay(){
                 opzioni: ["martello", "peso", "giavellotto", "disco"]
             }, {
                 domanda: "Lo stretching &#232; utilizzato per:",
-                r_corretta: "elasticizzare",
-                opzioni: ["elasticizzare", "migliorare la potenza esplosiva muscolare", "migliorare la potenza reattiva muscolare", "allungare di 1 cm la struttura muscolare"]
+                r_corretta: "elasticizzare il muscolo",
+                opzioni: ["elasticizzare il muscolo", "migliorare la potenza esplosiva muscolare", "migliorare la potenza reattiva muscolare", "non serve"]
             }, {
                 domanda: "Quali caratteristiche psicofisiche tende a sviluppare la ginnastica artistica?",
                 r_corretta: "Resistenza aerobica",
@@ -909,7 +909,7 @@ function gameplay(){
             }, {
                 domanda: "Quali, tra le seguenti specialit&#224;, sono eseguite unicamente nelle gare di ginnastica artistica femminile?",
                 r_corretta: "Trave e parallele asimmetriche",
-                opzioni: ["Volteggio e sbarra", "Corpo libero e volteggio", "Trave e parallele asimmetriche", "Cavallo con maniglie e parallele asimmetriche"]
+                opzioni: ["Volteggio e sbarra", "Corpo libero e volteggio", "Trave e parallele asimmetriche", "Cavallo con maniglie"]
             }, {
                 domanda: "Su quale superficie si giocano le partite del Roland Garros, uno dei quattro tornei del Grande Slam di tennis?",
                 r_corretta: "Terra rossa",
@@ -964,7 +964,7 @@ function gameplay(){
                 opzioni: ["Giallo", "Bianco", "Rosso", "Verde"]
             }, {
                 domanda: "In che gioco love &#232; un punteggio?",
-                r_corretta: "",
+                r_corretta: "Tennis",
                 opzioni: ["Vita", "Tennis", "Basket", "Cricket"]
             }, {
                 domanda: "Quale sport &#232; molto simile al softball?",
@@ -992,12 +992,12 @@ function gameplay(){
                 opzioni: ["35 min", "20 min", "15 min", "29 min"]
             }, {
                 domanda: "Durante le prime Olimpiadi moderne, con cosa sono stati premiati i primi classificati?",
-                r_corretta: "Medaglie d&#39;argento",
-                opzioni: ["Medaglie d&#39;argento", "Medaglie d&#39;oro", "Collane di diamanti", "Coppe dorate"]
+                r_corretta: "Medaglie argento",
+                opzioni: ["Medaglie argento", "Medaglie oro", "Collane di diamanti", "Coppe dorate"]
             }, {
                 domanda: "Cosa rappresentano gli anelli alle Olimpiadi?",
                 r_corretta: "I continenti del mondo",
-                opzioni: ["I continenti del mondo", "Gli sport presenti nella prima Olimpiade moderna ", "I colori primari", "I colori della bandiera ospitante"]
+                opzioni: ["I continenti del mondo", "Gli sport della prima Olimpiade", "I colori primari", "I colori della bandiera ospitante"]
             }
         ];
         
@@ -1279,7 +1279,7 @@ function gameplay(){
                 r_corretta: "comici",
                 opzioni: ["cantanti", "comici", "ballerini", "attori"]
             }, {
-                domanda: "-Mii non ci posso credere; Quale attore pronuncia questa frase?",
+                domanda: "-Mii non ci posso credere! Quale attore pronuncia questa frase?",
                 r_corretta: "Aldo",
                 opzioni: ["Aldo", "Luca", "Giacomo", "Giovanni"]
             }, {
@@ -1288,12 +1288,12 @@ function gameplay(){
                 opzioni: ["Futurama", "Simpson", "Griffin", "Winx"]
             }, {
                 domanda: "Gallina che non becca...",
-                r_corretta: "ha gi&#224; beccato",
-                opzioni: ["fa l&#39;uovo", "ha gi&#224; dorme", "beccher&#224;"]
+                r_corretta: "ha beccato",
+                opzioni: ["fa l&#39;uovo", "ha beccato", "dorme", "beccher&#224;"]
             }, {
                 domanda: "Chi sono i Pentatonix?",
                 r_corretta: "dei cantanti",
-                opzioni: ["una band", "dei ballerini", "dei cantanti", " degli artisti"]
+                opzioni: ["una band", "dei ballerini", "dei cantanti", "degli artisti"]
             }, {
                 domanda: "Come si chiama la protagonista di Stranger Things?",
                 r_corretta: "Eleven",
@@ -1363,17 +1363,17 @@ function gameplay(){
                 r_corretta: "Deserto rosso", 
                 opzioni: ["Profondo rosso", "Sorgo rosso", "Deserto rosso", "Il fiume rosso"]
             }, {
-                domanda: "&#200; stato assegnato, alla Mostra del Cinema di Venezia del 1992, il Leone D&#39;oro alla carriera ad un famoso comico e scrittore italiano. Chi &#232;?", 
+                domanda: "&#200; stato assegnato, alla Mostra del Cinema di Venezia del 1992, il Leone D&#39;oro a chi?", 
                 r_corretta: "Paolo Villaggio", 
                 opzioni: ["Raimondo Vinello", "Ugo Tognazzi", "Paolo Villaggio", "Macario"]
             }, {
-                domanda: "Ermanno Olmi traccia storie che sono favole proiettate verso l&#39;affermazione dei valori essenziali della vita. Sono sue opere i seguenti film tranne:", 
+                domanda: "Quali trai seguenti non sono film di Ermanno Olmi:", 
                 r_corretta: "Il posto delle fragole", 
                 opzioni: ["La leggenda del Santo Bevitore", "Genesi", "L&#39;albero degli zoccoli", "Il posto delle fragole"]
             }, {
-                domanda: "I film di Luis Bunuel sono caratterizzati da uno stile secco e da un sottile umorismo che trasforma il quotidiano in fantastico, come avviene in:", 
+                domanda: "I film di Luis Bunuel sono caratterizzati da uno stile secco e da un umorismo che trasforma il quotidiano in fantastico, come avviene in:", 
                 r_corretta: "Il fascino discreto della borghesia", 
-                opzioni: ["Amarcord", "Il fascino discreto della borghesia", "L&#39;eclisse", "nessuna delle precedenti"]
+                opzioni: ["Amarcord", "Il fascino discreto della borghesia", "L&#39;eclisse", "nessuna"]
             }, {
                 domanda: " Il successo internazionale di un romanzo postumo &#232; davvero eccezionale. Tale &#232; stato il caso di:", 
                 r_corretta: "Il Gattopardo", 
@@ -1388,8 +1388,8 @@ function gameplay(){
                 opzioni: ["L. Pirandello", "G. Verga", "C. Pavese", "F. Tozzi"]
             }, {
                 domanda: "Cos&#39;&#232; la sceneggiatura di un film?", 
-                r_corretta: "la stesura definitiva del testo del film", 
-                opzioni: ["l&#39;insieme degli ambienti in cui si svolge l&#39;azione filmica", "la scaletta degli argomenti da trattare nel film", "l&#39;insieme delle inquadrature riferibili all&#39;inizio e alla fine del film", "la stesura definitiva del testo del film"]
+                r_corretta: "la stesura del testo del film", 
+                opzioni: ["insieme degli ambienti in cui si svolge il film", "gli argomenti del film", "insieme delle inquadrature del film", "la stesura del testo del film"]
             }, {
                 domanda: "Come si definisce il procedimento cinematografico che permette di ampliare il formato delle proiezioni per scopi spettacolari?", 
                 r_corretta: "cinemascope", 
@@ -1447,7 +1447,7 @@ function gameplay(){
                 r_corretta: "Ridley Scott", 
                 opzioni: ["Stanley Kubrick", "Steven Spielberg", "Chris Columbus", "Ridley Scott"]
             }, {
-                domanda: "Ne L&#39;uomo nell&#39;alto castello quali potenze si spartiscono il territorio degli Stati Uniti?", 
+                domanda: "Ne L&#39;uomo nell&#39;alto castello quali potenze si spartiscono gli Stati Uniti?", 
                 r_corretta: "Cina e India", 
                 opzioni: ["Germania e Giappone", "Regno Unito e Francia", "Italia e Spagna", "Cina e India"]
             }, {
