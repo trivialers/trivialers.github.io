@@ -393,6 +393,7 @@ function gameplay(){
 	}
     
     function carta(materia, triangolo) {
+        
         const storia = [
             {
                 domanda: "Chi &#232; il padre degli dei?",
@@ -617,7 +618,7 @@ function gameplay(){
             }, {
                 domanda: "Cos&#39;&#232; la Sardegna?",
                 r_corretta: "isola",
-                opzioni: ["penisola", "arcipelago", "citt&#224;", "isola"]
+                opzioni: ["penisola", "arcipelago", "comune;", "isola"]
             }, {
                 domanda: "Dove si trova la Piazza del Duomo?",
                 r_corretta: "Milano",
@@ -661,7 +662,7 @@ function gameplay(){
             }, {
                 domanda: "Qual&#39;&#232; il nome del canale che divide il Mar Mediterraneo dal Mar Rosso?",
                 r_corretta: "Suez",
-                opzioni: ["Corinto", "Panama", "Suez", "Nessuna risposta &#232; corretta"]
+                opzioni: ["Corinto", "Panama", "Suez", "Nessuna risposta precedente"]
             }, {
                 domanda: "Dov&#39;&#232; la Citt&#224; Proibita?", 
                 r_corretta: "Pechino", 
@@ -771,7 +772,7 @@ function gameplay(){
                 r_corretta: "Antartico", 
                 opzioni: ["Pacifico", "Indiano", "Atlantico", "Antartico"]
             }, {
-                domanda: "Qual &#232; il principale passaggio naturale tra il Pacifico e l&#39;Oceano Atlantico?", 
+                domanda: "Qual'&#232; il principale passaggio naturale tra il Pacifico e l&#39;Oceano Atlantico?", 
                 r_corretta: "Lo stretto di Magellano", 
                 opzioni: ["Lo stretto di Bering", "Lo stretto di Malacca", "Lo stretto di Messina", "Lo stretto di Magellano"]
             }, {
@@ -1003,9 +1004,9 @@ function gameplay(){
         
         const art_letter = [
             {
-                domanda: "Non &#232; bello ci&#242; che &#232; bello. . .",
-                r_corretta: "ma &#232; bello ci&#242; che piace",
-                opzioni: ["ma &#232; bello ci&#242; che non &#232; bello", "perch&#232; nulla &#232; bello", "ma &#232; bello ci&#242; che costa", "ma &#232; bello ci&#242; che piace"]
+                domanda: "Non &#232; bello ci&#242; che &#232; bello, ma &#232; bello. . .",
+                r_corretta: "quello che piace",
+                opzioni: ["quello non bello", "quello bello", "quello che costa", "quello che piace"]
             }, {
                 domanda: "Chi ha progettato Piazza San Pietro a Roma?",
                 r_corretta: "Bernini",
@@ -1092,8 +1093,8 @@ function gameplay(){
                 opzioni: ["Metafisico", "Pop", "Minimalista", "Impressionismo"]
             }, {
                 domanda: "Il nome Guernica del capolavoro di Pablo Picasso, deriva da... ? ", 
-                r_corretta: "una citt&#224; bombardata", 
-                opzioni: ["un aereo in uso nella prima guerra mondiale", "una razza di cavallo", "una citt&#224; bombardata", "il luogo dove stava il suo studio"]
+                r_corretta: "un paese bombardato", 
+                opzioni: ["un aereo della prima guerra mondiale", "una razza di cavallo", "un paese bombardato", "il luogo dove studiava"]
             }, {
                 domanda: "Dove si trova il Cenacolo di Leonardo da Vinci?", 
                 r_corretta: "Milano", 
@@ -1159,9 +1160,9 @@ function gameplay(){
                 r_corretta: "Roma", 
                 opzioni: ["Roma", "Urbino", "Pisa", "Napoli"]
             }, {
-                domanda: "Dove si trova la Fontana delle 99 cannelle?", 
-                r_corretta: "L&#39;Aquila", 
-                opzioni: ["Viterbo", "L&#39;Aquila", "Mantova", "Perugia"]
+                domanda: "Dove si trova la Fontana di Trevi?", 
+                r_corretta: "Roma", 
+                opzioni: ["Viterbo", "Roma", "Mantova", "Perugia"]
             }, {
                 domanda: "Qual era il vero nome della Gioconda?", 
                 r_corretta: "Lisa Gherardini", 
@@ -1173,7 +1174,7 @@ function gameplay(){
             }, {
                 domanda: "Shakespeare ha scritto un&#39;opera in cui muoiono i quattro protagonisti: qual &#232;?", 
                 r_corretta: "Amleto", 
-                opzioni: ["Sogno d&#39;una notte di mezza estate", "La tempesta", "Romeo e Giulietta", "Amleto"]
+                opzioni: ["Sogno di una notte di mezza estate", "La tempesta", "Romeo e Giulietta", "Amleto"]
             }, {
                 domanda: "Quanti sono i samurai di Kurosawa?", 
                 r_corretta: "Sette", 
@@ -1213,15 +1214,15 @@ function gameplay(){
             }, {
                 domanda: "Nel Sahara tunisino e pi&#249; precisamente a El Djem, cosa c&#39;&#232;?", 
                 r_corretta: "Un anfiteatro romano", 
-                opzioni: ["La statua di una creatura marina", "La prima ferrovia del continente africano", "Un anfiteatro romano", "Una piramide di mattoni rossi"]
+                opzioni: ["Una statua marina", "La prima ferrovia africana", "Un anfiteatro romano", "Una piramide rossa"]
             }, {
                 domanda: "Ovale rosso, Tratto bianco, Nel grigio sono opere di quale noto pittore?", 
                 r_corretta: "Kandinsky", 
                 opzioni: ["Kandinsky", "Mondrian", "Klee", "Picasso"]
             }, {
-                domanda: "Ren&#233; Magritte &#232; cresciuto in quale delle seguenti citt&#224; belghe?", 
-                r_corretta: "Charleroi, citt&#224; industriale", 
-                opzioni: ["Anversa, citt&#224; portuale", "Bruges cittadina romantica caratterizzata dai canali", "Charleroi, citt&#224; industriale", "Liegi centro commerciale e culturale"]
+                domanda: "Ren&#233; Magritte &#232; cresciuto in quale delle seguenti cittadine belghe?", 
+                r_corretta: "Charleroi, cittadina industriale", 
+                opzioni: ["Anversa,  portuale", "Bruges,  romantica", "Charleroi,  industriale", "Liegi, culturale"]
             }, {
                 domanda: "Famoso scultore autore de La porta dell&#39;inferno", 
                 r_corretta: "Auguste Rodin", 
@@ -1488,8 +1489,8 @@ function gameplay(){
                 opzioni: ["gomma", "proteina", "polisaccaride", "colla"]
             }, {
                 domanda: "Cosa mangiano prevalentemente i panda?", 
-                r_corretta: "bamb&#249;", 
-                opzioni: ["bamb&#249;", "insetti", "fieno", "piccoli mammiferi"]
+                r_corretta: "bamboo;", 
+                opzioni: ["bamboo", "insetti", "fieno", "piccoli mammiferi"]
             }, {
                 domanda: "Com&#39;&#232; chiamata una reazione chimica che produce calore?",
                 r_corretta: "esotermica",
@@ -1531,9 +1532,9 @@ function gameplay(){
                 r_corretta: "illusione ottica",
                 opzioni: ["illusione ottica", "arcobaleno", "forte vento", "stelle cadenti"]
             },{
-                domanda: "Qual&#39;&#232; l&#39;oggetto della Sociologia?", 
-                r_corretta: "studio scientifico della societ&#224;", 
-                opzioni: ["le applicazioni", "il cinema", "i giochi di societ&#224;", "studio scientifico della societ&#224;"]
+                domanda: "Qual&#39;&#232; l&#39;oggetto della Psicologia?", 
+                r_corretta: "studio scientifico della psiche",
+                opzioni: ["le applicazioni", "il cinema", "studio della societ&#224;", "studio scientifico della psiche"]
             }, {
                 domanda: "Quale ortaggio viene decorato ad Halloween?", 
                 r_corretta: "zucca", 
@@ -1612,8 +1613,8 @@ function gameplay(){
                 opzioni: ["dagli Egiziani", "dai Maya", "dai Sumeri", "dai Romani"]
             }, {
                 domanda: "Venere possiede...", 
-                r_corretta: "una massa simile a quella della terra", 
-                opzioni: ["una massa simile a quella della terra", "8 satelliti", "2 anelli", "un atmosfera densa di gas che lo rendeno rossastro"]
+                r_corretta: "una massa simile alla terrestre", 
+                opzioni: ["una massa simile alla terrestre", "8 satelliti", "2 anelli", "un atmosfera densa di gas di color rosso"]
             }, {
                 domanda: "Il sistema solare si divide in...", 
                 r_corretta: "interno ed esterno", 
@@ -1647,13 +1648,13 @@ function gameplay(){
                 r_corretta: "America meridionale", 
                 opzioni: ["Mongolia", "America meridionale", "Cina", "Giappone"]
             }, {
-                domanda: "La Fascia di Kuiper &#232;..", 
-                r_corretta: "un fascia di asteroidi posta al confine del sistema solare", 
-                opzioni: ["un fascia di asteroidi posta al confine del sistema solare", "un fascia di asteroidi che gira attorno a Saturno", "un fascia di asteroidi che gira attorno alla Terra", "un fascia di asteroidi posta tra Giove e Saturno"]
+                domanda: "La Fascia di Kuiper &#232; un fascia di asteroidi posta..", 
+                r_corretta: "al confine del sistema solare", 
+                opzioni: ["al confine del sistema solare", "attorno a Saturno", "attorno alla Terra", "tra Giove e Saturno"]
             }, {
-                domanda: "Una nana rossa &#232;...", 
-                r_corretta: "una stella di piccole dimensioni e relativamente fredda", 
-                opzioni: ["una stella di piccole dimensioni e relativamente fredda", "una grande stella", "una stella di piccole dimensioni e calda", "una grande stella di colore rosso o arancione"]
+                domanda: "Una nana rossa &#232; una stella...", 
+                r_corretta: "piccola e fredda", 
+                opzioni: ["piccola e fredda", "grande", "piccola e calda", "grande e di colore rosso o arancione"]
             }, {
                 domanda: "La stella visibile dalla Terra pi&#249; luminosa dopo il nostro Sole &#232;...", 
                 r_corretta: "Sirio", 
