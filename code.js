@@ -138,22 +138,22 @@ function gameplay(){
 				posizione("Polygon_5", "intrattenimento", true);
 			});
             $("#Ellipse_36").click(function () {
-				posizione("Ellipse_27", "geografia");
+				posizione("Ellipse_36", "geografia");
 			});
 			$("#Ellipse_37").click(function () {
-				posizione("Ellipse_28", "ritira");
+				posizione("Ellipse_37", "ritira");
 			});
 			$("#Ellipse_38").click(function () {
-				posizione("Ellipse_29", "art_letter");
+				posizione("Ellipse_38", "art_letter");
 			});
 			$("#Ellipse_39").click(function () {
-				posizione("Ellipse_30", "storia");
+				posizione("Ellipse_39", "storia");
 			});
 			$("#Ellipse_40").click(function () {
-				posizione("Ellipse_31", "ritira");
+				posizione("Ellipse_40", "ritira");
 			});
 			$("#Ellipse_41").click(function () {
-				posizione("Ellipse_32", "sport_hobby");
+				posizione("Ellipse_41", "sport_hobby");
 			});
 			$("#Ellipse_42").click(function () {
 				posizione("Polygon_4", "nat_scienza", true);
