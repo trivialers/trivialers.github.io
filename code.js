@@ -368,26 +368,28 @@ function gameplay(){
     }
 
 	function posizione(id, materia, triangolo = false) {
-		let pedina = document.getElementById(players[giocatore].id_pedina);
-		let dimensioni = pedina.getBoundingClientRect();
-		let indirizzo = document.getElementById(id);
-		let posizione = indirizzo.getBoundingClientRect();
-		if (!skipMove){
-			skipMove= true;
-            players[giocatore].id_casella=id;
-            id_possibili=[];
-			setTimeout( function() { 
-				pedina.style.top = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
-				pedina.style.left = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
-				setTimeout( function() {
-					if (materia=="ritira"){
-						turno();
-					}else{
-						carta(materia, triangolo);
-					}
-				}, 300);
-			}, 1000);
-		}
+	    let pedina = document.getElementById(players[giocatore].id_pedina);
+	    let dimensioni = pedina.getBoundingClientRect();
+	    let indirizzo = document.getElementById(id);
+	    let posizione = indirizzo.getBoundingClientRect();
+	    if (!skipMove) {
+	        if (id_possibili.includes(id)) {
+	            skipMove = true;
+	            players[giocatore].id_casella = id;
+	            id_possibili = [];
+	            setTimeout(function () {
+	                pedina.style.top = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
+	                pedina.style.left = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
+	                setTimeout(function () {
+	                    if (materia == "ritira") {
+	                        turno();
+	                    } else {
+	                        carta(materia, triangolo);
+	                    }
+	                }, 300);
+	            }, 1000);
+	        }
+	    }
 	}
     
     function carta(materia, triangolo) {
@@ -410,8 +412,8 @@ function gameplay(){
                 opzioni: ["Caio Giulio Cesare", "Diocleziano", "Nerone", "Tito Flavio Vespasiano"]
             }, {
                 domanda: "Dove viveva il popolo Inca?",
-                r_corretta: "Per&#249;",
-                opzioni: ["Messico", "Per&#249;", "Brasile", "India"]
+                r_corretta: "Peru",
+                opzioni: ["Messico", "Peru", "Brasile", "India"]
             }, {
                 domanda: "In che giorno &#232; avvenuto sbarco in Normandia?",
                 r_corretta: "6 giugno 1944",
@@ -490,16 +492,16 @@ function gameplay(){
                 opzioni: ["Ad Anzio", "A Marsala", "A Trieste", "A Quarto"]
             }, {
                 domanda: "Di quale giornale fu direttore Mussolini?",
-                r_corretta: "L&#39;Avanti",
-                opzioni: ["La Repubblica", "Il fatto quotidiano", "L&#39;Avanti", "Non &#232; mai stato direttore di alcun giornale"]
+                r_corretta: "Avanti",
+                opzioni: ["La Repubblica", "Il fatto quotidiano", "Avanti", "Non &#232; mai stato direttore di alcun giornale"]
             }, {
                 domanda: "In che anno il governo Giolitti diede le dimissioni dopo l&#39;uscita dei radicali?",
                 r_corretta: "1914",
                 opzioni: ["1913", "1914", "1915", "1916"]
             }, {
                 domanda: "In seguito a cosa inizi&#242; la Seconda Guerra Mondiale?",
-                r_corretta: "L&#39;invasione della Polonia",
-                opzioni: ["L&#39;invasione della Francia", "Nessuna delle risposte precendenti", "L&#39;invasione della Polonia", "L&#39;invasione dell&#39;Inghilterra"]
+                r_corretta: "invasione della Polonia",
+                opzioni: ["invasione della Francia", "invasione della Polonia", "invasione dell&#39;Inghilterra","Nessuna delle risposte precendenti"]
             }, {
                 domanda: "Il sindacato dei lavoratori italiani fondato nel 1906 si chiamava:",
                 r_corretta: "Confederazione Generale del Lavoro",
@@ -543,7 +545,7 @@ function gameplay(){
             }, {
                 domanda: "In che scandalo fu coinvolto l&#39;ex-presidente americano Reagan?",
                 r_corretta: "Irangate",
-                opzioni: ["Irangate", "Watergate", "Fu coinvolto sia nel watergate che nell&#39;irangate", "Non fu coinvolto in nessuno scandalo"]
+                opzioni: ["Irangate", "Watergate", "Watergate che nell&#39;Irangate", "Non fu coinvolto in nessuno scandalo"]
             }, {
                 domanda: "Che fenomeno demografico particolarmente importante ci fu tra il 1950 e il 1970?",
                 r_corretta: "L&#39;emigrazione dal Sud verso il nord Italia",
@@ -886,8 +888,8 @@ function gameplay(){
                 opzioni: ["martello", "peso", "giavellotto", "disco"]
             }, {
                 domanda: "Lo stretching &#232; utilizzato per:",
-                r_corretta: "elasticizzare, migliorare la mobilit&#224; articolare, allenare il sistema propriocettori-nervomuscolari",
-                opzioni: ["elasticizzare, migliorare la mobilit&#224; articolare, allenare il sistema propriocettori-nervomuscolari", "migliorare la potenza esplosiva muscolare", "migliorare la potenza reattiva muscolare", "allungare fino al massimo di 1 cm una struttura muscolare"]
+                r_corretta: "elasticizzare",
+                opzioni: ["elasticizzare", "migliorare la potenza esplosiva muscolare", "migliorare la potenza reattiva muscolare", "allungare di 1 cm la struttura muscolare"]
             }, {
                 domanda: "Quali caratteristiche psicofisiche tende a sviluppare la ginnastica artistica?",
                 r_corretta: "Resistenza aerobica",
