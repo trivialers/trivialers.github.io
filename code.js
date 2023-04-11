@@ -13,7 +13,7 @@ function gameplay(){
 	let again = false;
     let numeroGiocatori=0;
 	let giocatore = 0;
-    let players[];
+    let players=[];
 
 	function clickElementi(){
 		$(document).ready(function () {
@@ -300,6 +300,7 @@ function gameplay(){
             cube.onclick="";
 			cube.style.transform = "rotateX(" + X + "deg) " + "rotateY(" + Y + "deg)";
             previsione(random, players[giocatore].id_casella, players[giocatore].id_casella);
+            console.log(id_possibili);
 			setTimeout(function(){
 				skipMove= false;
 			}, 5000);
@@ -374,7 +375,7 @@ function gameplay(){
 		if (!skipMove){
 			skipMove= true;
             players[giocatore].id_casella=id;
-            id_possibili[];
+            id_possibili=[];
 			setTimeout( function() { 
 				pedina.style.top = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
 				pedina.style.left = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";

@@ -91,7 +91,7 @@ body {
 h2{
     color: white;
     letter-spacing: 2px;
-    font-family: 'Cookie', cursive;
+    font-family: 'Niconne', cursive;
     font-size: 2rem;
     margin: 1rem;
 }
@@ -99,7 +99,7 @@ h2{
 p{
     color: white;
     letter-spacing: 1px;
-    font-family: 'Cookie', cursive;
+    font-family: 'Niconne', cursive;
     font-size: 1.5rem;
     margin: 0.5rem;
 }
@@ -113,7 +113,7 @@ p{
 li{
     color: white;
     letter-spacing: 1px;
-    font-family: 'Cookie', cursive;
+    font-family: 'Niconne', cursive;
     font-size: 1.5rem;
     margin: 0.5rem;
 }
@@ -314,7 +314,7 @@ li{
     border-top: 3px inset rgba(255, 255, 255, 0.5);
     box-sizing: border-box;
     color: #fff;
-    font-family: 'Cookie', cursive;
+    font-family: 'Niconne', cursive;
     cursor: pointer;
     font-size: 20px;
     margin: 30px;
@@ -354,7 +354,7 @@ li{
 #dom {
     margin-top: 0.3rem;
     margin-bottom: 1.3rem;
-    font-family: 'Cookie', cursive;
+    font-family: 'Niconne', cursive;
     padding: 0.1rem;
     background: #27678D;
     color: #fff;
@@ -369,7 +369,7 @@ li{
 
 
 #ris label {
-    font-family: 'Cookie', cursive;
+    font-family: 'Niconne', cursive;
     background: #27678D;
     border-radius: 10px;
     font-size: 1.6rem;
@@ -410,13 +410,13 @@ li{
 h3 {
     color: white;
     letter-spacing: 1px;
-    font-family: 'Cookie', cursive;
+    font-family: 'Niconne', cursive;
     font-size: 2em;
     margin-bottom: 3%;
 }
 
 #btn {
-    font-family: 'Cookie', cursive;
+    font-family: 'Niconne', cursive;
     background: #DFA207;
     border-radius: 1rem;
     border: 0px;
