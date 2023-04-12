@@ -1,31 +1,14 @@
-DOTAZIONE
-
-La scatola di Trivial Pursuit contiene un tabellone, un dado,
-1000 schede con 6 domande e 6 risposte ciascuna divise in
-due scatole, 6 segnaposto e 36 cunei di plastica da inserire nei
-segnaposto nel corso del gioco.
-
 SCOPO DEL GIOCO
-
-Rientrare per primo nell’esagono centrale e rispondere
-correttamente alla domanda finale in una categoria scelta dagli
-avversari, vincendo così la partita. Ma prima di poter rientrare
-nell’esagono centrale, il giocatore deve aver raggiunto le 6
+Il giocatore deve aver raggiunto le 6
 caselle finali di ciascuna categoria ed aver risposto
 correttamente ad una domanda nella categoria relativa. Le 6
 caselle finali di categoria sono poste al termine di ciascun raggio
 della pista di gioco, contrassegnate da un triangolo colorato.
 
 COME SI GIOCA
-
-Ciascun giocatore sceglie un segnaposto e prende 6 cunei
-segnapunti, uno per ciascuno dei 6 colori che identificano le
-6 categorie.
-Ciascun giocatore lancia il dado e chi realizza il numero più
-alto gioca per primo. In caso di parità si procede ad un altro
-lancio di dado.
-Il giocatore che ha ottenuto il numero più alto inizia quindi
-la partita lanciando il dado ancora una volta e muove il proprio
+Premere il pulsante centrale giallo, inserire il numero dei giocatori e
+digitare i loro nicknames.
+Il primo giocatore inizia la partita lanciando il dado e muove il proprio
 segnaposto a partire dall’esagono centrale in qualsiasi direzione
 per tante caselle quanti sono i punti ottenuti con il lancio del
 dado. Altrettanto faranno tutti gli altri giocatori, uno dopo
@@ -42,7 +25,6 @@ Ogni volta che il giocatore pone il proprio segnaposto su una
 casella, sia essa una casella finale di categoria o una semplice
 casella, egli dovrà rispondere ad una domanda della categoria
 segnata nella casella.
-
 Le categorie sono contrassegnate da colori (e da iniziali):
 
 Blu.......................... Geografia (G)
@@ -51,15 +33,13 @@ Giallo..........................Storia (St)
 Marrone.............Arte & Letteratura (AL)
 Verde.................Natura & Scienza (NS)
 Arancione................Hobby & Sport (HS)
+Beige
 
-La domanda, sempre preceduta da un contrassegno colorato
-che ne identifica la categoria, viene presa dalla prima scheda
-in una delle due scatole e viene letta al giocatore da uno dei
-suoi avversari. Le risposte sono sul retro della scheda.
+Una carta appare sullo schermo e premendo "rivela", apparirà
+una domanda alla quale si hanno 8s per rispoondere.
 Se il giocatore risponde correttamente ha diritto ad un altro
 lancio di dado e relativa ulteriore domanda, e così via sino a
-che non sbagli la risposta cedendo il turno al giocatore alla
-sua sinistra.
+che non sbagli la risposta cedendo il turno al giocatore successivo.
 Ad ogni lancio di dado, il giocatore può cambiare direzione,
 ma non può tornare sui propri passi nel corso dello stesso
 lancio. Se riterrà di dover tornare indietro dovrà attendere il
