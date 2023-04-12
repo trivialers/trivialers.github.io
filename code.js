@@ -35,11 +35,11 @@ function gameplay(){
 			$("#Ellipse_6").click(function () {
 				posizione("Ellipse_6", "storia");
 			});
-            $("#Ellipse_7").click(function () {
-				posizione("Polygon_3", "art_letter", true);
+            $("#Polygon_3").click(function () {
+				posizione("Ellipse_7", "art_letter", true);
 			});
-			$("#Polygon_3").click(function () {
-				posizione("Polygon_3", "art_letter", true);
+			$("#Ellipse_7").click(function () {
+				posizione("Ellipse_7", "art_letter", true);
 			});
             $("#Ellipse_8").click(function () {
 				posizione("Ellipse_8", "storia");
@@ -59,11 +59,11 @@ function gameplay(){
 			$("#Ellipse_13").click(function () {
 				posizione("Ellipse_13", "intrattenimento");
 			});
-			$("#Ellipse_14").click(function () {
-				posizione("Polygon_2", "geografia", true);
-			});
 			$("#Polygon_2").click(function () {
-				posizione("Polygon_2", "geografia", true);
+				posizione("Ellipse_14", "geografia", true);
+			});
+			$("#Ellipse_14").click(function () {
+				posizione("Ellipse_14", "geografia", true);
 			});
             $("#Ellipse_15").click(function () {
 				posizione("Ellipse_15", "intrattenimento");
@@ -83,11 +83,11 @@ function gameplay(){
 			$("#Ellipse_20").click(function () {
 				posizione("Ellipse_20", "nat_scienza");
 			});
-			$("#Ellipse_21").click(function () {
-				posizione("Polygon_1", "sport_hobby", true);
-			});
 			$("#Polygon_1").click(function () {
-				posizione("Polygon_1", "sport_hobby", true);
+				posizione("Ellipse_21", "sport_hobby", true);
+			});
+			$("#Ellipse_21").click(function () {
+				posizione("Ellipse_21", "sport_hobby", true);
 			});
             $("#Ellipse_22").click(function () {
 				posizione("Ellipse_22", "nat_scienza");
@@ -107,11 +107,11 @@ function gameplay(){
 			$("#Ellipse_27").click(function () {
 				posizione("Ellipse_27", "art_letter");
 			});
-			$("#Ellipse_28").click(function () {
-				posizione("Polygon_6", "storia", true);
-			});
 			$("#Polygon_6").click(function () {
-				posizione("Polygon_6", "storia", true);
+				posizione("Ellipse_28", "storia", true);
+			});
+			$("#Ellipse_28").click(function () {
+				posizione("Ellipse_28", "storia", true);
 			});
             $("#Ellipse_29").click(function () {
 				posizione("Ellipse_29", "art_letter");
@@ -131,11 +131,11 @@ function gameplay(){
 			$("#Ellipse_34").click(function () {
 				posizione("Ellipse_34", "geografia");
 			});
-			$("#Ellipse_35").click(function () {
-				posizione("Polygon_5", "intrattenimento", true);
-			});
 			$("#Polygon_5").click(function () {
-				posizione("Polygon_5", "intrattenimento", true);
+				posizione("Ellipse_35", "intrattenimento", true);
+			});
+			$("#Ellipse_35").click(function () {
+				posizione("Ellipse_35", "intrattenimento", true);
 			});
             $("#Ellipse_36").click(function () {
 				posizione("Ellipse_36", "geografia");
@@ -155,11 +155,11 @@ function gameplay(){
 			$("#Ellipse_41").click(function () {
 				posizione("Ellipse_41", "sport_hobby");
 			});
-			$("#Ellipse_42").click(function () {
-				posizione("Polygon_4", "nat_scienza", true);
-			});
 			$("#Polygon_4").click(function () {
-				posizione("Polygon_4", "nat_scienza", true);
+				posizione("Ellipse_42", "nat_scienza", true);
+			});
+			$("#Ellipse_42").click(function () {
+				posizione("Ellipse_42", "nat_scienza", true);
 			});
 			$("#esagono").click(function () {
 				posizione("esagono", "ritira");
@@ -265,7 +265,8 @@ function gameplay(){
 	function lanciaDado(){
 		let cube = document.getElementById("cube");
 		cube.onclick = function (){
-			let random = Math.ceil(Math.random()*6);
+			//let random = Math.ceil(Math.random()*6);
+            let random=6;
 			let X=0, Y=0, Z=0;
 			switch (random){
 				case 1:
