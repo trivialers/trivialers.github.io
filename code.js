@@ -1490,7 +1490,7 @@ function gameplay(){
                 opzioni: ["gomma", "proteina", "polisaccaride", "colla"]
             }, {
                 domanda: "Cosa mangiano prevalentemente i panda?", 
-                r_corretta: "bamboo;", 
+                r_corretta: "bamboo", 
                 opzioni: ["bamboo", "insetti", "fieno", "piccoli mammiferi"]
             }, {
                 domanda: "Com&#39;&#232; chiamata una reazione chimica che produce calore?",
