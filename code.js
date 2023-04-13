@@ -1844,8 +1844,7 @@ function gameplay(){
         let t=`
             <div id="vincita">
                 <img src="img/scritta.png" id="congra">
-                <img src="img/lista.png" id="lista">
-                <h3>Giocatore ` + (giocatore+1) + ` ha vinto la partita!</h3>
+                <h3>Giocatore ` + (players[giocatore].nome) + ` ha vinto la partita!</h3>
                 <input type="button" id="btn" value="Gioca un&#39;altra partita" onclick="nuovoGioco();"/>
             </div>`;
         document.body.innerHTML += t;
