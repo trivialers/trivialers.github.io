@@ -265,8 +265,7 @@ function gameplay(){
 	function lanciaDado(){
 		let cube = document.getElementById("cube");
 		cube.onclick = function (){
-			//let random = Math.ceil(Math.random()*6);
-            let random=6;
+			let random = Math.ceil(Math.random()*6);
 			let X=0, Y=0, Z=0;
 			switch (random){
 				case 1:
