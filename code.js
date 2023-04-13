@@ -783,6 +783,46 @@ function gameplay(){
                 domanda: "Nome ufficiale di Samoa:", 
                 r_corretta: "Stato indipendente di Samoa", 
                 opzioni: ["Regno di Samoa", "Stato indipendente di Samoa", "Repubblica democratica di Samoa", "Repubblica di Samoa"]
+            }, {
+                domanda: "Dove si trova Ciad?",
+                r_corretta: "Africa",
+                opzioni: ["Africa", "Asia", "America", "Canada"]
+            }, {
+                domanda: "Dove si trova la famosa provincia dello Champagne?",
+                r_corretta: "Francia",
+                opzioni: ["Svizzera ", "Francia", "Spagna", "Germania"]
+            }, {
+                domanda: "Qual &#232; il nome di un monte situato nel Per&#249;?",
+                r_corretta: "Machu Picchu",
+                opzioni: ["Machu Picchu", "K2", "Everest", "Elbrus"]
+            }, {
+                domanda: "Qual&#39;&#232; l&#39;isola pi&#249; grande del mondo?",
+                r_corretta: "Groenlandia",
+                opzioni: ["Groenlandia", "Sardegna", "Giappone", "Gran Bretagna"]
+            }, {
+                domanda: "Dove ci troviamo se siamo a Piazza Plebiscito?",
+                r_corretta: "Napoli",
+                opzioni: ["Verona", "Napoli", "Venezia", "Roma"]
+            }, {
+                domanda: "Di quale dei seguenti arcipelaghi fa parte l&#39;isola Panarea?",
+                r_corretta: "Isole Eolie",
+                opzioni: [" Isola di Capo", "Isola Verde", "Isole Eolie", "Isole delle Antille"]
+            }, {
+                domanda: "Che cosa sono i pupi siciliani?",
+                r_corretta: "marionette",
+                opzioni: ["dolci", "marionette", "giochi", "accessori"]
+            }, {
+                domanda: "Quale lingua si parla in Mozambico?",
+                r_corretta: "portoghese",
+                opzioni: ["tedesco", "inglese", "olandese", "portoghese"]
+            }, {
+                domanda: "Qual&#39;&#232; il quinto pianeta del nostro sistema solare?",
+                r_corretta: "Giove",
+                opzioni: ["Giove", "Nettuno", "Terra", "Mercurio"]
+            }, {
+                domanda: "La capitale della Bulgaria?",
+                r_corretta: "Sofia",
+                opzioni: ["Vienna", "Chisinau ", "Bucarest", "Sofia"]
             }
         ];
 
@@ -1104,46 +1144,6 @@ function gameplay(){
                 r_corretta: "Piazza Navona", 
                 opzioni: ["Arena di Verona", "Piazza Navona", "Spianata delle Moschee", "Parco dei Principi"]
             }, {
-                domanda: "Dove si trova Ciad?",
-                r_corretta: "Africa",
-                opzioni: ["Africa", "Asia", "America", "Canada"]
-            }, {
-                domanda: "Dove si trova la famosa provincia dello Champagne?",
-                r_corretta: "Francia",
-                opzioni: ["Svizzera ", "Francia", "Spagna", "Germania"]
-            }, {
-                domanda: "Qual &#232; il nome di un monte situato nel Per&#249;?",
-                r_corretta: "Machu Picchu",
-                opzioni: ["Machu Picchu", "K2", "Everest", "Elbrus"]
-            }, {
-                domanda: "Qual&#39;&#232; l&#39;isola pi&#249; grande del mondo?",
-                r_corretta: "Groenlandia",
-                opzioni: ["Groenlandia", "Sardegna", "Giappone", "Gran Bretagna"]
-            }, {
-                domanda: "Dove ci troviamo se siamo a Piazza Plebiscito?",
-                r_corretta: "Napoli",
-                opzioni: ["Verona", "Napoli", "Venezia", "Roma"]
-            }, {
-                domanda: "Di quale dei seguenti arcipelaghi fa parte l&#39;isola Panarea?",
-                r_corretta: "Isole Eolie",
-                opzioni: [" Isola di Capo", "Isola Verde", "Isole Eolie", "Isole delle Antille"]
-            }, {
-                domanda: "Che cosa sono i pupi siciliani?",
-                r_corretta: "marionette",
-                opzioni: ["dolci", "marionette", "giochi", "accessori"]
-            }, {
-                domanda: "Quale lingua si parla in Mozambico?",
-                r_corretta: "portoghese",
-                opzioni: ["tedesco", "inglese", "olandese", "portoghese"]
-            }, {
-                domanda: "Qual&#39;&#232; il quinto pianeta del nostro sistema solare?",
-                r_corretta: "Giove",
-                opzioni: ["Giove", "Nettuno", "Terra", "Mercurio"]
-            }, {
-                domanda: "La capitale della Bulgaria?",
-                r_corretta: "Sofia",
-                opzioni: ["Vienna", "Chisinau ", "Bucarest", "Sofia"]
-            },{
                 domanda: "Chi era Lisippo?", 
                 r_corretta: "Uno scultore", 
                 opzioni: ["Uno scultore", "Un filosofo", "Un cantante", "Un ceramista"]
