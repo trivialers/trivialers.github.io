@@ -949,11 +949,11 @@ function gameplay(){
                 r_corretta: "336",
                 opzioni: ["336", "300", "20", "186"]
             }, {
-                domanda: "Quale paese ha gareggiato pi&#249; volte alle Olimpiadi estive ma non ha vinto una medaglia d&#39;oro?",
+                domanda: "Quale paese ha gareggiato pi&#249; volte alle Olimpiadi ma non ha vinto una medaglia d&#39;oro?",
                 r_corretta: "Le Filippine",
                 opzioni: ["Le Filippine", "San Marino", "Birmania", "Laos"]
             }, {
-                domanda: "Alle Olimpiadi del 1971, Nadia Comaneci fu la prima ginnasta a segnare un punteggio perfetto. Quale paese rappresentava?",
+                domanda: "Alle Olimpiadi del 1971, quale paese rappresentava Nadia Comaneci?",
                 r_corretta: "Romania",
                 opzioni: ["Austria", "URSS", "Romania", "Bangladesh"]
             }, {
@@ -999,7 +999,7 @@ function gameplay(){
             }, {
                 domanda: "Cosa rappresentano gli anelli alle Olimpiadi?",
                 r_corretta: "I continenti del mondo",
-                opzioni: ["I continenti del mondo", "Gli sport della prima Olimpiade", "I colori primari", "I colori della bandiera ospitante"]
+                opzioni: ["I continenti del mondo", "Sport della prima Olimpiade", "I colori primari", "colori della bandiera ospitante"]
             }
         ];
         
