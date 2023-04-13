@@ -25,17 +25,16 @@ Ogni volta che il giocatore pone il proprio segnaposto su una
 casella, sia essa una casella finale di categoria o una semplice
 casella, egli dovrà rispondere ad una domanda della categoria
 segnata nella casella.
+
 Le categorie sono contrassegnate da colori (e da iniziali):
-
-Blu.......................... Geografia (G)
+Blu......................... Geografia (G)
 Rosa.........................Spettacolo (S)
-Giallo..........................Storia (St)
-Marrone.............Arte & Letteratura (AL)
-Verde.................Natura & Scienza (NS)
-Arancione................Hobby & Sport (HS)
-Beige
+Giallo.......................Storia (St)
+Marrone......................Arte & Letteratura (AL)
+Verde........................Natura & Scienza (NS)
+Arancione....................Hobby & Sport (HS)
 
-Una carta appare sullo schermo e premendo "rivela", apparirà
+Una carta appare sullo schermo e premendo "Rivela", apparirà
 una domanda alla quale si hanno 8s per rispoondere.
 Se il giocatore risponde correttamente ha diritto ad un altro
 lancio di dado e relativa ulteriore domanda, e così via sino a
@@ -48,94 +47,20 @@ segnaposto esattamente di tante caselle quanti sono i numeri
 ottenuti con il dado.
 
 COME PROSEGUE IL GIOCO
-
-Il gioco continua rimettendo ciascuna scheda estratta nella sua
-scatola dietro l’ultima scheda.
 Quando il giocatore riesce a raggiungere una casella finale di
 categoria e a rispondere correttamente, prende un cuneo
-segnapunti del colore relativo alla categoria stessa e lo inserisce
+segnapunti del colore relativo alla categoria stessa e questa viene inserita
 nel proprio segnaposto.
-Se il giocatore non sa rispondere esattamente alla domanda
-quando giunge alla casella finale di categoria lascia il proprio
-segnapunti nella casella sino al turno successivo, e da lì
-
---------------------------------------------------------------------
-
-riprende il gioco senza avere ottenuto il cuneo segnapunti.
+Se si risponde incorrettamente, il gioco riprende senza avere ottenuto il cuneo segnapunti.
 Dovrà quindi riuscire a tornare altre volte nella casella finale
 sino a quando sarà in grado di rispondere correttamente alla
 domanda della categoria relativa ed ottenere il cuneo
 segnapunti.
 Il giocatore che termina con il segnaposto in una delle 12
-caselle dove sono raffigurati i dadi ha diritto ad un altro lancio
+caselle di colore Beige o nell’esagono centrale ha diritto ad un altro lancio
 senza dover rispondere ad una domanda.
-Quando un giocatore termina nell’esagono centrale prima che
-abbia potuto ottenere i 6 cunei segnapunti corrispondenti alle
-6 categorie, l’esagono centrale è considerato una casella-jolly
-ed il giocatore può scegliere di rispondere ad una domanda
-di una categoria di suo gradimento per proseguire il gioco.
-Più segnaposti possono trovarsi nella stessa casella.
 
 COME SI VINCE
-
 Quando un giocatore ha raccolto i 6 cunei rispondendo
 correttamente alla domanda finale di ciascuna categoria, egli
-può iniziare a muovere il proprio segnaposto verso l’esagono
-centrale per tentare di vincere la partita.
-Quando il giocatore in possesso dei 6 cunei riesce ad arrivare
-sull’esagono centrale, gli altri giocatori si consultano per
-scegliere la categoria della domanda finale. La domanda finale
-viene présa dalla prima scheda di una delle due scatole.
-Se il giocatore risponde correttamente a quest’ultima domanda
-vince la partita. Altrimenti rimane con il segnaposto
-nell’esagono centrale, attende il turno successivo allontanandosi
-dall’esagono per tante caselle quanti punti ha realizzato con
-il lancio del dado e tenta di rientrare nell’esagono con i lanci
-successivi. Ogni risposta esatta dà diritto ad un lancio di dado:
-questa regola rende teoricamente possibile una vittoria del
-giocatore che inizia il gioco. In questo caso, tutti gli altri
-giocatori hanno diritto ad un simile tentativo e se esso risulta
-positivo la partita viene chiusa in parità.
-
-NOTE DI STRATEGIA
-
-Tutte le categorie sono rappresentate nelle caselle che formano
-i raggi che si dipartono dall’esagono centrale. Esse sono dislocate
-in modo che anche il giocatore che al primo lancio non faccia 6
-(e non possa quindi andare direttamente nella casella finale di una
-categoria di sua scelta) possa tuttavia scegliere la categoria della
-sua prima domanda. Poniamo infatti che il giocatore faccia 4 e
-che la categoria preferita sia Storia, il giocatore può scegliere di
-muovere il suo segnaposto lungo il raggio che al quarto posto ha
-la casella gialla della Storia.
-Questa disposizione delle caselle nei raggi significa anche che il
-giocatore che si vede costretto a scavalcare per eccesso di punti
-l’esagono centrale a cui puntava per ottenere la domanda finale
-ha cinque caselle di 5 categorie diverse sulle quali fermarsi per
-ottenere la domanda successiva.
-Nelle istruzioni non si fa cenno ad un limite di tempo prefissato
-entro il quale ogni giocatore deve dare la risposta. Sono gli stessi
-giocatori che prima di iniziare una partita decidono quale debba
-essere il limite di tempo ragionevole.
-Similmente, sono i giocatori che decidono cosa si deve intendere
-per una risposta corretta: se, ad esempio, basta il cognome di un
-personaggio o sia invece tassativo dire anche il nome, se basta
-l’anno di una data, o se serva anche il giorno ed il mese, e così via.
-Trivial Pursuit si presta ad essere giocato a squadre: sino a 6
-squadre di 6 giocatori ciascuna, per un totale di 36 giocatori, in
-modo che ogni squadra possa avere un esperto in ogni categoria.
-In questo caso dovrà precedentemente essere deciso se siano
-permesse consultazioni tra membri della stessa squadra prima della
-risposta.
-Quando si gioca in meno di quattro, sarà più pratico eliminare
-una delle due scatole di schede.
-Non è necessario mescolare le schede, ma se si decide di farlo,
-bisogna fare attenzione a che esse rimangano tutte nel senso giusto
-e ben allineate.
-E’ importante tenere le schede in buon ordine. Una volta data
-la risposta, la scheda deve essere reinserita all’ultimo posto nella
-scatola dalla quale era stata estratta.
-Tenendo le schede sempre nella stessa posizione sarà facile vedere
-qual’è la parte frontale della scatola quando si inizia una nuova
-partita e si eviterà quindi di riestrarre le stesse schede usate nella
-partita precedente.
+avrà vinto la partita.
