@@ -305,76 +305,75 @@ function gameplay(){
 			setTimeout(function(){
 				skipMove= false;
 			}, 5000);
+            for(let i=0; i<id_possibili.length; i++){
+                id=document.getElementById(id_possibili[i]);
+            }
 		}
 	}
 	
-    function previsione(mosse, id_attuale, id_passato){
-        let id_futuro="";
-        if (mosse==0){
+    function previsione(mosse, id_attuale, id_passato) {
+        let id_futuro = "";
+        if (mosse == 0) {
             id_possibili.push(id_attuale);
-        }
-        else if (id_attuale=="esagono"){
-            for (let i=1; i<=6; i++){
-                id_futuro="Ellipse_"+(i*7)+"_1";
-                if (id_futuro != id_passato){
-                    previsione(mosse-1, id_futuro, id_attuale);
+        } else if (id_attuale == "esagono") {
+            for (let i = 1; i <= 6; i++) {
+                id_futuro = "Ellipse_" + (i * 7) + "_1";
+                if (id_futuro != id_passato) {
+                    previsione(mosse - 1, id_futuro, id_attuale);
                 }
             }
-        }
-        else {
+        } else {
             let id_diviso = id_attuale.split("_");
-            id_diviso[1]= Number(id_diviso[1]);
-            if (id_diviso[1] % 7 ==0 && id_diviso.length==2){
-                id_futuro = "Ellipse_"+(id_diviso[1]+1);
-                if(id_attuale == "Ellipse_42"){
+            id_diviso[1] = Number(id_diviso[1]);
+            if (id_diviso[1] % 7 == 0 && id_diviso.length == 2) {
+                id_futuro = "Ellipse_" + (id_diviso[1] + 1);
+                if (id_attuale == "Ellipse_42") {
                     id_futuro = "Ellipse_1";
                 }
-                if (id_futuro != id_passato){
-                    previsione(mosse-1, id_futuro, id_attuale);
+                if (id_futuro != id_passato) {
+                    previsione(mosse - 1, id_futuro, id_attuale);
                 }
-                id_futuro = "Ellipse_"+(id_diviso[1]-1);
-                if(id_attuale == "Ellipse_1"){
+                id_futuro = "Ellipse_" + (id_diviso[1] - 1);
+                if (id_attuale == "Ellipse_1") {
                     id_futuro = "Ellipse_42";
                 }
-                if (id_futuro != id_passato){
-                    previsione(mosse-1, id_futuro, id_attuale);
+                if (id_futuro != id_passato) {
+                    previsione(mosse - 1, id_futuro, id_attuale);
                 }
-                id_futuro = "Ellipse_"+id_diviso[1]+"_5";
-                if (id_futuro != id_passato){
-                    previsione(mosse-1, id_futuro, id_attuale);
+                id_futuro = "Ellipse_" + id_diviso[1] + "_5";
+                if (id_futuro != id_passato) {
+                    previsione(mosse - 1, id_futuro, id_attuale);
                 }
-            }
-            else if (id_diviso.length==3){
-                id_diviso[2]= Number(id_diviso[2]);
-                id_futuro = "Ellipse_"+id_diviso[1]+"_"+(id_diviso[2]+1);
-                if(id_diviso[2]==5){
-                    id_futuro = "Ellipse_"+id_diviso[1];
+            } else if (id_diviso.length == 3) {
+                id_diviso[2] = Number(id_diviso[2]);
+                id_futuro = "Ellipse_" + id_diviso[1] + "_" + (id_diviso[2] + 1);
+                if (id_diviso[2] == 5) {
+                    id_futuro = "Ellipse_" + id_diviso[1];
                 }
-                if (id_futuro != id_passato){
-                    previsione(mosse-1, id_futuro, id_attuale);
+                if (id_futuro != id_passato) {
+                    previsione(mosse - 1, id_futuro, id_attuale);
                 }
-                id_futuro = "Ellipse_"+id_diviso[1]+"_"+(id_diviso[2]-1);
-                if(id_diviso[2]==1){
+                id_futuro = "Ellipse_" + id_diviso[1] + "_" + (id_diviso[2] - 1);
+                if (id_diviso[2] == 1) {
                     id_futuro = "esagono";
                 }
-                if (id_futuro != id_passato){
-                    previsione(mosse-1, id_futuro, id_attuale);
+                if (id_futuro != id_passato) {
+                    previsione(mosse - 1, id_futuro, id_attuale);
                 }
-            }
-            else {
-                id_futuro = "Ellipse_"+(id_diviso[1]+1);
-                if(id_attuale == "Ellipse_42"){
+            } else {
+                id_futuro = "Ellipse_" + (id_diviso[1] + 1);
+                if (id_attuale == "Ellipse_42") {
                     id_futuro = "Ellipse_1";
                 }
-                if (id_futuro != id_passato){
-                    previsione(mosse-1, id_futuro, id_attuale);
+                if (id_futuro != id_passato) {
+                    previsione(mosse - 1, id_futuro, id_attuale);
                 }
-                id_futuro = "Ellipse_"+(id_diviso[1]-1);
-                if(id_attuale == "Ellipse_1"){
+                id_futuro = "Ellipse_" + (id_diviso[1] - 1);
+                if (id_attuale == "Ellipse_1") {
                     id_futuro = "Ellipse_42";
                 }
-                if (id_futuro != id_passato){
-                    previsione(mosse-1, id_futuro, id_attuale);
+                if (id_futuro != id_passato) {
+                    previsione(mosse - 1, id_futuro, id_attuale);
                 }
             }
         }
@@ -469,7 +468,7 @@ function gameplay(){
                 r_corretta: "Donald Trump",
                 opzioni: ["Donald Duck", "Donald Trump", "Barack Obama", "George Bush"]
             }, {
-                domanda: "Cosa conquist&#232; Giulio Cesare?",
+                domanda: "Cosa conquist&#242; Giulio Cesare?",
                 r_corretta: "Gallia",
                 opzioni: ["Sicilia", "Russia", "Australia", "Gallia"]
             }, {
@@ -1283,7 +1282,7 @@ function gameplay(){
             {
                 domanda: "Quale programma per bambini insegna a realizzare piccoli lavori con svariati materiali?", 
                 r_corretta: "Art Attack", 
-                opzioni: ["Art Attack", "Di tutto un p&#232;", "Artisti in erba", "Riciclando"]
+                opzioni: ["Art Attack", "Di tutto un p&#242;", "Artisti in erba", "Riciclando"]
             }, {
                 domanda: "Come si chiama il famoso personaggio di un videogame che ha per fratello Mario?", 
                 r_corretta: "Luigi", 
@@ -1397,7 +1396,7 @@ function gameplay(){
                 r_corretta: "Il posto delle fragole", 
                 opzioni: ["La leggenda del Santo Bevitore", "Genesi", "L&#39;albero degli zoccoli", "Il posto delle fragole"]
             }, {
-                domanda: "I film di Luis Bunuel sono caratterizzati da uno stile secco e da un umorismo che trasforma il quotidiano in fantastico, come avviene in:", 
+                domanda: "Di Luis Bunuel è caratterizzante un umorismo che trasforma il quotidiano in fantastico, come in:", 
                 r_corretta: "Il fascino discreto della borghesia", 
                 opzioni: ["Amarcord", "Il fascino discreto della borghesia", "L&#39;eclisse", "nessuna"]
             }, {
@@ -1417,7 +1416,7 @@ function gameplay(){
                 r_corretta: "la stesura del testo del film", 
                 opzioni: ["insieme degli ambienti in cui si svolge il film", "gli argomenti del film", "insieme delle inquadrature del film", "la stesura del testo del film"]
             }, {
-                domanda: "Come si definisce il procedimento cinematografico che permette di ampliare il formato delle proiezioni per scopi spettacolari?", 
+                domanda: "Come si chiama il procedimento cinematografico che amplifica il formato delle proiezioni per lo spettacolo?", 
                 r_corretta: "cinemascope", 
                 opzioni: ["editing", "cinemascope", " infotainment", "colophon"]
             }, {
@@ -1732,27 +1731,27 @@ function gameplay(){
         switch (materia) {
             case "storia":
                 argomento = storia;
-                colore_triangolino = "rgb(239, 208, 45)";
+                colore_triangolino = "rgb(247, 219, 116)";
                 break;
             case "geografia":
                 argomento = geografia;
-                colore_triangolino = "rgb(75, 162, 242)";
+                colore_triangolino = "rgb(0, 127, 255)";
                 break;
             case "art_letter":
                 argomento = art_letter;
-                colore_triangolino = "rgb(188, 75, 242)";
+                colore_triangolino = "rgb(143, 0, 255)";
                 break;
             case "intrattenimento":
                 argomento = intrattenimento;
-                colore_triangolino = "rgb(249, 60, 173)";
+                colore_triangolino = "rgb(215, 11, 122)";
                 break;
             case "sport_hobby":
                 argomento = sport_hobby;
-                colore_triangolino = "rgb(239, 119, 51)";
+                colore_triangolino = "rgb(255, 117, 20)";
                 break;
             case "nat_scienza":
                 argomento = nat_scienza;
-                colore_triangolino = "rgb(83, 208, 96)";
+                colore_triangolino = "rgb(34, 139, 34);";
                 break;
         }
         
@@ -1801,18 +1800,15 @@ function gameplay(){
             }, 1000);
             quiz.domanda.innerHTML = argomento[random].domanda;
             quiz.risposte.innerHTML = "";
-            
             let elementi = 4;
             let randomIndex = 0;
-              
             while (elementi != 0) {
-            
+
                 randomIndex = Math.floor(Math.random() * elementi);
                 elementi--;
                 [argomento[random].opzioni[elementi], argomento[random].opzioni[randomIndex]] = 
                 [argomento[random].opzioni[randomIndex], argomento[random].opzioni[elementi]];
             }
-
             for (let i in argomento[random].opzioni) {
                 let label = document.createElement("label");
                 label.innerHTML = argomento[random].opzioni[i];
@@ -1865,7 +1861,6 @@ function gameplay(){
                         giocatore = 0;
                     } else {
                         giocatore += 1;
-                        
                     }
                     priorita += 1;
                     document.getElementById(players[giocatore].id_pedina).style.zIndex = priorita;
@@ -1934,7 +1929,7 @@ function gameplay(){
     
     function visualizzaNomi() {
         let t = `<div id="players">
-                    <h2>Giocatori:</h2>
+                    <h2 style="color: #d3d3d3">Giocatori:</h2>
                     <div id="nomi">
                     </div>
                 </div>`;
@@ -1954,7 +1949,7 @@ function gameplay(){
 		let posizione = esagono.getBoundingClientRect();
 		let topDefault = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
 		let leftDefault = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
-		let colori = ["rgb(239, 119, 51)","rgb(75, 162, 242)","rgb(188, 75, 242)","rgb(83, 208, 96)","rgb(249, 60, 173)","rgb(239, 208, 45)" ]
+		let colori = ["rgb(255, 117, 20)","rgb(0, 127, 255)","rgb(143, 0, 255)","rgb(34, 139, 34)","rgb(215, 11, 122)","rgb(247, 219, 116)" ]
         
         for (let i=0; i<numeroGiocatori; i++){
             let nome = document.getElementById("nome"+i).value;
@@ -1971,9 +1966,9 @@ function gameplay(){
 		for (let i=numeroGiocatori-1; i>=0; i--){
 			let text =
 				` <div id="pedina_` + i + `" class="pedina">
-					<svg width="4vh" height="4vh" viewBox="52 40 390 435" fill="none">
+					<svg width="4.5vh" height="4.5vh" viewBox="50 33 390 450" fill="none">
 						<g id="Radial 1">
-							<circle id="contornoPedina" fill="`+ colori[i] +`" cx="246" cy="257" r="215" fill="#B31818"/>
+							<circle id="contornoPedina" fill="`+ colori[i] +`" cx="245" cy="260" r="220" fill="#B31818"/>
 							<g id="Segment 1">
 								<path id="Triangolino_1_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M354.853 89.2909C381.496 106.505 403.662 129.809 419.523 157.279C435.383 184.75 444.481 215.599 446.067 247.279L266.292 256.279C266.134 253.111 265.224 250.026 263.638 247.279C262.052 244.532 259.835 242.202 257.171 240.48L354.853 89.2909Z" />         
 							</g>
@@ -2012,7 +2007,8 @@ function gameplay(){
         divPlayers.remove();
         visualizzaNomi();
         turnoGiocatore=document.getElementById("li"+giocatore);
-        turnoGiocatore.style.color="black";
+        turnoGiocatore.style.color="#DFA207";
+        turnoGiocatore.style.fontSize="2rem";
         clickElementi();
 		lanciaDado();
 	}
