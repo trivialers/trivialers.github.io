@@ -305,12 +305,13 @@ function gameplay() {
             cube.onclick = "";
             cube.style.transform = "rotateX(" + X + "deg) " + "rotateY(" + Y + "deg)";
             previsione(random, players[giocatore].id_casella, players[giocatore].id_casella);
+            console.log(id_possibili);
             setTimeout(function () {
-                skipMove = false;
                 for (let i = 0; i < id_possibili.length; i++) {
-                    id = document.getElementById(id_possibili[i]);
-                    id.style.strokeWidth = "5px";
+                    let stroke = document.getElementById(id_possibili[i]);
+                    stroke.style.strokeWidth = "4px";
                 }
+                skipMove = false;
             }, 5000);
         }
     }
@@ -391,8 +392,8 @@ function gameplay() {
         if (!skipMove) {
             if (id_possibili.includes(id)) {
                 for (let i = 0; i < id_possibili.length; i++) {
-                    id = document.getElementById(id_possibili[i]);
-                    id.style.strokeWidth = "0px";
+                    let stroke = document.getElementById(id_possibili[i]);
+                    stroke.style.strokeWidth = "0px";
                 }
                 skipMove = true;
                 players[giocatore].id_casella = id;
