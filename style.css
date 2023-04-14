@@ -354,18 +354,18 @@ li{
 
 #dom {
     margin-top: 0.3rem;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.5rem;
     font-family: 'Niconne', cursive;
     padding: 0.1rem;
     background: #27678D;
     color: #fff;
-    font-size: 2rem;
+    font-size: 2.4vw;
     border-radius: 10px;
 }
 
 #ris {
     display: grid;
-    grid-gap: 1.3rem;
+    grid-gap: 1vw;
 }
 
 
@@ -373,7 +373,7 @@ li{
     font-family: 'Niconne', cursive;
     background: #27678D;
     border-radius: 10px;
-    font-size: 1.6rem;
+    font-size: 1.6vw;
     cursor: pointer;
     color: #fff;
     padding: 0.1rem;
@@ -426,14 +426,4 @@ h3 {
     font-size: 1.2em;
     color: white;
     cursor: pointer;
-}
-
-#lista {
-    transform: rotate(40deg);
-    text-align: initial;
-    position: absolute;
-    width: 10%;
-    height: 30%;
-    margin-top: 3%;
-    margin-left: 7%;
 }

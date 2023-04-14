@@ -1172,7 +1172,7 @@ function gameplay(){
                 r_corretta: "Arpagone", 
                 opzioni: ["Carlone", "Salvatore", "Ganimede", "Arpagone"]
             }, {
-                domanda: "Shakespeare ha scritto un&#39;opera in cui muoiono i quattro protagonisti: qual &#232;?", 
+                domanda: "In quale opera di Shakespeare nella quale muoiono i quattro protagonisti: qual &#232;?", 
                 r_corretta: "Amleto", 
                 opzioni: ["Sogno di una notte di mezza estate", "La tempesta", "Romeo e Giulietta", "Amleto"]
             }, {
