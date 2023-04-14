@@ -66,5 +66,5 @@ senza dover rispondere ad una domanda.
 
 COME SI VINCE
 Quando un giocatore ha raccolto i 6 cunei rispondendo
-correttamente alla domanda finale di ciascuna categoria, egli
-avrà vinto la partita.
+correttamente alla domanda finale di ciascuna categoria, quindi
+per vincere basterà arrivare esattamente sull'esagono centrale.
