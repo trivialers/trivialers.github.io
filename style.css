@@ -341,6 +341,7 @@ li{
     height: 60%;
     background: #DFA207;
     border-radius: 20px;
+    z-index: 100000;
 }
 
 #davanti {
@@ -400,6 +401,7 @@ li{
     width: 50%;
     height: 40%;
     box-shadow: -1px -2px 42px -19px rgba(0, 0, 0, 0.74);
+    z-index: 100000;
 }
 
 #congra {
