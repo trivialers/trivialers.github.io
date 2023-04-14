@@ -13,6 +13,7 @@ function gameplay(){
 	let again = false;
     let numeroGiocatori=0;
 	let giocatore = 0;
+    let priorita = 0;
     let players=[];
 
 	function clickElementi(){
@@ -381,11 +382,23 @@ function gameplay(){
 	                pedina.style.top = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
 	                pedina.style.left = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
 	                setTimeout(function () {
-	                    if (materia == "ritira") {
-	                        turno();
-	                    } else {
-	                        carta(materia, triangolo);
-	                    }
+                        if (id == "esagono"){
+                            if (document.getElementById("Triangolino_6_"+ giocatore).style.fill !== "rgba(228, 231, 231, 0.4)"){
+                                setTimeout(function(){
+                                    win();
+                                }, 2000);
+		    		        }
+                            else{
+                                turno();
+                            }
+                        }
+                        else{
+                            if (materia == "ritira") {
+                                turno();
+                            } else {
+                                carta(materia, triangolo);
+                            }
+                        }
 	                }, 300);
 	            }, 1000);
 	        }
@@ -1818,12 +1831,7 @@ function gameplay(){
 		    		        }
 		    		        if (id_triangolino.style.fill==="rgba(228, 231, 231, 0.4)"){
                                 id_triangolino.style.fill=colore_triangolino;
-                                if(i == 6){
-                                setTimeout(function(){
-                                    win(giocatore);
-                                }, 2000);
-                            }
-		    		            break;
+                                break;
 		    		        }
 		    		    }
 		    		}
@@ -1833,14 +1841,17 @@ function gameplay(){
                         giocatore = 0;
                     } else {
                         giocatore += 1;
+                        
                     }
+                    priorita += 1;
+                    document.getElementById(players[giocatore].id_pedina).style.zIndex = priorita;
 					turno();
                 }
             }, 1000);
         }
     }
     
-    function win(giocatore){
+    function win(){
         let t=`
             <div id="vincita">
                 <img src="img/scritta.png" id="congra">
