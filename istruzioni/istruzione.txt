@@ -1,3 +1,7 @@
+#f17d00
+#f18900
+#f19500
+
 SCOPO DEL GIOCO
 Il giocatore deve aver raggiunto le 6
 caselle finali di ciascuna categoria ed aver risposto
