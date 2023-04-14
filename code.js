@@ -7,310 +7,314 @@ function play() {
 }
 
 let insert, nomiGiocatori, flip, nuovoGioco;
-function gameplay(){
-    let id_possibili = [];
-	let skipMove = true;
-	let again = false;
-    let numeroGiocatori=0;
-	let giocatore = 0;
-    let priorita = 0;
-    let players=[];
 
-	function clickElementi(){
-		$(document).ready(function () {
+function gameplay() {
+    let id_possibili = [];
+    let skipMove = true;
+    let again = false;
+    let numeroGiocatori = 0;
+    let giocatore = 0;
+    let priorita = 0;
+    let players = [];
+
+    function clickElementi() {
+        $(document).ready(function () {
             $("#Ellipse_1").click(function () {
-				posizione("Ellipse_1", "sport_hobby");
-			});
+                posizione("Ellipse_1", "sport_hobby");
+            });
             $("#Ellipse_2").click(function () {
-				posizione("Ellipse_2", "ritira");
-			});
-			$("#Ellipse_3").click(function () {
-				posizione("Ellipse_3", "geografia");
-			});
-			$("#Ellipse_4").click(function () {
-				posizione("Ellipse_4", "intrattenimento");
-			});
-			$("#Ellipse_5").click(function () {
-				posizione("Ellipse_5", "ritira");
-			});
-			$("#Ellipse_6").click(function () {
-				posizione("Ellipse_6", "storia");
-			});
+                posizione("Ellipse_2", "ritira");
+            });
+            $("#Ellipse_3").click(function () {
+                posizione("Ellipse_3", "geografia");
+            });
+            $("#Ellipse_4").click(function () {
+                posizione("Ellipse_4", "intrattenimento");
+            });
+            $("#Ellipse_5").click(function () {
+                posizione("Ellipse_5", "ritira");
+            });
+            $("#Ellipse_6").click(function () {
+                posizione("Ellipse_6", "storia");
+            });
             $("#Polygon_3").click(function () {
-				posizione("Ellipse_7", "art_letter", true);
-			});
-			$("#Ellipse_7").click(function () {
-				posizione("Ellipse_7", "art_letter", true);
-			});
+                posizione("Ellipse_7", "art_letter", true);
+            });
+            $("#Ellipse_7").click(function () {
+                posizione("Ellipse_7", "art_letter", true);
+            });
             $("#Ellipse_8").click(function () {
-				posizione("Ellipse_8", "storia");
-			});
-			$("#Ellipse_9").click(function () {
-				posizione("Ellipse_9", "ritira");
-			});
-			$("#Ellipse_10").click(function () {
-				posizione("Ellipse_10", "sport_hobby");
-			});
-			$("#Ellipse_11").click(function () {
-				posizione("Ellipse_11", "nat_scienza");
-			});
+                posizione("Ellipse_8", "storia");
+            });
+            $("#Ellipse_9").click(function () {
+                posizione("Ellipse_9", "ritira");
+            });
+            $("#Ellipse_10").click(function () {
+                posizione("Ellipse_10", "sport_hobby");
+            });
+            $("#Ellipse_11").click(function () {
+                posizione("Ellipse_11", "nat_scienza");
+            });
             $("#Ellipse_12").click(function () {
-				posizione("Ellipse_12", "ritira");
-			});
-			$("#Ellipse_13").click(function () {
-				posizione("Ellipse_13", "intrattenimento");
-			});
-			$("#Polygon_2").click(function () {
-				posizione("Ellipse_14", "geografia", true);
-			});
-			$("#Ellipse_14").click(function () {
-				posizione("Ellipse_14", "geografia", true);
-			});
+                posizione("Ellipse_12", "ritira");
+            });
+            $("#Ellipse_13").click(function () {
+                posizione("Ellipse_13", "intrattenimento");
+            });
+            $("#Polygon_2").click(function () {
+                posizione("Ellipse_14", "geografia", true);
+            });
+            $("#Ellipse_14").click(function () {
+                posizione("Ellipse_14", "geografia", true);
+            });
             $("#Ellipse_15").click(function () {
-				posizione("Ellipse_15", "intrattenimento");
-			});
-			$("#Ellipse_16").click(function () {
-				posizione("Ellipse_16", "ritira");
-			});
-			$("#Ellipse_17").click(function () {
-				posizione("Ellipse_17", "storia");
-			});
-			$("#Ellipse_18").click(function () {
-				posizione("Ellipse_18", "art_letter");
-			});
-			$("#Ellipse_19").click(function () {
-				posizione("Ellipse_19", "ritira");
-			});
-			$("#Ellipse_20").click(function () {
-				posizione("Ellipse_20", "nat_scienza");
-			});
-			$("#Polygon_1").click(function () {
-				posizione("Ellipse_21", "sport_hobby", true);
-			});
-			$("#Ellipse_21").click(function () {
-				posizione("Ellipse_21", "sport_hobby", true);
-			});
+                posizione("Ellipse_15", "intrattenimento");
+            });
+            $("#Ellipse_16").click(function () {
+                posizione("Ellipse_16", "ritira");
+            });
+            $("#Ellipse_17").click(function () {
+                posizione("Ellipse_17", "storia");
+            });
+            $("#Ellipse_18").click(function () {
+                posizione("Ellipse_18", "art_letter");
+            });
+            $("#Ellipse_19").click(function () {
+                posizione("Ellipse_19", "ritira");
+            });
+            $("#Ellipse_20").click(function () {
+                posizione("Ellipse_20", "nat_scienza");
+            });
+            $("#Polygon_1").click(function () {
+                posizione("Ellipse_21", "sport_hobby", true);
+            });
+            $("#Ellipse_21").click(function () {
+                posizione("Ellipse_21", "sport_hobby", true);
+            });
             $("#Ellipse_22").click(function () {
-				posizione("Ellipse_22", "nat_scienza");
-			});
-			$("#Ellipse_23").click(function () {
-				posizione("Ellipse_23", "ritira");
-			});
-			$("#Ellipse_24").click(function () {
-				posizione("Ellipse_24", "intrattenimento");
-			});
-			$("#Ellipse_25").click(function () {
-				posizione("Ellipse_25", "geografia");
-			});
-			$("#Ellipse_26").click(function () {
-				posizione("Ellipse_26", "ritira");
-			});
-			$("#Ellipse_27").click(function () {
-				posizione("Ellipse_27", "art_letter");
-			});
-			$("#Polygon_6").click(function () {
-				posizione("Ellipse_28", "storia", true);
-			});
-			$("#Ellipse_28").click(function () {
-				posizione("Ellipse_28", "storia", true);
-			});
+                posizione("Ellipse_22", "nat_scienza");
+            });
+            $("#Ellipse_23").click(function () {
+                posizione("Ellipse_23", "ritira");
+            });
+            $("#Ellipse_24").click(function () {
+                posizione("Ellipse_24", "intrattenimento");
+            });
+            $("#Ellipse_25").click(function () {
+                posizione("Ellipse_25", "geografia");
+            });
+            $("#Ellipse_26").click(function () {
+                posizione("Ellipse_26", "ritira");
+            });
+            $("#Ellipse_27").click(function () {
+                posizione("Ellipse_27", "art_letter");
+            });
+            $("#Polygon_6").click(function () {
+                posizione("Ellipse_28", "storia", true);
+            });
+            $("#Ellipse_28").click(function () {
+                posizione("Ellipse_28", "storia", true);
+            });
             $("#Ellipse_29").click(function () {
-				posizione("Ellipse_29", "art_letter");
-			});
-			$("#Ellipse_30").click(function () {
-				posizione("Ellipse_30", "ritira");
-			});
-			$("#Ellipse_31").click(function () {
-				posizione("Ellipse_31", "nat_scienza");
-			});
-			$("#Ellipse_32").click(function () {
-				posizione("Ellipse_32", "sport_hobby");
-			});
-			$("#Ellipse_33").click(function () {
-				posizione("Ellipse_33", "ritira");
-			});
-			$("#Ellipse_34").click(function () {
-				posizione("Ellipse_34", "geografia");
-			});
-			$("#Polygon_5").click(function () {
-				posizione("Ellipse_35", "intrattenimento", true);
-			});
-			$("#Ellipse_35").click(function () {
-				posizione("Ellipse_35", "intrattenimento", true);
-			});
+                posizione("Ellipse_29", "art_letter");
+            });
+            $("#Ellipse_30").click(function () {
+                posizione("Ellipse_30", "ritira");
+            });
+            $("#Ellipse_31").click(function () {
+                posizione("Ellipse_31", "nat_scienza");
+            });
+            $("#Ellipse_32").click(function () {
+                posizione("Ellipse_32", "sport_hobby");
+            });
+            $("#Ellipse_33").click(function () {
+                posizione("Ellipse_33", "ritira");
+            });
+            $("#Ellipse_34").click(function () {
+                posizione("Ellipse_34", "geografia");
+            });
+            $("#Polygon_5").click(function () {
+                posizione("Ellipse_35", "intrattenimento", true);
+            });
+            $("#Ellipse_35").click(function () {
+                posizione("Ellipse_35", "intrattenimento", true);
+            });
             $("#Ellipse_36").click(function () {
-				posizione("Ellipse_36", "geografia");
-			});
-			$("#Ellipse_37").click(function () {
-				posizione("Ellipse_37", "ritira");
-			});
-			$("#Ellipse_38").click(function () {
-				posizione("Ellipse_38", "art_letter");
-			});
-			$("#Ellipse_39").click(function () {
-				posizione("Ellipse_39", "storia");
-			});
-			$("#Ellipse_40").click(function () {
-				posizione("Ellipse_40", "ritira");
-			});
-			$("#Ellipse_41").click(function () {
-				posizione("Ellipse_41", "sport_hobby");
-			});
-			$("#Polygon_4").click(function () {
-				posizione("Ellipse_42", "nat_scienza", true);
-			});
-			$("#Ellipse_42").click(function () {
-				posizione("Ellipse_42", "nat_scienza", true);
-			});
-			$("#esagono").click(function () {
-				posizione("esagono", "ritira");
-			});
-			$("#centro").click(function () {
-				posizione("esagono", "ritira");
-			});
-			$("#Ellipse_21_1").click(function () {
-				posizione("Ellipse_21_1", "geografia");
-			});
-			$("#Ellipse_21_2").click(function () {
-				posizione("Ellipse_21_2", "storia");
-			});
-			$("#Ellipse_21_3").click(function () {
-				posizione("Ellipse_21_3", "intrattenimento");
-			});
-			$("#Ellipse_21_4").click(function () {
-				posizione("Ellipse_21_4", "art_letter");
-			});
-			$("#Ellipse_21_5").click(function () {
-				posizione("Ellipse_21_5", "nat_scienza");
-			});
-			$("#Ellipse_42_5").click(function () {
-				posizione("Ellipse_42_5", "sport_hobby");
-			});
-			$("#Ellipse_42_4").click(function () {
-				posizione("Ellipse_42_4", "storia");
-			});
-			$("#Ellipse_42_3").click(function () {
-				posizione("Ellipse_42_3", "geografia");
-			});
-			$("#Ellipse_42_2").click(function () {
-				posizione("Ellipse_42_2", "art_letter");
-			});
-			$("#Ellipse_42_1").click(function () {
-				posizione("Ellipse_42_1", "intrattenimento");
-			});
-			$("#Ellipse_14_1").click(function () {
-				posizione("Ellipse_14_1", "art_letter");
-			});
-			$("#Ellipse_14_2").click(function () {
-				posizione("Ellipse_14_2", "sport_hobby");
-			});
-			$("#Ellipse_14_3").click(function () {
-				posizione("Ellipse_14_3", "storia");
-			});
-			$("#Ellipse_14_4").click(function () {
-				posizione("Ellipse_14_4", "nat_scienza");
-			});
-			$("#Ellipse_14_5").click(function () {
-				posizione("Ellipse_14_5", "intrattenimento");
-			});
-			$("#Ellipse_35_5").click(function () {
-				posizione("Ellipse_35_5", "geografia");
-			});
-			$("#Ellipse_35_4").click(function () {
-				posizione("Ellipse_35_4", "sport_hobby");
-			});
-			$("#Ellipse_35_3").click(function () {
-				posizione("Ellipse_35_3", "art_letter");
-			});
-			$("#Ellipse_35_2").click(function () {
-				posizione("Ellipse_35_2", "nat_scienza");
-			});
-			$("#Ellipse_35_1").click(function () {
-				posizione("Ellipse_35_1", "storia");
-			});
-			$("#Ellipse_28_1").click(function () {
-				posizione("Ellipse_28_1", "sport_hobby");
-			});
-			$("#Ellipse_28_2").click(function () {
-				posizione("Ellipse_28_2", "intrattenimento");
-			});
-			$("#Ellipse_28_3").click(function () {
-				posizione("Ellipse_28_3", "nat_scienza");
-			});
-			$("#Ellipse_28_4").click(function () {
-				posizione("Ellipse_28_4", "geografia");
-			});
-			$("#Ellipse_28_5").click(function () {
-				posizione("Ellipse_28_5", "art_letter");
-			});
-			$("#Ellipse_7_5").click(function () {
-				posizione("Ellipse_7_5", "storia");
-			});
-			$("#Ellipse_7_4").click(function () {
-				posizione("Ellipse_7_4", "intrattenimento");
-			});
-			$("#Ellipse_7_3").click(function () {
-				posizione("Ellipse_7_3", "sport_hobby");
-			});
-			$("#Ellipse_7_2").click(function () {
-				posizione("Ellipse_7_2", "geografia");
-			});
-			$("#Ellipse_7_1").click(function () {
-				posizione("Ellipse_7_1", "nat_scienza");
-			});
-		});
-	}
-    
-    let dadoy = 1800, dadox = 1080;
-    
-	function lanciaDado(){
-		let cube = document.getElementById("cube");
-		cube.onclick = function (){
-			let random = Math.ceil(Math.random()*6);
-			let X=0, Y=0, Z=0;
-			switch (random){
-				case 1:
-					X = 0;
-					Y = 0;
-					break;
-				case 2:
-					X = 0;
-					Y = 90;
-					break;
-				case 3:
-					X = 90;
-					Y = 0;
-					break;
-				case 4:
-					X = -90;
-					Y = 0;
-					break;
-				case 5:
-					X = 0;
-					Y = -90;
-					break;
-				case 6:
-					X = 0;
-					Y = 180;
-					break;
-			}
-			dadox += 1800;
-			dadoy += 1080;
-			Y = Y + dadoy;
-			X = X + dadox;
-            cube.onclick="";
-			cube.style.transform = "rotateX(" + X + "deg) " + "rotateY(" + Y + "deg)";
-            previsione(random, players[giocatore].id_casella, players[giocatore].id_casella);
-            console.log(id_possibili);
-			setTimeout(function(){
-				skipMove= false;
-			}, 5000);
-            for(let i=0; i<id_possibili.length; i++){
-                id=document.getElementById(id_possibili[i]);
+                posizione("Ellipse_36", "geografia");
+            });
+            $("#Ellipse_37").click(function () {
+                posizione("Ellipse_37", "ritira");
+            });
+            $("#Ellipse_38").click(function () {
+                posizione("Ellipse_38", "art_letter");
+            });
+            $("#Ellipse_39").click(function () {
+                posizione("Ellipse_39", "storia");
+            });
+            $("#Ellipse_40").click(function () {
+                posizione("Ellipse_40", "ritira");
+            });
+            $("#Ellipse_41").click(function () {
+                posizione("Ellipse_41", "sport_hobby");
+            });
+            $("#Polygon_4").click(function () {
+                posizione("Ellipse_42", "nat_scienza", true);
+            });
+            $("#Ellipse_42").click(function () {
+                posizione("Ellipse_42", "nat_scienza", true);
+            });
+            $("#esagono").click(function () {
+                posizione("esagono", "ritira");
+            });
+            $("#centro").click(function () {
+                posizione("esagono", "ritira");
+            });
+            $("#Ellipse_21_1").click(function () {
+                posizione("Ellipse_21_1", "geografia");
+            });
+            $("#Ellipse_21_2").click(function () {
+                posizione("Ellipse_21_2", "storia");
+            });
+            $("#Ellipse_21_3").click(function () {
+                posizione("Ellipse_21_3", "intrattenimento");
+            });
+            $("#Ellipse_21_4").click(function () {
+                posizione("Ellipse_21_4", "art_letter");
+            });
+            $("#Ellipse_21_5").click(function () {
+                posizione("Ellipse_21_5", "nat_scienza");
+            });
+            $("#Ellipse_42_5").click(function () {
+                posizione("Ellipse_42_5", "sport_hobby");
+            });
+            $("#Ellipse_42_4").click(function () {
+                posizione("Ellipse_42_4", "storia");
+            });
+            $("#Ellipse_42_3").click(function () {
+                posizione("Ellipse_42_3", "geografia");
+            });
+            $("#Ellipse_42_2").click(function () {
+                posizione("Ellipse_42_2", "art_letter");
+            });
+            $("#Ellipse_42_1").click(function () {
+                posizione("Ellipse_42_1", "intrattenimento");
+            });
+            $("#Ellipse_14_1").click(function () {
+                posizione("Ellipse_14_1", "art_letter");
+            });
+            $("#Ellipse_14_2").click(function () {
+                posizione("Ellipse_14_2", "sport_hobby");
+            });
+            $("#Ellipse_14_3").click(function () {
+                posizione("Ellipse_14_3", "storia");
+            });
+            $("#Ellipse_14_4").click(function () {
+                posizione("Ellipse_14_4", "nat_scienza");
+            });
+            $("#Ellipse_14_5").click(function () {
+                posizione("Ellipse_14_5", "intrattenimento");
+            });
+            $("#Ellipse_35_5").click(function () {
+                posizione("Ellipse_35_5", "geografia");
+            });
+            $("#Ellipse_35_4").click(function () {
+                posizione("Ellipse_35_4", "sport_hobby");
+            });
+            $("#Ellipse_35_3").click(function () {
+                posizione("Ellipse_35_3", "art_letter");
+            });
+            $("#Ellipse_35_2").click(function () {
+                posizione("Ellipse_35_2", "nat_scienza");
+            });
+            $("#Ellipse_35_1").click(function () {
+                posizione("Ellipse_35_1", "storia");
+            });
+            $("#Ellipse_28_1").click(function () {
+                posizione("Ellipse_28_1", "sport_hobby");
+            });
+            $("#Ellipse_28_2").click(function () {
+                posizione("Ellipse_28_2", "intrattenimento");
+            });
+            $("#Ellipse_28_3").click(function () {
+                posizione("Ellipse_28_3", "nat_scienza");
+            });
+            $("#Ellipse_28_4").click(function () {
+                posizione("Ellipse_28_4", "geografia");
+            });
+            $("#Ellipse_28_5").click(function () {
+                posizione("Ellipse_28_5", "art_letter");
+            });
+            $("#Ellipse_7_5").click(function () {
+                posizione("Ellipse_7_5", "storia");
+            });
+            $("#Ellipse_7_4").click(function () {
+                posizione("Ellipse_7_4", "intrattenimento");
+            });
+            $("#Ellipse_7_3").click(function () {
+                posizione("Ellipse_7_3", "sport_hobby");
+            });
+            $("#Ellipse_7_2").click(function () {
+                posizione("Ellipse_7_2", "geografia");
+            });
+            $("#Ellipse_7_1").click(function () {
+                posizione("Ellipse_7_1", "nat_scienza");
+            });
+        });
+    }
+
+    let dadoy = 1800,
+        dadox = 1080;
+
+    function lanciaDado() {
+        let cube = document.getElementById("cube");
+        cube.onclick = function () {
+            let random = Math.ceil(Math.random() * 6);
+            let X = 0,
+                Y = 0,
+                Z = 0;
+            switch (random) {
+                case 1:
+                    X = 0;
+                    Y = 0;
+                    break;
+                case 2:
+                    X = 0;
+                    Y = 90;
+                    break;
+                case 3:
+                    X = 90;
+                    Y = 0;
+                    break;
+                case 4:
+                    X = -90;
+                    Y = 0;
+                    break;
+                case 5:
+                    X = 0;
+                    Y = -90;
+                    break;
+                case 6:
+                    X = 0;
+                    Y = 180;
+                    break;
             }
-		}
-	}
-	
+            dadox += 1800;
+            dadoy += 1080;
+            Y = Y + dadoy;
+            X = X + dadox;
+            cube.onclick = "";
+            cube.style.transform = "rotateX(" + X + "deg) " + "rotateY(" + Y + "deg)";
+            previsione(random, players[giocatore].id_casella, players[giocatore].id_casella);
+            setTimeout(function () {
+                skipMove = false;
+                for (let i = 0; i < id_possibili.length; i++) {
+                    id = document.getElementById(id_possibili[i]);
+                    id.style.strokeWidth = "5px";
+                }
+            }, 5000);
+        }
+    }
+
     function previsione(mosse, id_attuale, id_passato) {
         let id_futuro = "";
         if (mosse == 0) {
@@ -379,45 +383,47 @@ function gameplay(){
         }
     }
 
-	function posizione(id, materia, triangolo = false) {
-	    let pedina = document.getElementById(players[giocatore].id_pedina);
-	    let dimensioni = pedina.getBoundingClientRect();
-	    let indirizzo = document.getElementById(id);
-	    let posizione = indirizzo.getBoundingClientRect();
-	    if (!skipMove) {
-	        if (id_possibili.includes(id)) {
-	            skipMove = true;
-	            players[giocatore].id_casella = id;
-	            id_possibili = [];
-	            setTimeout(function () {
-	                pedina.style.top = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
-	                pedina.style.left = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
-	                setTimeout(function () {
-                        if (id == "esagono"){
-                            if (document.getElementById("Triangolino_6_"+ giocatore).style.fill !== "rgba(228, 231, 231, 0.4)"){
-                                setTimeout(function(){
+    function posizione(id, materia, triangolo = false) {
+        let pedina = document.getElementById(players[giocatore].id_pedina);
+        let dimensioni = pedina.getBoundingClientRect();
+        let indirizzo = document.getElementById(id);
+        let posizione = indirizzo.getBoundingClientRect();
+        if (!skipMove) {
+            if (id_possibili.includes(id)) {
+                for (let i = 0; i < id_possibili.length; i++) {
+                    id = document.getElementById(id_possibili[i]);
+                    id.style.strokeWidth = "0px";
+                }
+                skipMove = true;
+                players[giocatore].id_casella = id;
+                id_possibili = [];
+                setTimeout(function () {
+                    pedina.style.top = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
+                    pedina.style.left = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
+                    setTimeout(function () {
+                        if (id == "esagono") {
+                            if (document.getElementById("Triangolino_6_" + giocatore).style.fill !== "rgba(228, 231, 231, 0.4)") {
+                                setTimeout(function () {
                                     win();
                                 }, 2000);
-		    		        }
-                            else{
+                            } else {
                                 turno();
                             }
-                        }
-                        else{
+                        } else {
                             if (materia == "ritira") {
                                 turno();
                             } else {
                                 carta(materia, triangolo);
                             }
                         }
-	                }, 300);
-	            }, 1000);
-	        }
-	    }
-	}
-    
+                    }, 300);
+                }, 1000);
+            }
+        }
+    }
+
     function carta(materia, triangolo) {
-        
+
         const storia = [
             {
                 domanda: "Chi &#232; il padre degli dei?",
@@ -463,7 +469,7 @@ function gameplay(){
                 domanda: "In quale data si scopre l&#39;America?",
                 r_corretta: "12 Ottobre 1492",
                 opzioni: ["12 Ottobre 1491", "12 Ottobre 1492", "12 Ottobre 1493", "12 Ottobre 1494"]
-            },{
+            }, {
                 domanda: "Chi era il presidente americano nel 2018?",
                 r_corretta: "Donald Trump",
                 opzioni: ["Donald Duck", "Donald Trump", "Barack Obama", "George Bush"]
@@ -526,7 +532,7 @@ function gameplay(){
             }, {
                 domanda: "In seguito a cosa inizi&#242; la Seconda Guerra Mondiale?",
                 r_corretta: "invasione della Polonia",
-                opzioni: ["invasione della Francia", "invasione della Polonia", "invasione dell&#39;Inghilterra","Nessuna delle risposte precendenti"]
+                opzioni: ["invasione della Francia", "invasione della Polonia", "invasione dell&#39;Inghilterra", "Nessuna delle risposte precendenti"]
             }, {
                 domanda: "Il sindacato dei lavoratori italiani fondato nel 1906 si chiamava:",
                 r_corretta: "Confederazione Generale del Lavoro",
@@ -633,7 +639,7 @@ function gameplay(){
                 opzioni: ["guerra dei sette anni", "guerra dei cento anni", "guerra greco-gotico", "prima crociata"]
             }
         ];
-        
+
         const geografia = [
             {
                 domanda: "Dove si trova il Brasile?",
@@ -688,124 +694,124 @@ function gameplay(){
                 r_corretta: "Suez",
                 opzioni: ["Corinto", "Panama", "Suez", "Nessuna risposta precedente"]
             }, {
-                domanda: "Dov&#39;&#232; la Citt&#224; Proibita?", 
-                r_corretta: "Pechino", 
+                domanda: "Dov&#39;&#232; la Citt&#224; Proibita?",
+                r_corretta: "Pechino",
                 opzioni: ["Pechino", "La Mecca", "El Cairo", "Bombay"]
             }, {
-                domanda: "In quale citt&#224; si trova Piazza Affari?", 
-                r_corretta: "Milano", 
+                domanda: "In quale citt&#224; si trova Piazza Affari?",
+                r_corretta: "Milano",
                 opzioni: ["Roma", "Firenze", "Milano", "Napoli"]
             }, {
-                domanda: "Dove si trova l&#39;Eretteo?", 
-                r_corretta: "Atene", 
+                domanda: "Dove si trova l&#39;Eretteo?",
+                r_corretta: "Atene",
                 opzioni: ["Asmara", "Atene", "Istanbul", "Tripoli"]
             }, {
-                domanda: "State visitando Teatro Farnese, in quale citt&#224; vi trovate?", 
-                r_corretta: "Roma", 
+                domanda: "State visitando Teatro Farnese, in quale citt&#224; vi trovate?",
+                r_corretta: "Roma",
                 opzioni: ["Parma", "Palermo", "Roma", "Napoli"]
             }, {
-                domanda: "Dove si trova la Sorbona?", 
-                r_corretta: "Parigi", 
+                domanda: "Dove si trova la Sorbona?",
+                r_corretta: "Parigi",
                 opzioni: ["Berlino", "Barcellona", "Parigi", "Londra"]
             }, {
-                domanda: "Scegli il paese che ha un confine marittimo:", 
-                r_corretta: "Pakistan", 
+                domanda: "Scegli il paese che ha un confine marittimo:",
+                r_corretta: "Pakistan",
                 opzioni: ["Kirghizistan", "Afghanistan", "Tajikistan", "Pakistan"]
             }, {
-                domanda: "Il lago Tanganica &#232; uno dei grandi laghi di:", 
-                r_corretta: "Africa", 
+                domanda: "Il lago Tanganica &#232; uno dei grandi laghi di:",
+                r_corretta: "Africa",
                 opzioni: ["Africa", "Asia", "Oceania", "America"]
             }, {
-                domanda: "Qual &#232; la capitale del Burundi?", 
-                r_corretta: "Gitega", 
+                domanda: "Qual &#232; la capitale del Burundi?",
+                r_corretta: "Gitega",
                 opzioni: ["Kigali", "Gitega", "Addis Abeba", "Dodoma"]
             }, {
-                domanda: "Quale di queste citt&#224; &#232; la citt&#224; pi&#249; meridionale del mondo?", 
-                r_corretta: "Puerto Natales", 
+                domanda: "Quale di queste citt&#224; &#232; la citt&#224; pi&#249; meridionale del mondo?",
+                r_corretta: "Puerto Natales",
                 opzioni: ["Ushuaia", "Puerto Rico", "Puerto Natales", "Puerto Williams"]
             }, {
-                domanda: "In quale isola delle Hawaii si trova il Parco Nazionale di Haleakalā?", 
-                r_corretta: "Maui", 
+                domanda: "In quale isola delle Hawaii si trova il Parco Nazionale di Haleakalā?",
+                r_corretta: "Maui",
                 opzioni: ["Oahu", "Maui", "Kauai", "Molokai"]
             }, {
-                domanda: "Marsiglia &#232; una citt&#224; di:", 
-                r_corretta: "Francia", 
+                domanda: "Marsiglia &#232; una citt&#224; di:",
+                r_corretta: "Francia",
                 opzioni: ["Italia", "Lussemburgo", "Spagna", "Francia"]
             }, {
-                domanda: "Quale di questi paesi non &#232; nel Corno d&#39;Africa?", 
-                r_corretta: "Costa d&#39;Avorio", 
+                domanda: "Quale di questi paesi non &#232; nel Corno d&#39;Africa?",
+                r_corretta: "Costa d&#39;Avorio",
                 opzioni: ["Gibuti", "Somalia", "Etiopia", "Costa d&#39;Avorio"]
             }, {
-                domanda: "Il fiume Yalu &#232; un fiume di confine tra:", 
-                r_corretta: "Cina e Corea del Nord", 
+                domanda: "Il fiume Yalu &#232; un fiume di confine tra:",
+                r_corretta: "Cina e Corea del Nord",
                 opzioni: ["India e Nepal", "Cina e Corea del Nord", "Corea del Nord e Corea del Sud", "India e Bangladesh"]
             }, {
-                domanda: "Il Monte Titano &#232; la montagna pi&#249; alta di:", 
-                r_corretta: "San Marino", 
+                domanda: "Il Monte Titano &#232; la montagna pi&#249; alta di:",
+                r_corretta: "San Marino",
                 opzioni: ["Malta", "Monaco", "Andorra", "San Marino"]
             }, {
-                domanda: "Quale di questi paesi non &#232; un territorio britannico d&#39;oltremare?", 
-                r_corretta: "Antigua e Barbuda", 
+                domanda: "Quale di questi paesi non &#232; un territorio britannico d&#39;oltremare?",
+                r_corretta: "Antigua e Barbuda",
                 opzioni: ["Isole Cayman", "Bermuda", "Isole Turks e Caicos", "Antigua e Barbuda"]
             }, {
-                domanda: "Frutillar &#232; una citt&#224; di:", 
-                r_corretta: "Cile", 
+                domanda: "Frutillar &#232; una citt&#224; di:",
+                r_corretta: "Cile",
                 opzioni: ["Cile", "Ecuador", "Messico", "Argentina"]
             }, {
-                domanda: "Il fiume Tocantins &#232; un lungo fiume di:", 
-                r_corretta: "America", 
+                domanda: "Il fiume Tocantins &#232; un lungo fiume di:",
+                r_corretta: "America",
                 opzioni: ["Asia", "Europa", "Africa", "America"]
             }, {
-                domanda: "Qual &#232; la capitale della Papua Nuova Guinea?", 
-                r_corretta: "Moresby Harbour", 
+                domanda: "Qual &#232; la capitale della Papua Nuova Guinea?",
+                r_corretta: "Moresby Harbour",
                 opzioni: ["Numer", "Wellington", "Moresby Harbour", "Rabaul"]
             }, {
-                domanda: "Dove finisce il fiume Reno?", 
-                r_corretta: "Mare del Nord", 
+                domanda: "Dove finisce il fiume Reno?",
+                r_corretta: "Mare del Nord",
                 opzioni: ["Mare della Frisia", "Mare del Nord", "Mar Morto", "Mar Tirreno"]
             }, {
-                domanda: "Salonicco &#232; una citt&#224; di:", 
-                r_corretta: "Grecia", 
+                domanda: "Salonicco &#232; una citt&#224; di:",
+                r_corretta: "Grecia",
                 opzioni: ["Siria", "Grecia", "Libano", "Turchia"]
             }, {
-                domanda: "Managua &#232; la capitale di:", 
-                r_corretta: "Nicaragua", 
+                domanda: "Managua &#232; la capitale di:",
+                r_corretta: "Nicaragua",
                 opzioni: ["Honduras", "Papua Nuova Guinea", "El Salvador", "Nicaragua"]
             }, {
-                domanda: "Qual &#232; il fiume principale della citt&#224; di Santiago, capitale del Cile?", 
-                r_corretta: "Fiume Mapocho", 
+                domanda: "Qual &#232; il fiume principale della citt&#224; di Santiago, capitale del Cile?",
+                r_corretta: "Fiume Mapocho",
                 opzioni: ["Fiume Giallo", "Fiume Molina", "Fiume Vulcano", "Fiume Mapocho"]
             }, {
-                domanda: "In quale citt&#224; canadese si trova il Ponte Sospensione di Capilano?", 
-                r_corretta: "Vancouver", 
+                domanda: "In quale citt&#224; canadese si trova il Ponte Sospensione di Capilano?",
+                r_corretta: "Vancouver",
                 opzioni: ["Toronto", "Vancouver", "Calgary ", "Montreal"]
             }, {
-                domanda: "Quante sono le isole Fiji?", 
-                r_corretta: "333", 
+                domanda: "Quante sono le isole Fiji?",
+                r_corretta: "333",
                 opzioni: ["19", "333", "6852", "95"]
             }, {
-                domanda: "Quale fu la capitale d&#39;Italia tra il 1865 e il 1871?", 
-                r_corretta: "Firenze", 
+                domanda: "Quale fu la capitale d&#39;Italia tra il 1865 e il 1871?",
+                r_corretta: "Firenze",
                 opzioni: ["Torino", "Napoli", "Firenze", "Roma"]
             }, {
-                domanda: "Qual&#39;&#232; la capitale della Repubblica Democratica del Congo?", 
-                r_corretta: "Kinshasa", 
+                domanda: "Qual&#39;&#232; la capitale della Repubblica Democratica del Congo?",
+                r_corretta: "Kinshasa",
                 opzioni: ["Aba", "Kinshasa", "Maseru", "Lilongwe"]
             }, {
-                domanda: "Il Mare di Ross appartiene all&#39;oceano:", 
-                r_corretta: "Antartico", 
+                domanda: "Il Mare di Ross appartiene all&#39;oceano:",
+                r_corretta: "Antartico",
                 opzioni: ["Pacifico", "Indiano", "Atlantico", "Antartico"]
             }, {
-                domanda: "Qual'&#232; il principale passaggio naturale tra il Pacifico e l&#39;Oceano Atlantico?", 
-                r_corretta: "Lo stretto di Magellano", 
+                domanda: "Qual'&#232; il principale passaggio naturale tra il Pacifico e l&#39;Oceano Atlantico?",
+                r_corretta: "Lo stretto di Magellano",
                 opzioni: ["Lo stretto di Bering", "Lo stretto di Malacca", "Lo stretto di Messina", "Lo stretto di Magellano"]
             }, {
-                domanda: "Demonimo di Lettonia:", 
-                r_corretta: "Lettone", 
+                domanda: "Demonimo di Lettonia:",
+                r_corretta: "Lettone",
                 opzioni: ["Lettone", "Lettonico", "Lettonese", "Lettoniano"]
             }, {
-                domanda: "Nome ufficiale di Samoa:", 
-                r_corretta: "Stato indipendente di Samoa", 
+                domanda: "Nome ufficiale di Samoa:",
+                r_corretta: "Stato indipendente di Samoa",
                 opzioni: ["Regno di Samoa", "Stato indipendente di Samoa", "Repubblica democratica di Samoa", "Repubblica di Samoa"]
             }, {
                 domanda: "Dove si trova Ciad?",
@@ -931,7 +937,7 @@ function gameplay(){
                 domanda: "Che cos&#39;&#232; il doping? L&#39;uso di . . . per migliorare la prestazione sportiva",
                 r_corretta: "metodi nocivi alla salute",
                 opzioni: ["metodi nocivi alla salute", "farmaci antinfiammatori", "allenamenti intensivi", "integratori"]
-            },{
+            }, {
                 domanda: "Nel basket in quanti secondi occorre concludere la propria azione con tiro a canestro?",
                 r_corretta: "24",
                 opzioni: ["18", "20", "22", "24"]
@@ -1065,7 +1071,7 @@ function gameplay(){
                 opzioni: ["I continenti del mondo", "Sport della prima Olimpiade", "I colori primari", "colori della bandiera ospitante"]
             }
         ];
-        
+
         const art_letter = [
             {
                 domanda: "Non &#232; bello ci&#242; che &#232; bello, ma &#232; bello. . .",
@@ -1119,7 +1125,7 @@ function gameplay(){
                 domanda: "Dove hanno sepolto il corpo di Dante Alighieri?",
                 r_corretta: "Ravenna",
                 opzioni: ["Roma ", "Londra", "Firenze", "Ravenna"]
-            },{
+            }, {
                 domanda: "Chi era Gabriele D&#39;Annunzio?",
                 r_corretta: "un poeta",
                 opzioni: ["un bodybuilder", "un miliardario", "un poeta", "un cuoco"]
@@ -1129,175 +1135,175 @@ function gameplay(){
                 opzioni: ["La Gioconda", "Incoronazione di Napoleone", "Il Cenacolo", "La festa del Rosario"]
             }, {
                 domanda: "L&#39;autore della poesia Marzo 1821?",
-                r_corretta : "Alessandro Manzoni",
+                r_corretta: "Alessandro Manzoni",
                 opzioni: ["Giacomo Leopardi", "Ugo Foscolo", "Alessandro Manzoni", "Gabriele D&#39;Annunzio"]
             }, {
-                domanda: "L&#39;autore del romanzo L&#39;Esclusa ? ", 
-                r_corretta: "Luigi Pirandello", 
+                domanda: "L&#39;autore del romanzo L&#39;Esclusa ? ",
+                r_corretta: "Luigi Pirandello",
                 opzioni: ["Giovanni Verga", "Luigi Pirandello", "Italo Svevo", "Vittorio Alfieri"]
             }, {
                 domanda: "La gloria di colui che tutto move per l&#39;universo penetra, e risplende in una parte pi&#249; e meno altrove...",
-                r_corretta : "incipit del Paradiso", 
+                r_corretta: "incipit del Paradiso",
                 opzioni: ["incipit del Paradiso", "incipit del Purgatorio", "frase celebre di Virgilio", "frase celebre di Omero"]
             }, {
                 domanda: "Qual &#232; la citt&#224; natale di Eugenio Montale?",
                 r_corretta: "Genova",
                 opzioni: ["Genova", "Milano", "Firenze", "Torino"]
             }, {
-                domanda: "L&#39;autore del romanzo Madame Bovary ? ", 
-                r_corretta: "Gustave Flaubert", 
+                domanda: "L&#39;autore del romanzo Madame Bovary ? ",
+                r_corretta: "Gustave Flaubert",
                 opzioni: ["Paul Thomas Mann", "Gustave Flaubert", "&#201;mile &#201;douard Charles Antoine Zola", "Guy de Maupassan"]
             }, {
-                domanda: "Dove si trova la Torre degli Asinelli? ", 
-                r_corretta: "Bologna", 
+                domanda: "Dove si trova la Torre degli Asinelli? ",
+                r_corretta: "Bologna",
                 opzioni: ["Roma", "Firenze", "Milano", "Bologna"]
             }, {
-                domanda: "A quale corrente artistica fa parte Giorgio de Chirico? ", 
-                r_corretta: "Metafisico", 
+                domanda: "A quale corrente artistica fa parte Giorgio de Chirico? ",
+                r_corretta: "Metafisico",
                 opzioni: ["Metafisico", "Pop", "Minimalista", "Impressionismo"]
             }, {
-                domanda: "Il nome Guernica del capolavoro di Pablo Picasso, deriva da... ? ", 
-                r_corretta: "un paese bombardato", 
+                domanda: "Il nome Guernica del capolavoro di Pablo Picasso, deriva da... ? ",
+                r_corretta: "un paese bombardato",
                 opzioni: ["un aereo della prima guerra mondiale", "una razza di cavallo", "un paese bombardato", "il luogo dove studiava"]
             }, {
-                domanda: "Dove si trova il Cenacolo di Leonardo da Vinci?", 
-                r_corretta: "Milano", 
+                domanda: "Dove si trova il Cenacolo di Leonardo da Vinci?",
+                r_corretta: "Milano",
                 opzioni: ["Torino", "Milano", "Parma", "Firenze"]
             }, {
-                domanda: "Il Circo Agonale, oggi come si chiama?", 
-                r_corretta: "Piazza Navona", 
+                domanda: "Il Circo Agonale, oggi come si chiama?",
+                r_corretta: "Piazza Navona",
                 opzioni: ["Arena di Verona", "Piazza Navona", "Spianata delle Moschee", "Parco dei Principi"]
             }, {
-                domanda: "Chi era Lisippo?", 
-                r_corretta: "Uno scultore", 
+                domanda: "Chi era Lisippo?",
+                r_corretta: "Uno scultore",
                 opzioni: ["Uno scultore", "Un filosofo", "Un cantante", "Un ceramista"]
             }, {
-                domanda: "Chi &#232; l&#39;architetto autore della prospettiva della Galleria di Palazzo Spada, a Roma?", 
-                r_corretta: "Borromini", 
+                domanda: "Chi &#232; l&#39;architetto autore della prospettiva della Galleria di Palazzo Spada, a Roma?",
+                r_corretta: "Borromini",
                 opzioni: ["Borromini", "Bernini", "Vanvitelli", "Michelangelo"]
             }, {
-                domanda: "Se dico buccina, di cosa sto parlando?", 
-                r_corretta: "Uno strumento musicale", 
+                domanda: "Se dico buccina, di cosa sto parlando?",
+                r_corretta: "Uno strumento musicale",
                 opzioni: ["Una bilancia", "Un timbro", "Un frutto", "Uno strumento musicale"]
             }, {
-                domanda: "Nelle sue celebri incisioni, il Piranesi, quale citt&#224; ha immortalato?", 
-                r_corretta: "Roma", 
+                domanda: "Nelle sue celebri incisioni, il Piranesi, quale citt&#224; ha immortalato?",
+                r_corretta: "Roma",
                 opzioni: ["Roma", "Urbino", "Pisa", "Napoli"]
             }, {
-                domanda: "Dove si trova la Fontana di Trevi?", 
-                r_corretta: "Roma", 
+                domanda: "Dove si trova la Fontana di Trevi?",
+                r_corretta: "Roma",
                 opzioni: ["Viterbo", "Roma", "Mantova", "Perugia"]
             }, {
-                domanda: "Qual era il vero nome della Gioconda?", 
-                r_corretta: "Lisa Gherardini", 
+                domanda: "Qual era il vero nome della Gioconda?",
+                r_corretta: "Lisa Gherardini",
                 opzioni: ["Maria Luigia", "Lisa Gherardini", "Beatrice Cenci", "Bianca Cappello"]
             }, {
-                domanda: "Come si chiama il protagonista de L&#39;avaro, di Moli&#232;re?", 
-                r_corretta: "Arpagone", 
+                domanda: "Come si chiama il protagonista de L&#39;avaro, di Moli&#232;re?",
+                r_corretta: "Arpagone",
                 opzioni: ["Carlone", "Salvatore", "Ganimede", "Arpagone"]
             }, {
-                domanda: "In quale opera di Shakespeare nella quale muoiono i quattro protagonisti: qual &#232;?", 
-                r_corretta: "Amleto", 
+                domanda: "In quale opera di Shakespeare nella quale muoiono i quattro protagonisti: qual &#232;?",
+                r_corretta: "Amleto",
                 opzioni: ["Sogno di una notte di mezza estate", "La tempesta", "Romeo e Giulietta", "Amleto"]
             }, {
-                domanda: "Quanti sono i samurai di Kurosawa?", 
-                r_corretta: "Sette", 
+                domanda: "Quanti sono i samurai di Kurosawa?",
+                r_corretta: "Sette",
                 opzioni: ["Tre", "Sei", "Sette", "Dodici"]
             }, {
-                domanda: "In quale basilica ci sono le statue dei Tetrarchi?", 
-                r_corretta: "S. Marco a Venezia", 
+                domanda: "In quale basilica ci sono le statue dei Tetrarchi?",
+                r_corretta: "S. Marco a Venezia",
                 opzioni: ["S. Marco a Venezia", "S. Maria in Trastevere a Roma", "S. Sofia a Istanbul", "S. Croce a Firenze"]
             }, {
-                domanda: "Qual &#232; la citt&#224; natale di Raffaello Sanzio?", 
-                r_corretta: "Urbino", 
+                domanda: "Qual &#232; la citt&#224; natale di Raffaello Sanzio?",
+                r_corretta: "Urbino",
                 opzioni: ["Brescia", "Urbino", "Perugia", "Firenze"]
             }, {
-                domanda: "Chi guid&#242; Edipo accecato?", 
-                r_corretta: "Antigone", 
+                domanda: "Chi guid&#242; Edipo accecato?",
+                r_corretta: "Antigone",
                 opzioni: ["Elena", "Menelao", "Antigone", "Giocasta"]
             }, {
-                domanda: "In quale regione si trova la Cattolica di Stilo?", 
-                r_corretta: "Calabria", 
+                domanda: "In quale regione si trova la Cattolica di Stilo?",
+                r_corretta: "Calabria",
                 opzioni: ["Puglia", "Friuli Venezia Giulia", "Molise", "Calabria"]
             }, {
-                domanda: "Cos&#39;&#232; un oboe?", 
-                r_corretta: "Uno strumento musicale", 
+                domanda: "Cos&#39;&#232; un oboe?",
+                r_corretta: "Uno strumento musicale",
                 opzioni: ["Un tipo di capitello", "Una elemento teatrale", "Uno strumento musicale", "Una danza"]
             }, {
-                domanda: "Dove si trova il Ponte dei Sospiri?", 
-                r_corretta: "Venezia", 
+                domanda: "Dove si trova il Ponte dei Sospiri?",
+                r_corretta: "Venezia",
                 opzioni: ["Pavia", "Venezia", "Praga", "Firenze"]
             }, {
-                domanda: "Il pittore Giorgio da Castelfranco &#232; meglio conosciuto con quale nome?", 
-                r_corretta: "Giorgione", 
+                domanda: "Il pittore Giorgio da Castelfranco &#232; meglio conosciuto con quale nome?",
+                r_corretta: "Giorgione",
                 opzioni: ["Masaccio", "Mantegna", "Giorgione", "Pisanello"]
             }, {
-                domanda: "Chi ha dipinto la Vergine delle rocce?", 
-                r_corretta: "Leonardo da Vinci", 
+                domanda: "Chi ha dipinto la Vergine delle rocce?",
+                r_corretta: "Leonardo da Vinci",
                 opzioni: ["Tiziano", "Guido Reni", "Tintoretto", "Leonardo da Vinci"]
             }, {
-                domanda: "Nel Sahara tunisino e pi&#249; precisamente a El Djem, cosa c&#39;&#232;?", 
-                r_corretta: "Un anfiteatro romano", 
+                domanda: "Nel Sahara tunisino e pi&#249; precisamente a El Djem, cosa c&#39;&#232;?",
+                r_corretta: "Un anfiteatro romano",
                 opzioni: ["Una statua marina", "La prima ferrovia africana", "Un anfiteatro romano", "Una piramide rossa"]
             }, {
-                domanda: "Ovale rosso, Tratto bianco, Nel grigio sono opere di quale noto pittore?", 
-                r_corretta: "Kandinsky", 
+                domanda: "Ovale rosso, Tratto bianco, Nel grigio sono opere di quale noto pittore?",
+                r_corretta: "Kandinsky",
                 opzioni: ["Kandinsky", "Mondrian", "Klee", "Picasso"]
             }, {
-                domanda: "Ren&#233; Magritte &#232; cresciuto in quale delle seguenti cittadine belghe?", 
-                r_corretta: "Charleroi, cittadina industriale", 
+                domanda: "Ren&#233; Magritte &#232; cresciuto in quale delle seguenti cittadine belghe?",
+                r_corretta: "Charleroi, cittadina industriale",
                 opzioni: ["Anversa,  portuale", "Bruges,  romantica", "Charleroi,  industriale", "Liegi, culturale"]
             }, {
-                domanda: "Famoso scultore autore de La porta dell&#39;inferno", 
-                r_corretta: "Auguste Rodin", 
+                domanda: "Famoso scultore autore de La porta dell&#39;inferno",
+                r_corretta: "Auguste Rodin",
                 opzioni: ["Auguste Rodin", "Antonio Canova", "Giacomo Balla", "Amedeo Modigliani"]
             }, {
-                domanda: "Rappresentava i suoi dipinti attraverso l&#39;utilizzo di frutti e vegetali. Chi era?", 
-                r_corretta: "Arcimboldo", 
+                domanda: "Rappresentava i suoi dipinti attraverso l&#39;utilizzo di frutti e vegetali. Chi era?",
+                r_corretta: "Arcimboldo",
                 opzioni: ["Arcimboldo", "Fontana", "Picasso", "Botero"]
             }, {
-                domanda: "La storia di Ulisse &#232; narrata principalmente in quale delle seguenti opere?", 
-                r_corretta: "Iliade", 
+                domanda: "La storia di Ulisse &#232; narrata principalmente in quale delle seguenti opere?",
+                r_corretta: "Iliade",
                 opzioni: ["Odissea", "Iliade", "Eneide", "Chanson de Roland"]
             }, {
-                domanda: "Alberto Moravia &#232; uno scrittore del:", 
-                r_corretta: "XX secolo", 
+                domanda: "Alberto Moravia &#232; uno scrittore del:",
+                r_corretta: "XX secolo",
                 opzioni: ["XVIII secolo", "IX secolo", "XX secolo", "XXI secolo"]
             }, {
-                domanda: "Chi ha scritto La Metamorfosi", 
-                r_corretta: "Franz Kafka", 
+                domanda: "Chi ha scritto La Metamorfosi",
+                r_corretta: "Franz Kafka",
                 opzioni: ["Friedrich Nietzsche", "Franz Kafka", "Sigmund Freud", "Johann von Goethe"]
             }, {
-                domanda: "Quale delle seguenti non &#232; un&#39;opera di italo calvino?	", 
-                r_corretta: "Il fu Mattia Pascal", 
+                domanda: "Quale delle seguenti non &#232; un&#39;opera di italo calvino?	",
+                r_corretta: "Il fu Mattia Pascal",
                 opzioni: ["Il visconte dimezzato", "Il barone rampante", "Il fu Mattia Pascal", "Il cavaliere inesistente"]
             }, {
-                domanda: "In che anno appare il manifesto del futurismo a firma di Filippo Tommaso Marinetti?", 
-                r_corretta: "1909", 
+                domanda: "In che anno appare il manifesto del futurismo a firma di Filippo Tommaso Marinetti?",
+                r_corretta: "1909",
                 opzioni: ["1899", "1909", "1919", "1929"]
             }
-        ]; 
-        
+        ];
+
         const intrattenimento = [
             {
-                domanda: "Quale programma per bambini insegna a realizzare piccoli lavori con svariati materiali?", 
-                r_corretta: "Art Attack", 
+                domanda: "Quale programma per bambini insegna a realizzare piccoli lavori con svariati materiali?",
+                r_corretta: "Art Attack",
                 opzioni: ["Art Attack", "Di tutto un p&#242;", "Artisti in erba", "Riciclando"]
             }, {
-                domanda: "Come si chiama il famoso personaggio di un videogame che ha per fratello Mario?", 
-                r_corretta: "Luigi", 
+                domanda: "Come si chiama il famoso personaggio di un videogame che ha per fratello Mario?",
+                r_corretta: "Luigi",
                 opzioni: ["Luigi", "Lucas", "Ligi", "Luis"]
             }, {
-                domanda: "Geronimo Stilton, protagonista di vari libri, che animale &#232;?", 
-                r_corretta: "topo", 
+                domanda: "Geronimo Stilton, protagonista di vari libri, che animale &#232;?",
+                r_corretta: "topo",
                 opzioni: ["gatto", "topo", "cane", "coniglio"]
             }, {
-                domanda: "In quale cartone giapponese &#232; coinvolto un bambino investigatore?", 
-                r_corretta: "Detective Conan", 
+                domanda: "In quale cartone giapponese &#232; coinvolto un bambino investigatore?",
+                r_corretta: "Detective Conan",
                 opzioni: ["Detective Conan", "Doraemon", "Naruto Shippuden", "Dragon ball"]
             }, {
-                domanda: "Cosa usa per volare Mary Poppins?", 
-                r_corretta: "ombrello", 
+                domanda: "Cosa usa per volare Mary Poppins?",
+                r_corretta: "ombrello",
                 opzioni: ["aereo", "tappeto", "ombrello", "scopa"]
             }, {
                 domanda: "Chi sono gli Arteteca?",
@@ -1339,181 +1345,181 @@ function gameplay(){
                 domanda: "Qual &#232; il nome del protagonista in Dr.House?",
                 r_corretta: "Gregory",
                 opzioni: ["iTerence ", "Sheldon  ", "Gregory", "Willy"]
-            },{
-                domanda: "Chi &#232; Woody Allen?", 
-                r_corretta: "regista", 
+            }, {
+                domanda: "Chi &#232; Woody Allen?",
+                r_corretta: "regista",
                 opzioni: ["regista", "cuoco", "politico", "pittore"]
             }, {
-                domanda: "In Harry Potter cosa protegge il cane a tre teste?", 
-                r_corretta: "la pietra filosofale", 
+                domanda: "In Harry Potter cosa protegge il cane a tre teste?",
+                r_corretta: "la pietra filosofale",
                 opzioni: ["Harry Potter", "il mondo", "la pietra filosofale", "la bacchetta magica"]
             }, {
-                domanda: "Qual &#232; la protagonista del videogioco Life is strange?", 
-                r_corretta: "Max", 
+                domanda: "Qual &#232; la protagonista del videogioco Life is strange?",
+                r_corretta: "Max",
                 opzioni: ["Max", "Alex", "Chloe", "Jessica"]
             }, {
-                domanda: "Come si chiama la figlia di Marco ed Eva della serie TV i Cesaroni?", 
-                r_corretta: "Marta", 
+                domanda: "Come si chiama la figlia di Marco ed Eva della serie TV i Cesaroni?",
+                r_corretta: "Marta",
                 opzioni: ["Marta", "Sara", "Martina", "Giulia"]
             }, {
-                domanda: "Quale programma ha come logo un occhio?", 
-                r_corretta: "Grande Fratello", 
+                domanda: "Quale programma ha come logo un occhio?",
+                r_corretta: "Grande Fratello",
                 opzioni: ["X Factor", "Amici di Maria de Filippi", "The Voice", "Grande Fratello"]
             }, {
-                domanda: "Quale di questi attori non ha interpretato un agente in Men in Black (1997)?", 
-                r_corretta: "Kevin Costner", 
+                domanda: "Quale di questi attori non ha interpretato un agente in Men in Black (1997)?",
+                r_corretta: "Kevin Costner",
                 opzioni: ["Will Smith", "Kevin Costner", "Rip Torn", "Tommy Lee Jones"]
             }, {
-                domanda: "Come si chiamava Il Padrino?", 
-                r_corretta: "Vito Corleone", 
+                domanda: "Come si chiamava Il Padrino?",
+                r_corretta: "Vito Corleone",
                 opzioni: ["Vito Corleone", "Sonny Corleone", "Michael Corleone", "Carlo Corleone"]
             }, {
-                domanda: "Chi ha vinto sanremo 2023?", 
-                r_corretta: "Marco Mengoni", 
+                domanda: "Chi ha vinto sanremo 2023?",
+                r_corretta: "Marco Mengoni",
                 opzioni: ["Francesco Gabbani", "Marco Mengoni", "Ermal Meta", "Mahmood"]
             }, {
-                domanda: "Mamma Roma di Pasolini &#232; interpretato da:", 
-                r_corretta: "Anna Magnani", 
+                domanda: "Mamma Roma di Pasolini &#232; interpretato da:",
+                r_corretta: "Anna Magnani",
                 opzioni: ["Anna Magnani", "Giulietta Masina", "Sophia Loren", " Monica Vitti"]
             }, {
-                domanda: "La protagonista di The Scarlet Letter di Nathaniel Hawthorn si chiama", 
-                r_corretta: "Esther Prynne", 
+                domanda: "La protagonista di The Scarlet Letter di Nathaniel Hawthorn si chiama",
+                r_corretta: "Esther Prynne",
                 opzioni: ["Esther Prynne", "Helen Schlegel", "Josephine March", "Jane Eyre"]
             }, {
-                domanda: "A bout de souffle di Jean Luc Godard &#232; uno dei film−manifesto di:", 
-                r_corretta: "Nouvelle vague", 
+                domanda: "A bout de souffle di Jean Luc Godard &#232; uno dei film−manifesto di:",
+                r_corretta: "Nouvelle vague",
                 opzioni: [" &#201;cole du regard", "Nouvelle vague", "Neorealismo", "Free cinema"]
             }, {
-                domanda: "Michelangelo Antonioni &#232; il regista di:", 
-                r_corretta: "Deserto rosso", 
+                domanda: "Michelangelo Antonioni &#232; il regista di:",
+                r_corretta: "Deserto rosso",
                 opzioni: ["Profondo rosso", "Sorgo rosso", "Deserto rosso", "Il fiume rosso"]
             }, {
-                domanda: "&#200; stato assegnato, alla Mostra del Cinema di Venezia del 1992, il Leone D&#39;oro a chi?", 
-                r_corretta: "Paolo Villaggio", 
+                domanda: "&#200; stato assegnato, alla Mostra del Cinema di Venezia del 1992, il Leone D&#39;oro a chi?",
+                r_corretta: "Paolo Villaggio",
                 opzioni: ["Raimondo Vinello", "Ugo Tognazzi", "Paolo Villaggio", "Macario"]
             }, {
-                domanda: "Quali trai seguenti non sono film di Ermanno Olmi:", 
-                r_corretta: "Il posto delle fragole", 
+                domanda: "Quali trai seguenti non sono film di Ermanno Olmi:",
+                r_corretta: "Il posto delle fragole",
                 opzioni: ["La leggenda del Santo Bevitore", "Genesi", "L&#39;albero degli zoccoli", "Il posto delle fragole"]
             }, {
-                domanda: "Di Luis Bunuel è caratterizzante un umorismo che trasforma il quotidiano in fantastico, come in:", 
-                r_corretta: "Il fascino discreto della borghesia", 
+                domanda: "Di Luis Bunuel è caratterizzante un umorismo che trasforma il quotidiano in fantastico, come in:",
+                r_corretta: "Il fascino discreto della borghesia",
                 opzioni: ["Amarcord", "Il fascino discreto della borghesia", "L&#39;eclisse", "nessuna"]
             }, {
-                domanda: " Il successo internazionale di un romanzo postumo &#232; davvero eccezionale. Tale &#232; stato il caso di:", 
-                r_corretta: "Il Gattopardo", 
+                domanda: " Il successo internazionale di un romanzo postumo &#232; davvero eccezionale. Tale &#232; stato il caso di:",
+                r_corretta: "Il Gattopardo",
                 opzioni: ["Il Gattopardo", "Ossi di Seppia", "V&#224; dove ti porta il cuore", "Gomorra"]
             }, {
-                domanda: "“L&#39;insostenibile leggerezza dell&#39;essere” &#232; opera di:", 
-                r_corretta: "Kundera", 
+                domanda: "“L&#39;insostenibile leggerezza dell&#39;essere” &#232; opera di:",
+                r_corretta: "Kundera",
                 opzioni: ["Kazan", "Kubrick", "Kundera", "Hesse"]
             }, {
-                domanda: "La morsa e Lumie di Sicilia sono due atti unici che costituirono l&#39;esordio teatrale di", 
-                r_corretta: "L. Pirandello", 
+                domanda: "La morsa e Lumie di Sicilia sono due atti unici che costituirono l&#39;esordio teatrale di",
+                r_corretta: "L. Pirandello",
                 opzioni: ["L. Pirandello", "G. Verga", "C. Pavese", "F. Tozzi"]
             }, {
-                domanda: "Cos&#39;&#232; la sceneggiatura di un film?", 
-                r_corretta: "la stesura del testo del film", 
+                domanda: "Cos&#39;&#232; la sceneggiatura di un film?",
+                r_corretta: "la stesura del testo del film",
                 opzioni: ["insieme degli ambienti in cui si svolge il film", "gli argomenti del film", "insieme delle inquadrature del film", "la stesura del testo del film"]
             }, {
-                domanda: "Come si chiama il procedimento cinematografico che amplifica il formato delle proiezioni per lo spettacolo?", 
-                r_corretta: "cinemascope", 
+                domanda: "Come si chiama il procedimento cinematografico che amplifica il formato delle proiezioni per lo spettacolo?",
+                r_corretta: "cinemascope",
                 opzioni: ["editing", "cinemascope", " infotainment", "colophon"]
             }, {
-                domanda: "Quali sono invece le uniche due attrici italiane ad aver conquistato l&#39;Oscar?", 
-                r_corretta: "Anna Magnani e Sophia Loren", 
+                domanda: "Quali sono invece le uniche due attrici italiane ad aver conquistato l&#39;Oscar?",
+                r_corretta: "Anna Magnani e Sophia Loren",
                 opzioni: ["Gina Lollobrigida e Silvana Mangano", "Monica Vitti e Mariangela Melato", "Claudia Cardinale e Virna Lisi", "Anna Magnani e Sophia Loren"]
             }, {
-                domanda: "Su un totale di 14 nomination, quanti Oscar si port&#242; a casa Titanic nel 1998?", 
-                r_corretta: "11", 
+                domanda: "Su un totale di 14 nomination, quanti Oscar si port&#242; a casa Titanic nel 1998?",
+                r_corretta: "11",
                 opzioni: ["4", "7", "9", "11"]
             }, {
-                domanda: "Quale di questi attori vinse un Oscar per un ruolo recitato interamente in siciliano?", 
-                r_corretta: "Robert De Niro", 
+                domanda: "Quale di questi attori vinse un Oscar per un ruolo recitato interamente in siciliano?",
+                r_corretta: "Robert De Niro",
                 opzioni: ["Marcello Mastroianni", "Chuck Norris", "Robert De Niro", "Gerard Depardieu"]
             }, {
-                domanda: "Chi tra questi artisti ha vinto pi&#249; Oscar di qualunque altro individuo per un totale di 22 statuette?", 
-                r_corretta: "Walt Disney", 
+                domanda: "Chi tra questi artisti ha vinto pi&#249; Oscar di qualunque altro individuo per un totale di 22 statuette?",
+                r_corretta: "Walt Disney",
                 opzioni: ["Walt Disney", "Alfred Hitchcock", "Stanley Kubrick", "Charlie Chaplin"]
             }, {
-                domanda: "A cosa sopravvivono i protagonisti di Lost?", 
-                r_corretta: "Guerra nucleare", 
+                domanda: "A cosa sopravvivono i protagonisti di Lost?",
+                r_corretta: "Guerra nucleare",
                 opzioni: ["Attentato terroristico", "Pandemia", "Incidente aereo", "Guerra nucleare"]
             }, {
-                domanda: "Quale citt&#224; fa da sfondo alle vicende di Grey&#39;s Anatomy?", 
-                r_corretta: "Chicago", 
+                domanda: "Quale citt&#224; fa da sfondo alle vicende di Grey&#39;s Anatomy?",
+                r_corretta: "Chicago",
                 opzioni: ["New York", "Los Angeles", "Seattle", "Chicago"]
             }, {
-                domanda: "Quale tra queste &#232; una delle principali abilit&#224; di Shaun Murphy, protagonista di The Good Doctor?", 
-                r_corretta: "Risolvere il cubo di Rubik", 
+                domanda: "Quale tra queste &#232; una delle principali abilit&#224; di Shaun Murphy, protagonista di The Good Doctor?",
+                r_corretta: "Risolvere il cubo di Rubik",
                 opzioni: ["Calcoli a mente", "Lingue straniere", "Memoria fotografica", "Risolvere il cubo di Rubik"]
             }, {
-                domanda: "Le lavagne di quale personaggio di The Big Bang Theory sono celebri per le equazioni?", 
-                r_corretta: "Raj", 
+                domanda: "Le lavagne di quale personaggio di The Big Bang Theory sono celebri per le equazioni?",
+                r_corretta: "Raj",
                 opzioni: ["Leonard", "Howard", "Sheldon", "Raj"]
             }, {
-                domanda: "Quale sovrano &#232; il protagonista della serie Versailles?", 
-                r_corretta: "Luigi XVI", 
+                domanda: "Quale sovrano &#232; il protagonista della serie Versailles?",
+                r_corretta: "Luigi XVI",
                 opzioni: ["Luigi Filippo I", "Luigi XV", "Luigi XVI", "Luigi XIV"]
             }, {
-                domanda: "In quale continente si trova la citt&#224; Approdo del Re ne Il Trono di Spade?", 
-                r_corretta: "Occidentale", 
+                domanda: "In quale continente si trova la citt&#224; Approdo del Re ne Il Trono di Spade?",
+                r_corretta: "Occidentale",
                 opzioni: ["Settentrionale", "Meridionale", "Orientale", "Occidentale"]
             }, {
-                domanda: "Chi furono i Peaky Blinders?", 
-                r_corretta: "Una gang criminale", 
+                domanda: "Chi furono i Peaky Blinders?",
+                r_corretta: "Una gang criminale",
                 opzioni: ["Ufficiali di polizia", "Esploratori", "Scienziati", "Una gang criminale"]
             }, {
-                domanda: "Quale tra queste serie TV &#232; di genere post-apocalittico?", 
-                r_corretta: "Downtown Abbey", 
+                domanda: "Quale tra queste serie TV &#232; di genere post-apocalittico?",
+                r_corretta: "Downtown Abbey",
                 opzioni: ["Riverdale", "Emily in Paris", "Downtown Abbey", "The Walking Dead"]
             }, {
-                domanda: "Di quale regista &#232; fan Dawson Leery, protagonista di Dawson&#39;s Creek?", 
-                r_corretta: "Ridley Scott", 
+                domanda: "Di quale regista &#232; fan Dawson Leery, protagonista di Dawson&#39;s Creek?",
+                r_corretta: "Ridley Scott",
                 opzioni: ["Stanley Kubrick", "Steven Spielberg", "Chris Columbus", "Ridley Scott"]
             }, {
-                domanda: "Ne L&#39;uomo nell&#39;alto castello quali potenze si spartiscono gli Stati Uniti?", 
-                r_corretta: "Cina e India", 
+                domanda: "Ne L&#39;uomo nell&#39;alto castello quali potenze si spartiscono gli Stati Uniti?",
+                r_corretta: "Cina e India",
                 opzioni: ["Germania e Giappone", "Regno Unito e Francia", "Italia e Spagna", "Cina e India"]
             }, {
-                domanda: "Come si chiama il protagonista di Lost?", 
-                r_corretta: "Jack", 
+                domanda: "Come si chiama il protagonista di Lost?",
+                r_corretta: "Jack",
                 opzioni: ["Jack", "Julio", "Joseph", "Jos&#233;"]
             }, {
-                domanda: "Cosa s&#39;intende per binge watching?", 
-                r_corretta: "guardare gli episodi tutti di fila", 
+                domanda: "Cosa s&#39;intende per binge watching?",
+                r_corretta: "guardare gli episodi tutti di fila",
                 opzioni: ["guardare gli episodi con calma", "guardare gli episodi tutti di fila", "saltare gli episodi", "riguardare gli episodi"]
             }, {
                 domanda: "Qual &#232; il nome del bar dove si trovano i protagonisti di Friends?",
-                r_corretta: "Central Perk", 
+                r_corretta: "Central Perk",
                 opzioni: ["Baretto", "Amigos", "Mc Laren&#39;s", "Central Perk"]
             }, {
-                domanda: "Twin Peaks ruota attorno alla misteriosa morte di...", 
-                r_corretta: "Laura Palmer", 
+                domanda: "Twin Peaks ruota attorno alla misteriosa morte di...",
+                r_corretta: "Laura Palmer",
                 opzioni: ["Ciara Palmer", "Sarah Palmer", "Laura Palmer", "Vera Palmer"]
             }
         ];
 
         const nat_scienza = [
             {
-                domanda: "Cosa manca al pane azzimo?", 
-                r_corretta: "sale", 
+                domanda: "Cosa manca al pane azzimo?",
+                r_corretta: "sale",
                 opzioni: ["lievito", "olio di palma", "mollica", "sale"]
             }, {
-                domanda: "Quale organo serve per la formazione della bile?", 
-                r_corretta: "fegato", 
+                domanda: "Quale organo serve per la formazione della bile?",
+                r_corretta: "fegato",
                 opzioni: ["pancreas", "fegato", "stomaco", "vescica"]
             }, {
-                domanda: "Che cos&#39;&#232; C6H12O6?", 
-                r_corretta: "glucosio", 
+                domanda: "Che cos&#39;&#232; C6H12O6?",
+                r_corretta: "glucosio",
                 opzioni: ["glicerina", "glucosio", "formaldeide", "acqua ossigenata"]
             }, {
-                domanda: "Cos&#39;&#232; la pectina?", 
-                r_corretta: "polisaccaride", 
+                domanda: "Cos&#39;&#232; la pectina?",
+                r_corretta: "polisaccaride",
                 opzioni: ["gomma", "proteina", "polisaccaride", "colla"]
             }, {
-                domanda: "Cosa mangiano prevalentemente i panda?", 
-                r_corretta: "bamboo", 
+                domanda: "Cosa mangiano prevalentemente i panda?",
+                r_corretta: "bamboo",
                 opzioni: ["bamboo", "insetti", "fieno", "piccoli mammiferi"]
             }, {
                 domanda: "Com&#39;&#232; chiamata una reazione chimica che produce calore?",
@@ -1555,162 +1561,162 @@ function gameplay(){
                 domanda: "Cosa s&#39;intende per miraggio?",
                 r_corretta: "illusione ottica",
                 opzioni: ["illusione ottica", "arcobaleno", "forte vento", "stelle cadenti"]
-            },{
-                domanda: "Qual&#39;&#232; l&#39;oggetto della Psicologia?", 
+            }, {
+                domanda: "Qual&#39;&#232; l&#39;oggetto della Psicologia?",
                 r_corretta: "studio scientifico della psiche",
                 opzioni: ["le applicazioni", "il cinema", "studio della societ&#224;", "studio scientifico della psiche"]
             }, {
-                domanda: "Quale ortaggio viene decorato ad Halloween?", 
-                r_corretta: "zucca", 
+                domanda: "Quale ortaggio viene decorato ad Halloween?",
+                r_corretta: "zucca",
                 opzioni: ["zucca", "pomodoro", "melanzana", "peperone"]
             }, {
-                domanda: "Con quale materiale puoi costruire un origami?", 
-                r_corretta: "carta", 
+                domanda: "Con quale materiale puoi costruire un origami?",
+                r_corretta: "carta",
                 opzioni: ["fiori", "carta", "plastica", "vetro"]
             }, {
-                domanda: "Quanti elettroni formano un ottetto completo?", 
-                r_corretta: "8", 
+                domanda: "Quanti elettroni formano un ottetto completo?",
+                r_corretta: "8",
                 opzioni: ["2", "4", "6", "8"]
             }, {
-                domanda: "Quale pesce &#232; famoso per nuotare controcorrente?", 
-                r_corretta: "salmone", 
+                domanda: "Quale pesce &#232; famoso per nuotare controcorrente?",
+                r_corretta: "salmone",
                 opzioni: ["spigola", "luccio", "salmone", "sardina"]
             }, {
-                domanda: "Quale virus ha provocato una pandemia all&#39;inizio del 2020?", 
-                r_corretta: "COVID19", 
+                domanda: "Quale virus ha provocato una pandemia all&#39;inizio del 2020?",
+                r_corretta: "COVID19",
                 opzioni: ["TOVID19", "COVID19", "COVIT19", "VOCID19"]
             }, {
-                domanda: "Qual&#39;&#232; il composto chimico utilizzato nella piscina?", 
-                r_corretta: "cloro", 
+                domanda: "Qual&#39;&#232; il composto chimico utilizzato nella piscina?",
+                r_corretta: "cloro",
                 opzioni: ["fluoro", "cloro", "bromo", "astato"]
             }, {
-                domanda: "Il barracuda &#232; un tipo di...?", 
-                r_corretta: "pesce", 
+                domanda: "Il barracuda &#232; un tipo di...?",
+                r_corretta: "pesce",
                 opzioni: ["pesce", "roditore", "uccello", "cane"]
             }, {
-                domanda: "Benjamin Franklin invent&#242;...", 
-                r_corretta: "il parafulmine", 
+                domanda: "Benjamin Franklin invent&#242;...",
+                r_corretta: "il parafulmine",
                 opzioni: ["la ruota", "il parafulmine", "Il motoscafo", "l&#39;aceto"]
             }, {
-                domanda: "Il primo termometro fu realizzato da...", 
-                r_corretta: "Galileo Galilei", 
+                domanda: "Il primo termometro fu realizzato da...",
+                r_corretta: "Galileo Galilei",
                 opzioni: ["Galileo Galilei", "Daniel Gabriel Fahrenheit", "Leonardo da Vinci", "Friedrich Nietzsche"]
             }, {
-                domanda: "Il sassofono viene inventato dal costruttore di strumenti musicali belga Adolphe Sax nel...", 
-                r_corretta: "1841", 
+                domanda: "Il sassofono viene inventato dal costruttore di strumenti musicali belga Adolphe Sax nel...",
+                r_corretta: "1841",
                 opzioni: ["1778", "1612", "1945", "1841"]
             }, {
-                domanda: "Invent&#242; la motocicletta a vapore...", 
-                r_corretta: "Louis-Guillaume Perreaux", 
+                domanda: "Invent&#242; la motocicletta a vapore...",
+                r_corretta: "Louis-Guillaume Perreaux",
                 opzioni: ["Thomas Edison", "Gottlieb Daimler", "Louis-Guillaume Perreaux", "Wilhelm Maybach"]
             }, {
-                domanda: "I fratelli Wright compiono il primo volo su un aeroplano portato a termine con successo nel...", 
-                r_corretta: "1903", 
+                domanda: "I fratelli Wright compiono il primo volo su un aeroplano portato a termine con successo nel...",
+                r_corretta: "1903",
                 opzioni: ["1908", "1918", "1880", "1903"]
             }, {
-                domanda: "Invent&#242; la macchina a vapore...", 
-                r_corretta: "James Watt", 
+                domanda: "Invent&#242; la macchina a vapore...",
+                r_corretta: "James Watt",
                 opzioni: ["Galileo Galilei", "Thomas Edison", "James Watt", "Benjamin Franklin"]
             }, {
-                domanda: "Nel 1829 W.A Burt brevetta...", 
-                r_corretta: "la macchina da scrivere", 
+                domanda: "Nel 1829 W.A Burt brevetta...",
+                r_corretta: "la macchina da scrivere",
                 opzioni: ["la macchina da scrivere", "il frigorifero", "il televisore", "la radio"]
             }, {
-                domanda: "Chi inventó la pastorizzazione?", 
-                r_corretta: "Louis Pasteur", 
+                domanda: "Chi inventó la pastorizzazione?",
+                r_corretta: "Louis Pasteur",
                 opzioni: ["Louis Pasteur", "Thomas Alva Edison", "Heinrich Hertz", "Antonio Meucci"]
             }, {
-                domanda: "Chi inventó la macchina da cucire?", 
-                r_corretta: "Isaac Singer", 
+                domanda: "Chi inventó la macchina da cucire?",
+                r_corretta: "Isaac Singer",
                 opzioni: ["Georges Audemars", "George Pullman", "Levi Strauss", "Isaac Singer"]
             }, {
-                domanda: "Nel 1901 trasmette via radio una lettera dell&#39;alfabeto Morse attraverso l&#39;oceano Atlantico:", 
-                r_corretta: "Guglielmo Marconi", 
+                domanda: "Nel 1901 trasmette via radio una lettera dell&#39;alfabeto Morse attraverso l&#39;oceano Atlantico:",
+                r_corretta: "Guglielmo Marconi",
                 opzioni: ["Guglielmo Marconi", "Samuel Morse", "Antonio Meucci", "Nikola Tesla"]
             }, {
-                domanda: "La Penicillina venne scoperta da...", 
-                r_corretta: "Alexander Fleming", 
+                domanda: "La Penicillina venne scoperta da...",
+                r_corretta: "Alexander Fleming",
                 opzioni: ["Louis Pasteur", "Ernst Boris Chain", "Alexander Fleming", "James Parkinson"]
             }, {
-                domanda: "Secondo gli studiosi la ruota fu inventata nell&#39;antica Mesopotamia...", 
-                r_corretta: "dai Sumeri", 
+                domanda: "Secondo gli studiosi la ruota fu inventata nell&#39;antica Mesopotamia...",
+                r_corretta: "dai Sumeri",
                 opzioni: ["dagli Egiziani", "dai Maya", "dai Sumeri", "dai Romani"]
             }, {
-                domanda: "Venere possiede...", 
-                r_corretta: "una massa simile alla terrestre", 
+                domanda: "Venere possiede...",
+                r_corretta: "una massa simile alla terrestre",
                 opzioni: ["una massa simile alla terrestre", "8 satelliti", "2 anelli", "un atmosfera densa di gas di color rosso"]
             }, {
-                domanda: "Il sistema solare si divide in...", 
-                r_corretta: "interno ed esterno", 
+                domanda: "Il sistema solare si divide in...",
+                r_corretta: "interno ed esterno",
                 opzioni: ["primo e secondo", "di sopra e di sotto", "maggiore e minore", "interno ed esterno"]
             }, {
-                domanda: "Il pianeta pi&#249; piccolo del nostro sistema solare &#232;...", 
-                r_corretta: "Mercurio", 
+                domanda: "Il pianeta pi&#249; piccolo del nostro sistema solare &#232;...",
+                r_corretta: "Mercurio",
                 opzioni: ["Marte", "Venere", "Mercurio", "Nettuno"]
             }, {
-                domanda: "Il nostro sistema solare ha 5...", 
-                r_corretta: "pianeti nani", 
+                domanda: "Il nostro sistema solare ha 5...",
+                r_corretta: "pianeti nani",
                 opzioni: ["pianeti", "asteroidi", "soli", "pianeti nani"]
             }, {
-                domanda: "Quale di questi pianeti non &#232; uno dei giganti gassosi?", 
-                r_corretta: "Marte", 
+                domanda: "Quale di questi pianeti non &#232; uno dei giganti gassosi?",
+                r_corretta: "Marte",
                 opzioni: ["Giove", "Urano", "Nettuno", "Marte"]
             }, {
-                domanda: "La Luna compie un orbita ellittica completa della sfera celeste in...", 
-                r_corretta: "27 giorni circa", 
+                domanda: "La Luna compie un orbita ellittica completa della sfera celeste in...",
+                r_corretta: "27 giorni circa",
                 opzioni: ["27 giorni circa", "24 ore circa", "un anno circa", "due mesi"]
             }, {
-                domanda: "Quali tra questi animali &#232; il pi&#249; pericoloso per l&#39;uomo?", 
-                r_corretta: "Zanzara tigre", 
+                domanda: "Quali tra questi animali &#232; il pi&#249; pericoloso per l&#39;uomo?",
+                r_corretta: "Zanzara tigre",
                 opzioni: ["Squalo bianco", "Zanzara tigre", "Leone", "Serpente a sonagli"]
             }, {
-                domanda: "I koala si trovano principalmente...", 
-                r_corretta: "in Australia", 
+                domanda: "I koala si trovano principalmente...",
+                r_corretta: "in Australia",
                 opzioni: ["in Australia", "in Germania", "in Venezuela", "in Cina"]
             }, {
-                domanda: "L&#39; orso dagli occhiali vive in...", 
-                r_corretta: "America meridionale", 
+                domanda: "L&#39; orso dagli occhiali vive in...",
+                r_corretta: "America meridionale",
                 opzioni: ["Mongolia", "America meridionale", "Cina", "Giappone"]
             }, {
-                domanda: "La Fascia di Kuiper &#232; un fascia di asteroidi posta..", 
-                r_corretta: "al confine del sistema solare", 
+                domanda: "La Fascia di Kuiper &#232; un fascia di asteroidi posta..",
+                r_corretta: "al confine del sistema solare",
                 opzioni: ["al confine del sistema solare", "attorno a Saturno", "attorno alla Terra", "tra Giove e Saturno"]
             }, {
-                domanda: "Una nana rossa &#232; una stella...", 
-                r_corretta: "piccola e fredda", 
+                domanda: "Una nana rossa &#232; una stella...",
+                r_corretta: "piccola e fredda",
                 opzioni: ["piccola e fredda", "grande", "piccola e calda", "grande e di colore rosso o arancione"]
             }, {
-                domanda: "La stella visibile dalla Terra pi&#249; luminosa dopo il nostro Sole &#232;...", 
-                r_corretta: "Sirio", 
+                domanda: "La stella visibile dalla Terra pi&#249; luminosa dopo il nostro Sole &#232;...",
+                r_corretta: "Sirio",
                 opzioni: ["Betelgeuse", "Giove", "Sirio", "Rigel"]
             }, {
-                domanda: "La Margherita ha i petali generalmente...", 
-                r_corretta: "bianchi", 
+                domanda: "La Margherita ha i petali generalmente...",
+                r_corretta: "bianchi",
                 opzioni: ["verdi", "rossi", "bianchi", "gialli"]
             }, {
-                domanda: "L&#39;alloro ha fiori...", 
-                r_corretta: "gialli", 
+                domanda: "L&#39;alloro ha fiori...",
+                r_corretta: "gialli",
                 opzioni: ["blu", "rossi", "verdi", "gialli"]
             }, {
-                domanda: "Quale &#232; il pesce pi&#249; grande degli oceani?", 
-                r_corretta: "Lo squalo balena", 
+                domanda: "Quale &#232; il pesce pi&#249; grande degli oceani?",
+                r_corretta: "Lo squalo balena",
                 opzioni: ["La balena azzurra", "Il capodolio", "Lo squalo balena", "Lo squalo bianco"]
             }, {
-                domanda: "La gestazione della foca dura circa...", 
-                r_corretta: "undici mesi", 
+                domanda: "La gestazione della foca dura circa...",
+                r_corretta: "undici mesi",
                 opzioni: ["cinque mesi", "undici mesi", "due mesi", "nove mesi"]
             }, {
-                domanda: "La foca &#232;...", 
-                r_corretta: "un mammifero", 
+                domanda: "La foca &#232;...",
+                r_corretta: "un mammifero",
                 opzioni: ["un uccello", "un pesce", "un mammifero", "un rettile"]
             }, {
-                domanda: "Quanto puó essere alta una Giraffa?", 
-                r_corretta: "5 metri", 
+                domanda: "Quanto puó essere alta una Giraffa?",
+                r_corretta: "5 metri",
                 opzioni: ["4 metri", "5 metri", "7 metri", "10 metri"]
             }
         ];
-        
-        let t=`
+
+        let t = `
             <div id="card">
                 <div id="davanti">
                     <img src="img/carta.png" id="pic">
@@ -1719,7 +1725,7 @@ function gameplay(){
                 <div id="dietro"></div>
             </div>`;
         document.getElementById("map").innerHTML += t;
-        
+
         let quiz = {
             conten: null,
             domanda: null,
@@ -1754,7 +1760,7 @@ function gameplay(){
                 colore_triangolino = "rgb(34, 139, 34);";
                 break;
         }
-        
+
         let random = Math.floor(Math.random() * (argomento.length));
 
         function gira() {
@@ -1767,9 +1773,9 @@ function gameplay(){
             dav.style.display = "none";
             load();
         }
-        
-        flip=gira;
-        
+
+        flip = gira;
+
         function load() {
             quiz.conten = document.getElementById("dietro");
             let t = `<p id="tempo"></p>`;
@@ -1784,17 +1790,17 @@ function gameplay(){
         }
 
         function inserisci() {
-            let t_iniziale="Tempo: 8s";
-            document.getElementById("tempo").innerHTML=t_iniziale;
+            let t_iniziale = "Tempo: 8s";
+            document.getElementById("tempo").innerHTML = t_iniziale;
             let tempo = 7;
-            let timer = setInterval(function(){
-                if(tempo <= 0){
+            let timer = setInterval(function () {
+                if (tempo <= 0) {
                     clearInterval(timer);
-                    again=false;
+                    again = false;
                     verifica();
-                }else{
-                    let t="Tempo: "+tempo+"s";
-                    document.getElementById("tempo").innerHTML=t;
+                } else {
+                    let t = "Tempo: " + tempo + "s";
+                    document.getElementById("tempo").innerHTML = t;
                     tempo -= 1;
                 }
             }, 1000);
@@ -1806,8 +1812,7 @@ function gameplay(){
 
                 randomIndex = Math.floor(Math.random() * elementi);
                 elementi--;
-                [argomento[random].opzioni[elementi], argomento[random].opzioni[randomIndex]] = 
-                [argomento[random].opzioni[randomIndex], argomento[random].opzioni[elementi]];
+                [argomento[random].opzioni[elementi], argomento[random].opzioni[randomIndex]] = [argomento[random].opzioni[randomIndex], argomento[random].opzioni[elementi]];
             }
             for (let i in argomento[random].opzioni) {
                 let label = document.createElement("label");
@@ -1836,25 +1841,25 @@ function gameplay(){
             }
             verifica();
         }
-        
-        function verifica(){
+
+        function verifica() {
             setTimeout(function () {
                 let element = document.getElementById("card");
                 element.remove();
                 if (again) {
-		    		again = false;	
-		    		if (triangolo){
-		    		    for(let i=1; i<=6; i++){
-		    		        id_triangolino = document.getElementById("Triangolino_"+i+"_"+ giocatore );
-		    		        if (id_triangolino.style.fill===colore_triangolino){
-		    		            break;
-		    		        }
-		    		        if (id_triangolino.style.fill==="rgba(228, 231, 231, 0.4)"){
-                                id_triangolino.style.fill=colore_triangolino;
+                    again = false;
+                    if (triangolo) {
+                        for (let i = 1; i <= 6; i++) {
+                            id_triangolino = document.getElementById("Triangolino_" + i + "_" + giocatore);
+                            if (id_triangolino.style.fill === colore_triangolino) {
                                 break;
-		    		        }
-		    		    }
-		    		}
+                            }
+                            if (id_triangolino.style.fill === "rgba(228, 231, 231, 0.4)") {
+                                id_triangolino.style.fill = colore_triangolino;
+                                break;
+                            }
+                        }
+                    }
                     turno();
                 } else {
                     if (giocatore == (numeroGiocatori - 1)) {
@@ -1864,14 +1869,14 @@ function gameplay(){
                     }
                     priorita += 1;
                     document.getElementById(players[giocatore].id_pedina).style.zIndex = priorita;
-					turno();
+                    turno();
                 }
             }, 1000);
         }
     }
-    
-    function win(){
-        let t=`
+
+    function win() {
+        let t = `
             <div id="vincita">
                 <img src="img/scritta.png" id="congra">
                 <h3>Giocatore ` + (players[giocatore].nome) + ` ha vinto la partita!</h3>
@@ -1879,20 +1884,20 @@ function gameplay(){
             </div>`;
         document.body.innerHTML += t;
     }
-    
-    function partita(){
+
+    function partita() {
         let element = document.getElementById("vincita");
         element.remove();
-        for(let i=0; i<numeroGiocatori; i++){
-            let el = document.getElementById("pedina_"+i);
+        for (let i = 0; i < numeroGiocatori; i++) {
+            let el = document.getElementById("pedina_" + i);
             el.remove();
         }
         gameplay();
     }
-    nuovoGioco=partita;
-	
-    function nrGiocatori(){
-        let t=`
+    nuovoGioco = partita;
+
+    function nrGiocatori() {
+        let t = `
             <div id="nrGiocatori">
                 <form onsubmit="nomiGiocatori();">
                     <h3>In quanti si vuole giocare? Da un minimo di 1 ad un massimo di 6 giocatori?</h3><br>
@@ -1902,13 +1907,13 @@ function gameplay(){
             </div>`;
         document.body.innerHTML += t;
     }
-    nomiGiocatori=nicknames;
-    
+    nomiGiocatori = nicknames;
+
     function nicknames() {
         numeroGiocatori = document.getElementById("nGiocatori").value;
-        let element=document.getElementById("nrGiocatori");
+        let element = document.getElementById("nrGiocatori");
         element.remove();
-        let a=`
+        let a = `
             <div id="nicknames">
                 <form onsubmit="insert();">
                     <h2> Inserisci nomi dei giocatori: </h2>
@@ -1918,15 +1923,15 @@ function gameplay(){
                 </form>
             </div>`;
         document.body.innerHTML += a;
-        for (let i=0; i<numeroGiocatori; i++){
+        for (let i = 0; i < numeroGiocatori; i++) {
             let b = `
-                <p>Giocatore `+(i+1)+`</p>
-                <input type="text" id="nome`+i+`" required>`;
+                <p>Giocatore ` + (i + 1) + `</p>
+                <input type="text" id="nome` + i + `" required>`;
             document.getElementById("nome").innerHTML += b;
         }
     }
-    insert=inizializza;
-    
+    insert = inizializza;
+
     function visualizzaNomi() {
         let t = `<div id="players">
                     <h2 style="color: #d3d3d3">Giocatori:</h2>
@@ -1934,25 +1939,25 @@ function gameplay(){
                     </div>
                 </div>`;
         document.getElementById("gioco").innerHTML += t;
-        for (let i=0; i<numeroGiocatori; i++) {
+        for (let i = 0; i < numeroGiocatori; i++) {
             let li = document.createElement("li");
             li.innerHTML = players[i].nome;
             li.id = "li" + i;
             document.getElementById("nomi").appendChild(li);
         }
     }
-    
-	function inizializza(){
-		let inizio = document.getElementById("pedina_esempio");
-		let dimensioni = inizio.getBoundingClientRect();
-		let esagono = document.getElementById("esagono");
-		let posizione = esagono.getBoundingClientRect();
-		let topDefault = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
-		let leftDefault = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
-		let colori = ["rgb(255, 117, 20)","rgb(0, 127, 255)","rgb(143, 0, 255)","rgb(34, 139, 34)","rgb(215, 11, 122)","rgb(247, 219, 116)" ]
-        
-        for (let i=0; i<numeroGiocatori; i++){
-            let nome = document.getElementById("nome"+i).value;
+
+    function inizializza() {
+        let inizio = document.getElementById("pedina_esempio");
+        let dimensioni = inizio.getBoundingClientRect();
+        let esagono = document.getElementById("esagono");
+        let posizione = esagono.getBoundingClientRect();
+        let topDefault = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
+        let leftDefault = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
+        let colori = ["rgb(255, 117, 20)", "rgb(0, 127, 255)", "rgb(143, 0, 255)", "rgb(34, 139, 34)", "rgb(215, 11, 122)", "rgb(247, 219, 116)"]
+
+        for (let i = 0; i < numeroGiocatori; i++) {
+            let nome = document.getElementById("nome" + i).value;
             let giocator = {
                 nome: nome,
                 id_casella: "esagono",
@@ -1960,58 +1965,58 @@ function gameplay(){
             }
             players.push(giocator);
         }
-        let element=document.getElementById("nicknames");
+        let element = document.getElementById("nicknames");
         element.remove();
         visualizzaNomi();
-		for (let i=numeroGiocatori-1; i>=0; i--){
-			let text =
-				` <div id="pedina_` + i + `" class="pedina">
+        for (let i = numeroGiocatori - 1; i >= 0; i--) {
+            let text =
+                ` <div id="pedina_` + i + `" class="pedina">
 					<svg width="4.5vh" height="4.5vh" viewBox="50 33 390 450" fill="none">
 						<g id="Radial 1">
-							<circle id="contornoPedina" fill="`+ colori[i] +`" cx="245" cy="260" r="220" fill="#B31818"/>
+							<circle id="contornoPedina" fill="` + colori[i] + `" cx="245" cy="260" r="220" fill="#B31818"/>
 							<g id="Segment 1">
-								<path id="Triangolino_1_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M354.853 89.2909C381.496 106.505 403.662 129.809 419.523 157.279C435.383 184.75 444.481 215.599 446.067 247.279L266.292 256.279C266.134 253.111 265.224 250.026 263.638 247.279C262.052 244.532 259.835 242.202 257.171 240.48L354.853 89.2909Z" />         
+								<path id="Triangolino_1_` + i + `" style="fill:rgb(228, 231, 231,0.4)" d="M354.853 89.2909C381.496 106.505 403.662 129.809 419.523 157.279C435.383 184.75 444.481 215.599 446.067 247.279L266.292 256.279C266.134 253.111 265.224 250.026 263.638 247.279C262.052 244.532 259.835 242.202 257.171 240.48L354.853 89.2909Z" />         
 							</g>
 							<g id="Segment 2">
-								<path id="Triangolino_2_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M446.067 267.279C444.481 298.96 435.383 329.809 419.523 357.279C403.662 384.75 381.496 408.054 354.853 425.268L257.171 274.078C259.835 272.357 262.052 270.026 263.638 267.279C265.224 264.532 266.134 261.447 266.292 258.279L446.067 267.279Z" />
+								<path id="Triangolino_2_` + i + `" style="fill:rgb(228, 231, 231,0.4)" d="M446.067 267.279C444.481 298.96 435.383 329.809 419.523 357.279C403.662 384.75 381.496 408.054 354.853 425.268L257.171 274.078C259.835 272.357 262.052 270.026 263.638 267.279C265.224 264.532 266.134 261.447 266.292 258.279L446.067 267.279Z" />
 							</g>
 							<g id="Segment 3">
-								<path id="Triangolino_3_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M337.532 435.268C309.303 449.734 278.038 457.279 246.318 457.279C214.597 457.279 183.332 449.734 155.103 435.268L237.196 275.078C240.019 276.525 243.145 277.279 246.318 277.279C249.49 277.279 252.616 276.525 255.439 275.078L337.532 435.268Z" />
+								<path id="Triangolino_3_` + i + `" style="fill:rgb(228, 231, 231,0.4)" d="M337.532 435.268C309.303 449.734 278.038 457.279 246.318 457.279C214.597 457.279 183.332 449.734 155.103 435.268L237.196 275.078C240.019 276.525 243.145 277.279 246.318 277.279C249.49 277.279 252.616 276.525 255.439 275.078L337.532 435.268Z" />
 							</g>
 							<g id="Segment 4">
-								<path id="Triangolino_4_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M137.782 425.268C111.139 408.054 88.9725 384.75 73.1124 357.279C57.2523 329.809 48.1537 298.96 46.5677 267.279L226.343 258.279C226.501 261.447 227.411 264.532 228.997 267.279C230.583 270.026 232.8 272.357 235.464 274.078L137.782 425.268Z" />
+								<path id="Triangolino_4_` + i + `" style="fill:rgb(228, 231, 231,0.4)" d="M137.782 425.268C111.139 408.054 88.9725 384.75 73.1124 357.279C57.2523 329.809 48.1537 298.96 46.5677 267.279L226.343 258.279C226.501 261.447 227.411 264.532 228.997 267.279C230.583 270.026 232.8 272.357 235.464 274.078L137.782 425.268Z" />
 							</g>
 							<g id="Segment 5">
-								<path id="Triangolino_5_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M46.5677 247.279C48.1537 215.599 57.2523 184.75 73.1124 157.279C88.9725 129.809 111.139 106.505 137.782 89.2909L235.464 240.48C232.8 242.202 230.583 244.532 228.997 247.279C227.411 250.026 226.501 253.111 226.343 256.279L46.5677 247.279Z" />
+								<path id="Triangolino_5_` + i + `" style="fill:rgb(228, 231, 231,0.4)" d="M46.5677 247.279C48.1537 215.599 57.2523 184.75 73.1124 157.279C88.9725 129.809 111.139 106.505 137.782 89.2909L235.464 240.48C232.8 242.202 230.583 244.532 228.997 247.279C227.411 250.026 226.501 253.111 226.343 256.279L46.5677 247.279Z" />
 							</g>
                             <g id="Segment 6"> 
-								<path id="Triangolino_6_`+ i +`" style="fill:rgb(228, 231, 231,0.4)" d="M155.103 79.2909C183.332 64.8241 214.597 57.2793 246.318 57.2793C278.038 57.2793 309.303 64.8241 337.532 79.2909L255.439 239.48C252.616 238.034 249.49 237.279 246.318 237.279C243.145 237.279 240.019 238.034 237.196 239.48L155.103 79.2909Z" />
+								<path id="Triangolino_6_` + i + `" style="fill:rgb(228, 231, 231,0.4)" d="M155.103 79.2909C183.332 64.8241 214.597 57.2793 246.318 57.2793C278.038 57.2793 309.303 64.8241 337.532 79.2909L255.439 239.48C252.616 238.034 249.49 237.279 246.318 237.279C243.145 237.279 240.019 238.034 237.196 239.48L155.103 79.2909Z" />
 							</g>
 						</g>
 					</svg>
-				</div>`		
-				
-				document.getElementById("map").innerHTML +=text;
-		}
-		for (let i=0; i<numeroGiocatori; i++){
-			let elemento = document.getElementById(players[i].id_pedina);
-			elemento.style.top= topDefault;
-			elemento.style.left = leftDefault;
-		}
-        turno();
-	}
-    
+				</div>`
 
-	function turno(){
-        let divPlayers=document.getElementById("players");
+            document.getElementById("map").innerHTML += text;
+        }
+        for (let i = 0; i < numeroGiocatori; i++) {
+            let elemento = document.getElementById(players[i].id_pedina);
+            elemento.style.top = topDefault;
+            elemento.style.left = leftDefault;
+        }
+        turno();
+    }
+
+
+    function turno() {
+        let divPlayers = document.getElementById("players");
         divPlayers.remove();
         visualizzaNomi();
-        turnoGiocatore=document.getElementById("li"+giocatore);
-        turnoGiocatore.style.color="#DFA207";
-        turnoGiocatore.style.fontSize="2rem";
+        turnoGiocatore = document.getElementById("li" + giocatore);
+        turnoGiocatore.style.color = "#DFA207";
+        turnoGiocatore.style.fontSize = "2rem";
         clickElementi();
-		lanciaDado();
-	}
-	
-	nrGiocatori();
+        lanciaDado();
+    }
+
+    nrGiocatori();
 }
