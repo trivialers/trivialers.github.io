@@ -1789,6 +1789,18 @@ function gameplay(){
             }, 1000);
             quiz.domanda.innerHTML = argomento[random].domanda;
             quiz.risposte.innerHTML = "";
+            
+            let elementi = 4;
+            let randomIndex = 0;
+              
+            while (elementi != 0) {
+            
+                randomIndex = Math.floor(Math.random() * elementi);
+                elementi--;
+                [argomento[random].opzioni[elementi], argomento[random].opzioni[randomIndex]] = 
+                [argomento[random].opzioni[randomIndex], argomento[random].opzioni[elementi]];
+            }
+
             for (let i in argomento[random].opzioni) {
                 let label = document.createElement("label");
                 label.innerHTML = argomento[random].opzioni[i];
