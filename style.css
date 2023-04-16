@@ -106,7 +106,7 @@ p{
 }
 
 #players {
-    border: 0.1rem solid #DFA207;
+    border: 2px solid #DFA207;
     margin-left: 2%;
     top: 17%;
     position:absolute;
@@ -119,6 +119,17 @@ li{
     font-size: 1.5rem;
     margin: 0.5rem;
     margin-left:2rem;
+}
+
+#colore{
+    border-radius: 50%;
+	width: 0;
+	height: 0;
+	border-left: 0.6rem solid transparent;
+	border-right: 0.6rem solid transparent;
+	border-top: 1rem solid;
+    display: inline-block;
+    margin-left: 0.5rem;
 }
 
 #map {
@@ -356,7 +367,17 @@ li{
     transform: rotateY(180deg);
 }
 
+#countdown{
+	background:red;
+	max-width:100%;
+    height: 5%;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	transition: max-width 7s linear;
+}
+
 #tempo{
+    border-radius: 5px;
     border: 0.1rem solid rgba(255, 255, 255);
 }
 

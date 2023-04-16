@@ -10,6 +10,7 @@ let insert, nomiGiocatori, flip, nuovoGioco;
 
 function gameplay() {
     let id_possibili = [];
+    let colori = ["rgb(217, 89, 0)", "rgb(0, 127, 255)", "rgb(143, 0, 255)", "rgb(34, 139, 34)", "rgb(215, 11, 122)", "rgb(255, 184, 28)"];
     let skipMove = true;
     let again = false;
     let numeroGiocatori = 0;
@@ -1738,7 +1739,7 @@ function gameplay() {
         switch (materia) {
             case "storia":
                 argomento = storia;
-                colore_triangolino = "rgb(247, 219, 116)";
+                colore_triangolino = "rgb(255, 184, 28)";
                 break;
             case "geografia":
                 argomento = geografia;
@@ -1754,7 +1755,7 @@ function gameplay() {
                 break;
             case "sport_hobby":
                 argomento = sport_hobby;
-                colore_triangolino = "rgb(255, 117, 20)";
+                colore_triangolino = "rgb(217, 89, 0)";
                 break;
             case "nat_scienza":
                 argomento = nat_scienza;
@@ -1779,7 +1780,10 @@ function gameplay() {
 
         function load() {
             quiz.conten = document.getElementById("dietro");
-            let t = `<p id="tempo"></p>`;
+            let t = `   <p id="tempo">
+                            <div id="countdown">
+                            </div>
+                        </p>`;
             document.getElementById("dietro").innerHTML += t;
             quiz.domanda = document.createElement("div");
             quiz.domanda.id = "dom";
@@ -1791,6 +1795,7 @@ function gameplay() {
         }
 
         function inserisci() {
+            document.getElementById("countdown").style.maxWidth="10px";
             let t_iniziale = "Tempo: 8s";
             document.getElementById("tempo").innerHTML = t_iniziale;
             let tempo = 7;
@@ -1941,10 +1946,13 @@ function gameplay() {
                 </div>`;
         document.getElementById("gioco").innerHTML += t;
         for (let i = 0; i < numeroGiocatori; i++) {
-            let li = document.createElement("li");
-            li.innerHTML = players[i].nome;
-            li.id = "li" + i;
-            document.getElementById("nomi").appendChild(li);
+            let a = `
+                <li id=li`+i+`>
+                    `+players[i].nome+`
+                    <div id="colore" style="color: `+colori[i]+`">
+                    </div>
+                </li>`
+            document.getElementById("nomi").innerHTML += a;
         }
     }
 
@@ -1955,7 +1963,6 @@ function gameplay() {
         let posizione = esagono.getBoundingClientRect();
         let topDefault = (posizione.top - (dimensioni.height / 2) + (posizione.height / 2) + window.pageYOffset) + "px";
         let leftDefault = (posizione.left - (dimensioni.width / 2) + (posizione.width / 2) + window.pageXOffset) + "px";
-        let colori = ["rgb(255, 117, 20)", "rgb(0, 127, 255)", "rgb(143, 0, 255)", "rgb(34, 139, 34)", "rgb(215, 11, 122)", "rgb(247, 219, 116)"]
 
         for (let i = 0; i < numeroGiocatori; i++) {
             let nome = document.getElementById("nome" + i).value;
