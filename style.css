@@ -74,6 +74,12 @@ body {
     }
 }
 
+#libro{
+    position: absolute;
+    right:2%;
+    transform: scale(0.5);
+}
+
 #nicknames {
     width: max-content;
     height:max-content;
@@ -343,7 +349,7 @@ li{
 
 #card {
     position: absolute;
-    top: 0;
+    top: 0; /*da sistemare*/
     bottom: 0;
     left: 0;
     right: 0;
