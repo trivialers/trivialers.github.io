@@ -1780,10 +1780,12 @@ function gameplay() {
 
         function load() {
             quiz.conten = document.getElementById("dietro");
-            let t = `   <p id="tempo">
-                            <div id="countdown">
-                            </div>
-                        </p>`;
+            let t = `   <div id="count">
+                            <div id="down">
+                                <p id="tempo">
+                                </p>
+                            <div>
+                        </div>`;
             document.getElementById("dietro").innerHTML += t;
             quiz.domanda = document.createElement("div");
             quiz.domanda.id = "dom";
@@ -1795,7 +1797,7 @@ function gameplay() {
         }
 
         function inserisci() {
-            document.getElementById("countdown").style.maxWidth="10px";
+    
             let t_iniziale = "Tempo: 8s";
             document.getElementById("tempo").innerHTML = t_iniziale;
             let tempo = 7;
@@ -1932,7 +1934,7 @@ function gameplay() {
         for (let i = 0; i < numeroGiocatori; i++) {
             let b = `
                 <p>Giocatore ` + (i + 1) + `</p>
-                <input type="text" id="nome` + i + `" required>`;
+                <input type="text" id="nome` + i + `" maxlength="10" required>`;
             document.getElementById("nome").innerHTML += b;
         }
     }
