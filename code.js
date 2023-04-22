@@ -311,6 +311,7 @@ function gameplay() {
                 for (let i = 0; i < id_possibili.length; i++) {
                     let stroke = document.getElementById(id_possibili[i]);
                     stroke.style.strokeWidth = "4px";
+                    stroke.style.filter= "url(#glow)"; 
                 }
                 skipMove = false;
             }, 5000);
@@ -395,6 +396,7 @@ function gameplay() {
                 for (let i = 0; i < id_possibili.length; i++) {
                     let stroke = document.getElementById(id_possibili[i]);
                     stroke.style.strokeWidth = "0px";
+                    stroke.style.filter= ""; 
                 }
                 skipMove = true;
                 players[giocatore].id_casella = id;
@@ -464,9 +466,9 @@ function gameplay() {
                 r_corretta: "Spagna",
                 opzioni: ["Francia", "Austria", "Germania", "Spagna"]
             }, {
-                domanda: "Cosa accade il 14 agosto 2018 in Italia?",
+                domanda: "Che accade nel 14 agosto 2018 in Italia?",
                 r_corretta: "crolla il ponte Morandi",
-                opzioni: ["Presidente dimesso", "elezione Presidente", "crolla il ponte Morandi", " terremoto di magnitudo 6"]
+                opzioni: ["Presidente dimesso", "elezione Presidente", "crolla il ponte Morandi", "forte terremoto"]
             }, {
                 domanda: "In quale data si scopre l&#39;America?",
                 r_corretta: "12 Ottobre 1492",
@@ -490,7 +492,7 @@ function gameplay() {
             }, {
                 domanda: "Per Illuminismo cosa si intende?",
                 r_corretta: "diffondere i lumi della ragione",
-                opzioni: ["illuminare la citt&#224;", "risparmiare sulla luce", "abbassare il prezzo delle lampade", "diffondere i lumi della ragione"]
+                opzioni: ["illuminare la citt&#224;", "risparmiare sulla luce", "aprire la finestra", "diffondere i lumi della ragione"]
             }, {
                 domanda: "Quale citt&#224; venne divisa da un muro?",
                 r_corretta: "Berlino",
@@ -526,7 +528,7 @@ function gameplay() {
             }, {
                 domanda: "Di quale giornale fu direttore Mussolini?",
                 r_corretta: "Avanti",
-                opzioni: ["La Repubblica", "Il fatto quotidiano", "Avanti", "Non &#232; mai stato direttore di alcun giornale"]
+                opzioni: ["La Repubblica", "Il fatto quotidiano", "Avanti", "Non &#232; mai stato direttore"]
             }, {
                 domanda: "In che anno il governo Giolitti diede le dimissioni dopo l&#39;uscita dei radicali?",
                 r_corretta: "1914",
@@ -534,11 +536,11 @@ function gameplay() {
             }, {
                 domanda: "In seguito a cosa inizi&#242; la Seconda Guerra Mondiale?",
                 r_corretta: "invasione della Polonia",
-                opzioni: ["invasione della Francia", "invasione della Polonia", "invasione dell&#39;Inghilterra", "Nessuna delle risposte precendenti"]
+                opzioni: ["invasione della Francia", "invasione della Polonia", "invasione dell&#39;Inghilterra", "Nessuna delle risposte"]
             }, {
-                domanda: "Il sindacato dei lavoratori italiani fondato nel 1906 si chiamava:",
+                domanda: "Il sindacato dei lavoratori fondato nel 1906 si chiamava:",
                 r_corretta: "Confederazione Generale del Lavoro",
-                opzioni: ["Unione Lavoratori", "Confederazione Italiana Dirigenti d&#39;Azienda", "Confederazione Generale del Lavoro", "Confederazione Italiana Sindacati Lavoratori"]
+                opzioni: ["Unione Lavoratori", "Confederazione Italiana Azienda", "Confederazione Generale del Lavoro", "Confederazione Italiana Lavoratori"]
             }, {
                 domanda: "Uno dei piani politici-economici messi in atto dagli Stati Uniti dopo la Seconda Guerra Mondiale si chiamava:",
                 r_corretta: "Il Piano Marshall",
@@ -580,9 +582,9 @@ function gameplay() {
                 r_corretta: "Irangate",
                 opzioni: ["Irangate", "Watergate", "Watergate che nell&#39;Irangate", "Non fu coinvolto in nessuno scandalo"]
             }, {
-                domanda: "Che fenomeno demografico particolarmente importante ci fu tra il 1950 e il 1970?",
-                r_corretta: "emigrazione dal Sud verso il nord",
-                opzioni: ["emigrazione dal Sud verso il nord", "immigrazione di albanesi", "Lo sbarco di profughi albanesi", "aumento della mortalit&#224; per la malaria"]
+                domanda: "Che fenomeno demografico importante ci fu tra il 1950 e il 1970?",
+                r_corretta: "Emigrazione dal Sud verso Nord",
+                opzioni: ["Emigrazione dal Sud verso Nord", "Immigrazione di albanesi", "Sbarco di profughi albanesi", "Aumento della mortalit&#224; per la malaria"]
             }, {
                 domanda: "Cosa venne approvato nel 1947?",
                 r_corretta: "abolizione della pena di morte",
@@ -888,7 +890,7 @@ function gameplay() {
                 r_corretta: "11",
                 opzioni: ["5", "8", "11", "14"]
             }, {
-                domanda: "Chi &#232; il nuotatore italiano che ha vinto pi&#249; medaglie a livello internazionale?",
+                domanda: "Chi &#232; il nuotatore che ha vinto pi&#249; medaglie a livello internazionale?",
                 r_corretta: "Gregorio Paltrinieri",
                 opzioni: ["Massimiliano Rosolino", "Gregorio Paltrinieri", "Domenico Fioravanti", "Luca Marin"]
             }, {
@@ -898,7 +900,7 @@ function gameplay() {
             }, {
                 domanda: "Halterofilia significa?",
                 r_corretta: "sollevamento pesi",
-                opzioni: ["paura degli avversari", "disturbo nel processo di crescita", "alterazione dei livelli di ematocrito nel sangue", "sollevamento pesi"]
+                opzioni: ["paura di avversari", "disturbo nella crescita", "alterazione di ematocrito nel sangue", "sollevamento pesi"]
             }, {
                 domanda: "Il soprannome di Clarence Seedorf?",
                 r_corretta: "professore",
@@ -930,7 +932,7 @@ function gameplay() {
             }, {
                 domanda: "Cos&#39;&#232; un agente mascherante?",
                 r_corretta: "mascherare le sostanze proibite",
-                opzioni: ["Chi fornisce le sostanze proibite", "mascherare le sostanze proibite", "rappresentante di un atleta", "maschera teatrale"]
+                opzioni: ["fornitore di sostanze proibite", "mascherare le sostanze proibite", "rappresentante di un atleta", "maschera teatrale"]
             }, {
                 domanda: "il CIO &#232;?",
                 r_corretta: "comitato olimpico internazionale",
@@ -1069,8 +1071,8 @@ function gameplay() {
                 opzioni: ["Medaglie argento", "Medaglie oro", "Collane di diamanti", "Coppe dorate"]
             }, {
                 domanda: "Cosa rappresentano gli anelli alle Olimpiadi?",
-                r_corretta: "I continenti del mondo",
-                opzioni: ["I continenti del mondo", "Sport della prima Olimpiade", "I colori primari", "colori della bandiera ospitante"]
+                r_corretta: "Continenti del mondo",
+                opzioni: ["Continenti del mondo", "Sport della prima Olimpiade", "I colori primari", "colori della bandiera ospitante"]
             }
         ];
 
@@ -1422,7 +1424,7 @@ function gameplay() {
             }, {
                 domanda: "Cos&#39;&#232; la sceneggiatura di un film?",
                 r_corretta: "la stesura del testo del film",
-                opzioni: ["insieme degli ambienti in cui si svolge il film", "gli argomenti del film", "insieme delle inquadrature del film", "la stesura del testo del film"]
+                opzioni: ["luogo in cui si svolge il film", "i temi del film", "inquadrature del film", "la stesura del testo del film"]
             }, {
                 domanda: "Come si chiama il procedimento cinematografico che amplifica il formato delle proiezioni per lo spettacolo?",
                 r_corretta: "cinemascope",

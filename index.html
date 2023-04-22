@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
@@ -7,11 +8,11 @@
 </head>
 
 <body>
-    <a href=istruzioni/istruzione.html>
-        <img id="libro" src="istruzioni/icona.png"/>
+    <a href=istruzioni/istruzione.html target="_blank" rel="noopener noreferrer">
+        <img id="libro" src="istruzioni/icona.png" />
     </a>
     <button id="play" onclick="play();">
-        <img src="img/play.png" id="inizia"/>
+        <img src="img/play.png" id="inizia" />
     </button>
     <div id="gioco">
         <div id="map">
@@ -19,6 +20,13 @@
                 <g id="trivial">
                     <g id="cerchio">
                         <g id="grandi" clip-path="url(#clip0_0_1)">
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
                             <g id="Segment 2">
                                 <path id="Polygon_2" d="M1889.24 1462.78L2064.6 1535.93C2032.54 1611.71 1991.2 1683.21 1941.54 1748.81L1790.63 1633.36C1830.36 1580.76 1863.48 1523.46 1889.24 1462.78Z" fill="#E8DCB8" stroke="#4BA2F2" stroke-width="10"></path>
                             </g>
@@ -109,7 +117,7 @@
                                 <path id="Ellipse_38" d="M541.243 353.113C574.877 327.439 610.108 303.925 646.722 282.714L746.977 455.771C717.686 472.74 689.502 491.551 662.594 512.09L541.243 353.113Z" fill="#BC4BF2" stroke="white" stroke-width="0px"></path>
                             </g>
                             <g id="Segment 32">
-                                <path id="Ellipse_39" d="M650.187 280.716C686.885 259.651 724.884 240.937 763.953 224.686L840.762 409.349C809.507 422.35 779.108 437.321 749.75 454.172L650.187 280.716Z" fill="#EFD02D" stroke="white" stroke-width="0px";></path>
+                                <path id="Ellipse_39" d="M650.187 280.716C686.885 259.651 724.884 240.937 763.953 224.686L840.762 409.349C809.507 422.35 779.108 437.321 749.75 454.172L650.187 280.716Z" fill="#EFD02D" stroke="white" stroke-width="0px" ;></path>
                             </g>
                             <g id="Segment 33">
                                 <path id="Ellipse_40" d="M767.649 223.158C806.783 207.063 846.899 193.469 887.755 182.457L939.804 375.566C907.119 384.375 875.026 395.251 843.719 408.126L767.649 223.158Z" fill="#E8DCB8" stroke="white" stroke-width="0px"></path>
