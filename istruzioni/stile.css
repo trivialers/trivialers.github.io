@@ -1,0 +1,55 @@
+body {
+    background-color: #e6aa49;
+    border: 3px solid #27678D;
+}
+
+#home {
+    position: absolute;
+    transform: scale(0.5);
+    right: 2%;
+}
+
+#titolo{
+    text-align: center;
+    margin: 0px;
+}
+
+h3 {
+    display:inline-block;
+    padding: 1%;
+    color: black;
+    font-family: 'Parisienne', cursive;
+    font-size: 3rem;
+    margin:0px; 
+    margin-top: 1rem;
+    border: 2px solid #27678D;
+}
+
+#logo {
+    display: block;
+    margin: auto;
+    transform: scale(0.9);
+    margin-top: 0.5rem
+}
+
+#testo {
+    margin:0px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-family: 'Parisienne', cursive;
+}
+
+p {
+    margin-top: 0px;
+    font-size: 1.8rem;
+    font-family: 'Parisienne', cursive;
+}
+
+h1{
+    font-weight: normal;
+    margin-bottom: 0px;
+    display:inline-block;
+    font-size: 2.3rem;
+    font-family: 'Parisienne', cursive;
+}
+
