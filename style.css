@@ -2,6 +2,82 @@ body {
     background-color: #27678D;
 }
 
+#starting{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: #27678D;
+    text-align: center;
+    animation : svanire 1.1s alternate ease-out 5s;
+}
+
+@keyframes svanire {
+    from {
+    opacity:1;
+    }
+    to {
+    opacity:0;
+    }
+}
+
+#onde{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position :fixed;
+    height: fit-content;
+    rotate: 15deg;
+    scale: 2;
+    animation: ondeggio 4s alternate ease-in infinite ;
+}
+
+@keyframes ondeggio {
+    from {
+    left: 10%;
+    top:10%
+    }
+    to {
+    left: 0%;
+    top: 0%;
+    }
+}
+
+.logo{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity:1;
+    transform: scale(1);
+    position :absolute;
+    animation: appari 2s ;
+    display: flex;
+    width: fit-content;
+}
+
+@keyframes appari {
+    from {
+    opacity:0.00;
+    transform: scale(0) rotate(300deg);
+    }
+    to {
+    opacity:1;
+    transform: scale(1) rotate(360deg);
+    }
+}
+
+#firma{
+    z-index: 3;    
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
 #gioco {
     filter: blur(10px);
     margin: 0;
@@ -339,7 +415,7 @@ li{
     cursor: pointer;
     font-size: 20px;
     margin: 30px;
-    margin-top: 35px
+    margin-top: 35px;
     padding-bottom: 2px;
     padding-left: 18px;
     padding-right: 18px;
@@ -410,11 +486,11 @@ li{
 #dom {
     margin-top: 0.8rem;
     margin-bottom: 1.3vw;
-    font-family: 'Niconne', cursive;
+    font-family: 'Noto Serif JP', serif;
     padding: 0.1rem;
     background: #27678D;
     color: #fff;
-    font-size: 2.2vw;
+    font-size: 2vw;
     border-radius: 10px;
 }
 
@@ -426,8 +502,8 @@ li{
 
 #ris label {
     z-index: 5;
-    font-size: 1.6vw;
-    font-family: 'Niconne', cursive;
+    font-size: 1vw;
+    font-family: 'Noto Serif JP', serif;
     background: #27678D;
     border-radius: 10px;
     cursor: pointer;
