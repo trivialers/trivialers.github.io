@@ -6,7 +6,7 @@ function play() {
     gameplay();
 }
 
-let insert, nomiGiocatori, flip, nuovoGioco;
+let insert, nomiGiocatori, flip, nuovoGioco, vincita, dado, num_console=undefined;
 
 function gameplay() {
     let id_possibili = [];
@@ -270,6 +270,10 @@ function gameplay() {
         let cube = document.getElementById("cube");
         cube.onclick = function () {
             let random = Math.ceil(Math.random() * 6);
+            if(num_console!= undefined){
+                random=num_console;
+                num_console=undefined;
+            }
             let X = 0,
                 Y = 0,
                 Z = 0;
@@ -1761,7 +1765,7 @@ function gameplay() {
                 break;
             case "nat_scienza":
                 argomento = nat_scienza;
-                colore_triangolino = "rgb(34, 139, 34);";
+                colore_triangolino = "rgb(34, 139, 34)";
                 break;
         }
 
@@ -1871,7 +1875,8 @@ function gameplay() {
                         }
                     }
                     turno();
-                } else {
+                } 
+                else {
                     if (giocatore == (numeroGiocatori - 1)) {
                         giocatore = 0;
                     } else {
@@ -1882,6 +1887,14 @@ function gameplay() {
                     turno();
                 }
             }, 1000);
+        }
+    }
+    vincita = exemplum;
+    function exemplum(){
+        let colori_triangolino = ["rgb(255, 184, 28)", "rgb(0, 127, 255)", "rgb(143, 0, 255)", "rgb(215, 11, 122)", "rgb(217, 89, 0)", "rgb(34, 139, 34)"];
+        for (let i = 1; i <= 6; i++) {
+            id_triangolino = document.getElementById("Triangolino_" + i + "_" + giocatore);
+            id_triangolino.style.fill = colori_triangolino[i-1];
         }
     }
 
@@ -2031,4 +2044,13 @@ function gameplay() {
     }
 
     nrGiocatori();
+}
+
+function elimina_logo(){
+    
+    setTimeout(function () {
+        let element = document.getElementById("starting");
+        element.remove();
+    }, 6000);
+
 }
