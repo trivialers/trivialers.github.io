@@ -413,7 +413,7 @@ function gameplay() {
                             if (document.getElementById("Triangolino_6_" + giocatore).style.fill !== "rgba(228, 231, 231, 0.4)") {
                                 setTimeout(function () {
                                     win();
-                                }, 2000);
+                                }, 1000);
                             } else {
                                 turno();
                             }
@@ -543,8 +543,8 @@ function gameplay() {
                 opzioni: ["invasione della Francia", "invasione della Polonia", "invasione dell&#39;Inghilterra", "Nessuna delle risposte"]
             }, {
                 domanda: "Il sindacato dei lavoratori fondato nel 1906 si chiamava:",
-                r_corretta: "Confederazione Generale del Lavoro",
-                opzioni: ["Unione Lavoratori", "Confederazione Italiana Azienda", "Confederazione Generale del Lavoro", "Confederazione Italiana Lavoratori"]
+                r_corretta: "Confederazione Generale Lavoro",
+                opzioni: ["Unione Lavoratori", "Confederazione Azienda", "Confederazione Generale Lavoro", "Confederazione Italiana Lavoratori"]
             }, {
                 domanda: "Uno dei piani politici-economici messi in atto dagli Stati Uniti dopo la Seconda Guerra Mondiale si chiamava:",
                 r_corretta: "Il Piano Marshall",
@@ -587,14 +587,14 @@ function gameplay() {
                 opzioni: ["Irangate", "Watergate", "Watergate che nell&#39;Irangate", "Non fu coinvolto in nessuno scandalo"]
             }, {
                 domanda: "Che fenomeno demografico importante ci fu tra il 1950 e il 1970?",
-                r_corretta: "Emigrazione dal Sud verso Nord",
-                opzioni: ["Emigrazione dal Sud verso Nord", "Immigrazione di albanesi", "Sbarco di profughi albanesi", "Aumento della mortalit&#224; per la malaria"]
+                r_corretta: "Emigrazione dal Sud al Nord",
+                opzioni: ["Emigrazione dal Sud al Nord", "Immigrazione di albanesi", "Sbarco di profughi", "Aumento mortalit&#224; per la malaria"]
             }, {
                 domanda: "Cosa venne approvato nel 1947?",
                 r_corretta: "abolizione della pena di morte",
-                opzioni: ["La legge sull&#39;aborto", "La legge sul divorzio", "La dichiarazione sulla discriminazione razziale", "abolizione della pena di morte"]
+                opzioni: ["La legge sull&#39;aborto", "La legge sul divorzio", "La legge sulla privacy", "abolizione della pena di morte"]
             }, {
-                domanda: "A che anno risale il periodo di liberalizzazione della storia cecoslovacca, noto come primavera di Praga ?",
+                domanda: "A che anno risale il periodo di liberalizzazione, noto come primavera di Praga ?",
                 r_corretta: "1968",
                 opzioni: ["1958", "1988", "1968", "1938"]
             }, {
@@ -1410,7 +1410,7 @@ function gameplay() {
                 r_corretta: "Il posto delle fragole",
                 opzioni: ["La leggenda del Santo Bevitore", "Genesi", "L&#39;albero degli zoccoli", "Il posto delle fragole"]
             }, {
-                domanda: "Di Luis Bunuel è caratterizzante un umorismo che trasforma il quotidiano in fantastico, come in:",
+                domanda: "Di Luis Bunuel &#243; caratterizzante un umorismo che trasforma il quotidiano in fantastico, come in:",
                 r_corretta: "Il fascino discreto della borghesia",
                 opzioni: ["Amarcord", "Il fascino discreto della borghesia", "L&#39;eclisse", "nessuna"]
             }, {
@@ -1630,11 +1630,11 @@ function gameplay() {
                 r_corretta: "la macchina da scrivere",
                 opzioni: ["la macchina da scrivere", "il frigorifero", "il televisore", "la radio"]
             }, {
-                domanda: "Chi inventó la pastorizzazione?",
+                domanda: "Chi invent&#242; la pastorizzazione?",
                 r_corretta: "Louis Pasteur",
                 opzioni: ["Louis Pasteur", "Thomas Alva Edison", "Heinrich Hertz", "Antonio Meucci"]
             }, {
-                domanda: "Chi inventó la macchina da cucire?",
+                domanda: "Chi invent&#242; la macchina da cucire?",
                 r_corretta: "Isaac Singer",
                 opzioni: ["Georges Audemars", "George Pullman", "Levi Strauss", "Isaac Singer"]
             }, {
@@ -1915,6 +1915,8 @@ function gameplay() {
             let el = document.getElementById("pedina_" + i);
             el.remove();
         }
+        let el = document.getElementById("players");
+        el.remove();
         gameplay();
     }
     nuovoGioco = partita;

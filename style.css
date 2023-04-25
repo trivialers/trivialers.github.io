@@ -2,7 +2,7 @@ body {
     background-color: #27678D;
 }
 
-#starting{
+#starting {
     position: absolute;
     top: 0;
     left: 0;
@@ -11,68 +11,71 @@ body {
     z-index: 2;
     background-color: #27678D;
     text-align: center;
-    animation : svanire 1.1s alternate ease-out 5s;
+    animation: svanire 1.1s alternate ease-out 5s;
 }
 
 @keyframes svanire {
     from {
-    opacity:1;
+        opacity: 1;
     }
+
     to {
-    opacity:0;
+        opacity: 0;
     }
 }
 
-#onde{
+#onde {
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    position :fixed;
+    position: fixed;
     height: fit-content;
     rotate: 15deg;
     scale: 2;
-    animation: ondeggio 4s alternate ease-in infinite ;
+    animation: ondeggio 4s alternate ease-in infinite;
 }
 
 @keyframes ondeggio {
     from {
-    left: 10%;
-    top:10%
+        left: 10%;
+        top: 10%
     }
+
     to {
-    left: 0%;
-    top: 0%;
+        left: 0%;
+        top: 0%;
     }
 }
 
-.logo{
+.logo {
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    opacity:1;
+    opacity: 1;
     transform: scale(1);
-    position :absolute;
-    animation: appari 2s ;
+    position: absolute;
+    animation: appari 2s;
     display: flex;
     width: fit-content;
 }
 
 @keyframes appari {
     from {
-    opacity:0.00;
-    transform: scale(0) rotate(300deg);
+        opacity: 0.00;
+        transform: scale(0) rotate(300deg);
     }
+
     to {
-    opacity:1;
-    transform: scale(1) rotate(360deg);
+        opacity: 1;
+        transform: scale(1) rotate(360deg);
     }
 }
 
-#firma{
-    z-index: 3;    
+#firma {
+    z-index: 3;
     bottom: 0;
     right: 0;
     position: absolute;
@@ -91,7 +94,7 @@ body {
 
 #nrGiocatori {
     width: max-content;
-    height:max-content;
+    height: max-content;
     padding: 1%;
     box-shadow: 1px 2px 40px -5px rgba(0, 0, 0, 1);
     text-align: center;
@@ -123,7 +126,7 @@ body {
 }
 
 #play:before {
-    content:"";
+    content: "";
     position: absolute;
     width: 150%;
     height: 150%;
@@ -150,15 +153,16 @@ body {
     }
 }
 
-#libro{
+#libro {
     position: absolute;
-    right:2%;
+    right: 2%;
     transform: scale(0.7);
+    z-index: 1;
 }
 
 #nicknames {
     width: max-content;
-    height:max-content;
+    height: max-content;
     box-shadow: 1px 2px 40px -5px rgba(0, 0, 0, 1);
     text-align: center;
     position: absolute;
@@ -171,7 +175,7 @@ body {
     border-radius: 30px;
 }
 
-h2{
+h2 {
     color: white;
     letter-spacing: 2px;
     font-family: 'Niconne', cursive;
@@ -179,7 +183,7 @@ h2{
     margin: 1rem;
 }
 
-p{
+p {
     color: white;
     letter-spacing: 1px;
     font-family: 'Niconne', cursive;
@@ -192,25 +196,25 @@ p{
     border: 2px solid #DFA207;
     margin-left: 2%;
     top: 17%;
-    position:absolute;
+    position: absolute;
 }
 
-li{
+li {
     color: lightgray;
     letter-spacing: 1px;
     font-family: 'Niconne', cursive;
     font-size: 1.5rem;
     margin: 0.5rem;
-    margin-left:2rem;
+    margin-left: 2rem;
 }
 
-#colore{
+#colore {
     border-radius: 50%;
-	width: 0;
-	height: 0;
-	border-left: 0.6rem solid transparent;
-	border-right: 0.6rem solid transparent;
-	border-top: 1rem solid;
+    width: 0;
+    height: 0;
+    border-left: 0.6rem solid transparent;
+    border-right: 0.6rem solid transparent;
+    border-top: 1rem solid;
     display: inline-block;
     margin-left: 0.5rem;
 }
@@ -426,7 +430,8 @@ li{
 
 #card {
     position: absolute;
-    top: 0; /*da sistemare*/
+    top: 0;
+    /*da sistemare*/
     bottom: 0;
     left: 0;
     right: 0;
@@ -451,43 +456,41 @@ li{
     transform: rotateY(180deg);
 }
 
-#count{
+#count {
     text-align: center;
     border-radius: 10px;
     border: 0.1rem solid rgb(255, 255, 255);
-    border-left:0.2rem solid rgb(255, 255, 255);
+    border-left: 0.2rem solid rgb(255, 255, 255);
     border-right: 0.2rem solid rgb(255, 255, 255);
 }
 
-#down{
+#down {
     border-radius: 8px;
-	background:green;
-	width:100%;
+    background: green;
+    width: 100%;
     height: 8%;
-    animation: timer 9s linear;    
+    animation: timer 9s linear;
 }
 
-@keyframes timer{
+@keyframes timer {
     100% {
         width: 0%;
-        background:red;
+        background: red;
     }
 }
 
-#tempo{
+#tempo {
     position: absolute;
     margin: auto;
-    top:0;
-    bottom:0;
-    right:0;
-    left:0;
+    right: 0;
+    left: 0;
 }
 
 #dom {
     margin-top: 0.8rem;
     margin-bottom: 1.3vw;
     font-family: 'Noto Serif JP', serif;
-    padding: 0.1rem;
+    padding: 0.18rem;
     background: #27678D;
     color: #fff;
     font-size: 2vw;
