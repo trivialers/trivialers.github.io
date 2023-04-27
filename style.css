@@ -488,7 +488,7 @@ li {
 
 #dom {
     margin-top: 0.8rem;
-    margin-bottom: 1.3vw;
+    margin-bottom: 1.2vw;
     font-family: 'Noto Serif JP', serif;
     padding: 0.18rem;
     background: #27678D;
@@ -505,7 +505,7 @@ li {
 
 #ris label {
     z-index: 5;
-    font-size: 1vw;
+    font-size: 1.1vw;
     font-family: 'Noto Serif JP', serif;
     background: #27678D;
     border-radius: 10px;
