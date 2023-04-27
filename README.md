@@ -1,7 +1,7 @@
-(Badges
-work in progress...)
 
-<img src="img/read.png" width="80%"/>
+<p align="center">
+  <img src="img/read.png" width="80%"/>
+</p>
 
 # Trivial Pursuit
 
@@ -10,8 +10,7 @@ Il gioco d tavolo con un aspetto retro anni 80', giocaci ora ;)
 
 "Lo svantaggio di vincere il Nobel è la figuraccia che fai quando poi perdi a Trivial Pursuit" -Daniele Luttazzi
 
-<img src="img/storia.png" width="10%"/>
-<img src="img/storia1.png" width="10%"/>
+<img src="img/storia.png" width="5%"/><img src="img/storia1.png" width="10%"/>
 <img src="img/geo.png" width="10%"/>
 <img src="img/nat.png" width="10%"/>
 <img src="img/ent.png" width="10%"/>
