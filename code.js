@@ -345,9 +345,6 @@ function gameplay() {
                     previsione(mosse - 1, id_futuro, id_attuale);
                 }
                 id_futuro = "Ellipse_" + (id_diviso[1] - 1);
-                if (id_attuale == "Ellipse_1") {
-                    id_futuro = "Ellipse_42";
-                }
                 if (id_futuro != id_passato) {
                     previsione(mosse - 1, id_futuro, id_attuale);
                 }
@@ -373,9 +370,6 @@ function gameplay() {
                 }
             } else {
                 id_futuro = "Ellipse_" + (id_diviso[1] + 1);
-                if (id_attuale == "Ellipse_42") {
-                    id_futuro = "Ellipse_1";
-                }
                 if (id_futuro != id_passato) {
                     previsione(mosse - 1, id_futuro, id_attuale);
                 }
