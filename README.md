@@ -16,5 +16,4 @@ Il gioco d tavolo con un aspetto retro anni 80', giocaci ora ;)
 
 ## Demo
 https://trivialers.github.io/
-<img src="img/line.svg"/>
 
