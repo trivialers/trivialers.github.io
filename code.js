@@ -664,7 +664,7 @@ function gameplay() {
                 r_corretta: "Dublino",
                 opzioni: ["Chicago", "Charleston", "Boston", "Dublino"]
             }, {
-                domanda: "In quale provincia si trova Agropoli?",
+                domanda: "In quale provincia si trova Agropoli? ",
                 r_corretta: "SA",
                 opzioni: ["SA", "PA", "CS", "TA"]
             }, {
